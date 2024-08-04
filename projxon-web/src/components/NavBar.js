@@ -7,7 +7,7 @@ const NavBar = () => {
         <div>
             <Navbar bg="dark" variant="dark" expand="lg"
                 className="fixed-top ">
-                <Navbar.Brand as={Link} to="/" className='me-2 ms-auto'>PROJXON</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/Projxon" className='me-2 ms-auto'>PROJXON</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav ">
                     <Container className="d-flex justify-content-center">
