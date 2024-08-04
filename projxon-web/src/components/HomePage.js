@@ -14,7 +14,7 @@ const HomePage = () => {
             {/* Hero Section */}
             <div className="hero-section">
                 <Container className="text-center text-white hero-content">
-                    <h1 className="hero-title" data-aos="fade-up">Control the Chaos</h1>
+                    <h1 className="hero-title" data-aos="fade-up">Turning Chaos to be opportunity</h1>
                     <p className="hero-subtitle" >Empowering medium-sized businesses to achieve their full potential.</p>
                 </Container>
             </div>
