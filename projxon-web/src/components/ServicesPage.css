@@ -1,14 +1,14 @@
 /* ServicesPage.css */
 
 .services-hero-section {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: linear-gradient(110deg, #000000, #ffffff);
     color: white;
     padding: 120px 0;
     position: relative;
     overflow: hidden;
-  }
-  
-  .services-hero-section::before {
+}
+
+.services-hero-section::before {
     content: '';
     position: absolute;
     width: 400%;
@@ -17,33 +17,34 @@
     left: -200%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
     animation: rotate 10s linear infinite;
-  }
-  
-  @keyframes rotate {
+}
+
+@keyframes rotate {
     from {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     to {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  .hero-title {
+}
+
+.hero-title {
     font-size: 3.5rem;
     margin-bottom: 20px;
     font-weight: 700;
-  }
-  
-  .hero-subtitle {
+}
+
+.hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 50px;
-  }
-  
-  .services-container {
+}
+
+.services-container {
     padding: 80px 0;
-  }
-  
-  .service-card {
+}
+
+.service-card {
     background: white;
     border: none;
     border-radius: 10px;
@@ -54,38 +55,43 @@
     text-align: left;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .service-card:hover {
+}
+
+.service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-  }
-  
-  .service-card:hover .card-icon {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-  }
-  
-  .card-icon {
-    font-size: 2.5rem;
+}
+
+.service-card:hover .card-icon {
+    background: linear-gradient(135deg, #ffd700, #feb47a);
+}
+
+.card-icon {
+    font-size: 3rem;
     color: white;
     background: #6c757d;
     width: 80px;
     height: 80px;
     line-height: 80px;
+    text-align: center;
     margin-bottom: 20px;
     border-radius: 50%;
     transition: background 0.3s ease-in-out;
-  }
-  
-  .card-content h3 {
+}
+
+.card-content h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
     font-weight: 600;
-  }
-  
-  .card-content p {
+}
+
+.card-content p {
     font-size: 1rem;
     color: #666;
     margin-bottom: 10px;
-  }
-  
+}
+
+
+.homepage-call-to-action-section{
+    background-color: #666;
+}

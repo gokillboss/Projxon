@@ -1,0 +1,104 @@
+
+
+.contact-hero-section {
+    background: linear-gradient(135deg, #ffd700, #000000);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .promotional-section {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 50px;
+  }
+  
+  .promotional-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .promotional-section p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .contact-card {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .contact-card h2 {
+    margin-bottom: 30px;
+  }
+  
+  .contact-card .form-control {
+    border-radius: 5px;
+  }
+  
+  .contact-card .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+  }
+  
+  .contact-card .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .contact-info-section {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .contact-info-section h4 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .contact-info-section p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+  }
+  
+  .contact-icons .contact-icon {
+    font-size: 2rem;
+    color: white;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .contact-icons .contact-icon:hover {
+    color: #007bff;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .promotional-section h2 {
+      font-size: 1.8rem;
+    }
+  
+    .promotional-section p {
+      font-size: 1rem;
+    }
+  }
+  

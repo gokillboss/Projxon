@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Row, Col, Button,Card, Image } from 'react-bootstrap';
+import { Container, Row, Col, Button, Card, Image, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import './HomePage.css'; // Custom CSS file
+import './HomePage.css'; // Custom CSS file
 import 'aos/dist/aos.css'; // Animation library
 import AOS from 'aos';
 
@@ -12,10 +12,10 @@ const HomePage = () => {
         <>
 
             {/* Hero Section */}
-            <div className="hero-section">
-                <Container className="text-center text-white hero-content">
-                    <h1 className="hero-title" data-aos="fade-up">Turning Chaos to be opportunity</h1>
-                    <p className="hero-subtitle" >Empowering medium-sized businesses to achieve their full potential.</p>
+            <div className="homepage-hero-section">
+                <Container className="text-center text-white homepage-hero-content">
+                    <h1 className="homepage-hero-title" data-aos="fade-up">Turning Chaos to Opportunity</h1>
+                    <p className="homepage-hero-subtitle">Empowering medium-sized businesses to achieve their full potential.</p>
                 </Container>
             </div>
 
@@ -24,9 +24,9 @@ const HomePage = () => {
                 <h2 data-aos="fade-up">Welcome to PROJXON</h2>
                 <Row className="justify-content-center">
                     <Col md={10} lg={8}>
-                        <div className="video-container" data-aos="fade-up" data-aos-delay="200">
+                        <div className="homepage-video-container" data-aos="fade-up" data-aos-delay="500">
                             <iframe
-                                className="video-iframe"
+                                className="homepage-video-iframe"
                                 src="https://www.youtube.com/embed/your-video-id"
                                 allowFullScreen
                                 title="Introductory Video"
@@ -40,7 +40,7 @@ const HomePage = () => {
             <Container className="text-center my-5">
                 <h2 data-aos="fade-up">Our Services</h2>
                 <Row>
-                    <Col md={4} className="service-card" data-aos="zoom-in" data-aos-delay="100">
+                    <Col md={4} className="homepage-service-card" data-aos="zoom-in" data-aos-delay="300">
                         <Card className="mb-4">
                             <Card.Body>
                                 <Card.Title>Business Process Optimization</Card.Title>
@@ -48,7 +48,7 @@ const HomePage = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md={4} className="service-card" data-aos="zoom-in" data-aos-delay="200">
+                    <Col md={4} className="homepage-service-card" data-aos="zoom-in" data-aos-delay="400">
                         <Card className="mb-4">
                             <Card.Body>
                                 <Card.Title>Project Management</Card.Title>
@@ -56,7 +56,7 @@ const HomePage = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md={4} className="service-card" data-aos="zoom-in" data-aos-delay="300">
+                    <Col md={4} className="homepage-service-card" data-aos="zoom-in" data-aos-delay="500">
                         <Card className="mb-4">
                             <Card.Body>
                                 <Card.Title>E-commerce Solutions</Card.Title>
@@ -70,19 +70,19 @@ const HomePage = () => {
             {/* Detailed Services Section */}
             <Container className="text-center my-5">
                 <h2 data-aos="fade-up">Why Choose Us?</h2>
-                <Row className='my-5'>
-                    <Col md={4} data-aos="fade-up" data-aos-delay="100">
-                        <Image src="https://via.placeholder.com/150" roundedCircle className="mb-3" />
+                <Row className="my-5">
+                    <Col md={4} data-aos="fade-up" data-aos-delay="500">
+                        <Image src="https://via.placeholder.com/150" roundedCircle className="homepage-image mb-3" />
                         <h4>Expert Team</h4>
                         <p>Our team consists of industry experts with years of experience in their respective fields.</p>
                     </Col>
-                    <Col md={4} data-aos="fade-up" data-aos-delay="200">
-                        <Image src="https://via.placeholder.com/150" roundedCircle className="mb-3" />
+                    <Col md={4} data-aos="fade-up" data-aos-delay="500">
+                        <Image src="https://via.placeholder.com/150" roundedCircle className="homepage-image mb-3" />
                         <h4>Proven Results</h4>
                         <p>We have a track record of delivering successful projects and measurable improvements for our clients.</p>
                     </Col>
-                    <Col md={4} data-aos="fade-up" data-aos-delay="300">
-                        <Image src="https://via.placeholder.com/150" roundedCircle className="mb-3" />
+                    <Col md={4} data-aos="fade-up" data-aos-delay="500">
+                        <Image src="https://via.placeholder.com/150" roundedCircle className="homepage-image mb-3" />
                         <h4>Innovative Solutions</h4>
                         <p>We leverage the latest technologies and methodologies to provide innovative solutions to our clients.</p>
                     </Col>
@@ -99,7 +99,7 @@ const HomePage = () => {
                                 <Card.Text>
                                     "PROJXON transformed our onboarding process, reducing it from 90 days to just 14 days. This efficiency gain translated to an additional 2.5 months of revenue annually. Their expertise in process optimization is unparalleled."
                                 </Card.Text>
-                                <footer className="blockquote-footer">John Doe, CEO of XYZ Corp</footer>
+                                <div className="blockquote-footer">John Doe, CEO of XYZ Corp</div>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -109,22 +109,42 @@ const HomePage = () => {
                                 <Card.Text>
                                     "Thanks to PROJXON's innovative strategies, our operational costs decreased by 20% and our productivity improved dramatically. Their team is incredibly knowledgeable and dedicated."
                                 </Card.Text>
-                                <footer className="blockquote-footer">Jane Smith, Operations Manager at ABC Inc</footer>
+                                <div className="blockquote-footer">Jane Smith, Operations Manager at ABC Inc</div>
                             </Card.Body>
                         </Card>
                     </Col>
                 </Row>
             </Container>
 
-
-
             {/* Call to Action Section */}
-            <Container fluid className="text-center text-white call-to-action-section" data-aos="fade-up">
+            <Container fluid className=" text-white homepage-call-to-action-section" data-aos="fade-up">
                 <Row>
                     <Col>
-                        <h2>Ready to Transform Your Business?</h2>
-                        <p>Contact us today to discuss how we can help you achieve your business goals.</p>
-                        <Button variant="light" href="#contact">Contact Us</Button>
+                        <h2 className='text-center'>Ready to Transform Your Business?</h2>
+                        <p className='text-center'>Contact us today to discuss how we can help you achieve your business goals.</p>
+                        {/* Contact Form */}
+                        <Form className="homepage-contact-form mx-auto justify-content-center" style={{ maxWidth: '600px' }}>
+                            <Form.Group controlId="formName">
+                                <Form.Label>Your Name</Form.Label>
+                                <Form.Control type="text" placeholder="Enter your name" required />
+                            </Form.Group>
+
+                            <Form.Group controlId="formEmail" className="mt-3">
+                                <Form.Label>Email Address</Form.Label>
+                                <Form.Control type="email" placeholder="Enter your email" required />
+                            </Form.Group>
+
+                            <Form.Group controlId="formMessage" className="mt-3">
+                                <Form.Label>Your Message</Form.Label>
+                                <Form.Control as="textarea" rows={5} placeholder="Enter your message" required />
+                            </Form.Group>
+
+                            <div className="d-flex justify-content-center">
+                                <Button variant="light" type="submit" className="mt-4">
+                                    Submit
+                                </Button>
+                            </div>
+                        </Form>
                     </Col>
                 </Row>
             </Container>

@@ -1,0 +1,94 @@
+/* AboutPage.css */
+
+.about-hero-section {
+    background: linear-gradient(135deg, #ffd700, #000000);
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .value-card {
+    text-align: center;
+    padding: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .value-icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .team-card {
+    text-align: center;
+    border: none;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .team-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .call-to-action-section {
+    background-color: #343a40;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .call-to-action-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .call-to-action-section p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .team-card {
+      padding: 20px;
+    }
+  
+    .value-card {
+      padding: 20px;
+    }
+  }
+  

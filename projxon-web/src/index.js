@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'; // Import createRoot
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container); // Create a root
