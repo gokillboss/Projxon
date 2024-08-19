@@ -10,7 +10,7 @@ const Footer = () => {
       <Container>
         <Row>
           {/* Services Column */}
-          <Col md={2}>
+          <Col xs={6} md={2} className="mb-3">
             <h2 className="footer-heading">Services</h2>
             <ul className="list-unstyled">
               <li><a href="marketing" className="footer-link">Marketing + Social</a></li>
@@ -22,7 +22,7 @@ const Footer = () => {
           </Col>
 
           {/* About Column */}
-          <Col md={2}>
+          <Col xs={6} md={2} className="mb-3">
             <h2 className="footer-heading">About</h2>
             <ul className="list-unstyled">
               <li><a href="about" className="footer-link">Vision</a></li>
@@ -34,7 +34,7 @@ const Footer = () => {
           </Col>
 
           {/* Partnerships Column */}
-          <Col md={2}>
+          <Col xs={6} md={2} className="mb-3">
             <h2 className="footer-heading">Partnerships</h2>
             <ul className="list-unstyled">
               <li><a href="servicepartners" className="footer-link">Service Partners</a></li>
@@ -43,7 +43,7 @@ const Footer = () => {
           </Col>
 
           {/* Connect Column */}
-          <Col md={2}>
+          <Col xs={6} md={2} className="mb-3">
             <h2 className="footer-heading">Connect</h2>
             <ul className="list-unstyled">
               <li><a href="contact" className="footer-link">Contact</a></li>
@@ -55,7 +55,7 @@ const Footer = () => {
           </Col>
 
           {/* Blog & Research Column */}
-          <Col md={2}>
+          <Col xs={6} md={2} className="mb-3">
             <h2 className="footer-heading">Research</h2>
             <ul className="list-unstyled">
               <li><a href="blog" className="footer-link">Blog</a></li>
@@ -66,7 +66,7 @@ const Footer = () => {
           </Col>
 
           {/* Careers Column */}
-          <Col md={2}>
+          <Col xs={6} md={2} className="mb-3">
             <h2 className="footer-heading">Careers</h2>
             <ul className="list-unstyled">
               <li><a href="join" className="footer-link">Join Our Team</a></li>
