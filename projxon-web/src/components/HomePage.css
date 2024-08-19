@@ -14,6 +14,16 @@ body {
 }
 
 
+@media (max-width: 767px) {
+    .homepage-hero-section {
+        background-image: url('../assets/Icon-logo.png');
+        background-size: 100%; 
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+
 .homepage-hero-section::before {
     content: '';
     position: absolute;
@@ -27,13 +37,13 @@ body {
 .homepage-hero-content {
     position: relative;
     z-index: 1;
-    top: 20%;
+    top: 42%;
     transform: translateY(-50%);
 }
 
 .homepage-hero-title {
     font-size: 4rem;
-    
+    margin-bottom: 250px;
 }
 
 .homepage-hero-subtitle {

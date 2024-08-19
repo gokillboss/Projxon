@@ -10,7 +10,7 @@ const NavBar = () => {
     const handleLinkClick = () => setExpanded(false);
 
     return (
-        <div>
+        <div className='w-100'>
             <Navbar
                 bg="dark"
                 variant="dark"

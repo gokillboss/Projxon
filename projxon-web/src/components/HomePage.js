@@ -16,7 +16,6 @@ const HomePage = () => {
             <div className="homepage-hero-section">
                 <Container className="text-center text-white homepage-hero-content">
                     <h1 className="homepage-hero-title" data-aos="fade-up">Turning Chaos to Opportunity</h1>
-                    {/* <div className='pro-logo'>PROJXON</div> */}
                     <p className="homepage-hero-subtitle">Empowering medium-sized businesses to achieve their full potential.</p>
                 </Container>
             </div>
@@ -93,9 +92,9 @@ const HomePage = () => {
 
             {/* Client Testimonials */}
             <Container className="text-center my-5">
-                <h2>Client Testimonials</h2>
+                <h2 data-aos="fade-up">Client Testimonials</h2>
                 <Row>
-                    <Col md={6}>
+                    <Col md={6} data-aos="fade-up" data-aos-delay="500">
                         <Card className="mb-4">
                             <Card.Body>
                                 <Card.Text>
@@ -105,7 +104,7 @@ const HomePage = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md={6}>
+                    <Col md={6} data-aos="fade-up" data-aos-delay="500">
                         <Card className="mb-4">
                             <Card.Body>
                                 <Card.Text>

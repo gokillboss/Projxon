@@ -13,7 +13,7 @@ const AboutPage = () => {
     }, []);
 
     return (
-        <div>
+        <div className='w-100'>
             {/* Hero Section */}
             <div className="about-hero-section" data-aos="fade-in">
                 <Container className="text-center hero-content">
@@ -24,8 +24,8 @@ const AboutPage = () => {
 
             {/* Company Overview Section */}
             <Container className="my-5">
-                <Row>
-                    <Col md={6} data-aos="fade-right" className="p-4 shadow-sm rounded border">
+                <Row className='m-auto gap-6'>
+                    <Col md={6} data-aos="fade-right" className="p-4 shadow-mm rounded border">
                         <h2>Our Mission</h2>
                         <p>
                             At PROJXON, our mission is to empower medium-sized businesses to achieve their full potential through tailored solutions, innovative strategies, and expert guidance. We strive to help our clients navigate challenges, optimize operations, and drive sustainable growth.
