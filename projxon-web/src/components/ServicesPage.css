@@ -3,7 +3,7 @@
 .services-hero-section {
     background: linear-gradient(110deg, #000000, #ffffff);
     color: white;
-    padding: 120px 0;
+    padding: 20px 0;
     position: relative;
     overflow: hidden;
 }
@@ -29,15 +29,22 @@
     }
 }
 
+
+.hero-content {
+    margin-top: 100px;
+
+}
+
+
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
+
 .hero-subtitle {
     font-size: 1.5rem;
-    margin-bottom: 50px;
 }
 
 .services-container {

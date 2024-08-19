@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './AboutPage.css'; // Custom CSS file
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import InfoForm from './InfoForm';
 
 const AboutPage = () => {
 
@@ -20,7 +21,7 @@ const AboutPage = () => {
           <p className="hero-subtitle">Empowering Businesses to Reach Their Full Potential</p>
         </Container>
       </div>
-
+     
       {/* Company Overview Section */}
       <Container className="my-5">
         <Row>
@@ -120,11 +121,13 @@ const AboutPage = () => {
       </Container>
 
       {/* Company History Section */}
-      <Container className="my-5">
+      <Container className="my-5 justify-content-center">
         <h2 className="text-center mb-4" data-aos="fade-up">Our Journey</h2>
-        <Row>
+        <Row className='justify-content-center'>
+    
           <Col md={6} data-aos="fade-right">
             <h3>Milestones and Achievements</h3>
+          
             <p>
               From our humble beginnings, we have achieved numerous milestones, including expanding our client base internationally, developing proprietary solutions, and being recognized as industry leaders in business consulting. Our journey is a testament to our commitment to excellence and continuous improvement.
             </p>
@@ -133,15 +136,11 @@ const AboutPage = () => {
       </Container>
 
       {/* Call to Action Section */}
-      <Container fluid className="text-center text-white call-to-action-section" data-aos="fade-up">
-        <Row>
-          <Col>
-            <h2>Ready to Work with Us?</h2>
-            <p>Contact us today to learn how we can help your business reach its full potential.</p>
-            <a href="/contact" className="btn btn-light">Get in Touch</a>
-          </Col>
-        </Row>
-      </Container>
+      <InfoForm />
+      
+
+
+
     </div>
   );
 }

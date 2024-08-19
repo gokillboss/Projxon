@@ -1,0 +1,88 @@
+/* NavBar.css */
+
+/* General Navbar Styling */
+.navbar {
+    background-color: #343a40;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f8f9fa;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+/* Navbar Links Styling */
+.nav-link {
+    color: #f8f9fa;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Navbar Toggle Button Styling */
+.navbar-toggler {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Centering the Navbar Items */
+.navbar-collapse {
+    justify-content: center;
+}
+
+/* Fixed Top Navbar */
+.fixed-top {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    background-color: #343a40; /* Maintain background color on scroll */
+}
+
+/* Navbar on Scroll (optional: adds a shadow when scrolling down) */
+.navbar.scrolled {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: #343a40;
+        padding: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .navbar-toggler-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+/* Transition for Link Click Collapse (optional but improves UX) */
+.navbar-collapse.collapsing {
+    transition: height 0.3s ease;
+}

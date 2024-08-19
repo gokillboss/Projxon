@@ -5,12 +5,14 @@ body {
 
 .homepage-hero-section {
     background-image: url('../assets/projxonBanner.png');
+    background-color: #000;
     background-size: cover;
     background-attachment: fixed; /* Parallax effect */
     background-position: center;
     position: relative;
     height: 100vh;
 }
+
 
 .homepage-hero-section::before {
     content: '';
@@ -25,18 +27,18 @@ body {
 .homepage-hero-content {
     position: relative;
     z-index: 1;
-    top: 50%;
+    top: 20%;
     transform: translateY(-50%);
 }
 
 .homepage-hero-title {
     font-size: 4rem;
-    margin-bottom: 400px;
+    
 }
 
 .homepage-hero-subtitle {
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 .homepage-service-card {

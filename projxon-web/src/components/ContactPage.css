@@ -1,22 +1,22 @@
 
 
 .contact-hero-section {
-    background: linear-gradient(135deg, #ffd700, #000000);
+    background: linear-gradient(110deg, #000000, #ffffff);
     color: white;
-    padding: 100px 0;
-    text-align: center;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
   }
   
+
+
+
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
-    font-weight: bold;
   }
   
-  .hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-  }
+
   
   .promotional-section {
     background-color: #f8f9fa;

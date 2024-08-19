@@ -1,9 +1,10 @@
 import React from 'react';
-import { Container, Row, Col, Button, Card, Image, Form } from 'react-bootstrap';
+import { Container, Row, Col, Card, Image } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './HomePage.css'; // Custom CSS file
 import 'aos/dist/aos.css'; // Animation library
 import AOS from 'aos';
+import InfoForm from './InfoForm';
 
 AOS.init();
 
@@ -15,6 +16,7 @@ const HomePage = () => {
             <div className="homepage-hero-section">
                 <Container className="text-center text-white homepage-hero-content">
                     <h1 className="homepage-hero-title" data-aos="fade-up">Turning Chaos to Opportunity</h1>
+                    {/* <div className='pro-logo'>PROJXON</div> */}
                     <p className="homepage-hero-subtitle">Empowering medium-sized businesses to achieve their full potential.</p>
                 </Container>
             </div>
@@ -117,38 +119,7 @@ const HomePage = () => {
             </Container>
 
             {/* Call to Action Section */}
-            <Container fluid className=" text-white homepage-call-to-action-section" data-aos="fade-up">
-                <Row>
-                    <Col>
-                        <h2 className='text-center'>Ready to Transform Your Business?</h2>
-                        <p className='text-center'>Contact us today to discuss how we can help you achieve your business goals.</p>
-                        {/* Contact Form */}
-                        <Form className="homepage-contact-form mx-auto justify-content-center" style={{ maxWidth: '600px' }}>
-                            <Form.Group controlId="formName">
-                                <Form.Label>Your Name</Form.Label>
-                                <Form.Control type="text" placeholder="Enter your name" required />
-                            </Form.Group>
-
-                            <Form.Group controlId="formEmail" className="mt-3">
-                                <Form.Label>Email Address</Form.Label>
-                                <Form.Control type="email" placeholder="Enter your email" required />
-                            </Form.Group>
-
-                            <Form.Group controlId="formMessage" className="mt-3">
-                                <Form.Label>Your Message</Form.Label>
-                                <Form.Control as="textarea" rows={5} placeholder="Enter your message" required />
-                            </Form.Group>
-
-                            <div className="d-flex justify-content-center">
-                                <Button variant="light" type="submit" className="mt-4">
-                                    Submit
-                                </Button>
-                            </div>
-                        </Form>
-                    </Col>
-                </Row>
-            </Container>
-
+            <InfoForm />
         </>
     );
 }
