@@ -3,7 +3,6 @@
 /* General Navbar Styling */
 .navbar {
     background-color: #343a40;
-    padding: 1rem 1.5rem;
     transition: background-color 0.3s ease;
 }
 
@@ -15,7 +14,7 @@
 }
 
 .navbar-brand:hover {
-    color: #adb5bd;
+    color: #ffd700;
     text-decoration: none;
 }
 
@@ -23,15 +22,22 @@
 .nav-link {
     color: #f8f9fa;
     font-size: 1rem;
-    padding: 0.5rem 1rem;
+    border-radius: 5px;
     transition: color 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .nav-link:hover {
-    color: #007bff;
+    color: #ffd700;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     text-decoration: none;
+}
+
+/* Active link styling - underline the active button */
+.nav-link.active {
+    color: #ffd700;
+    text-decoration: underline; /* Underline the active link */
 }
 
 /* Navbar Toggle Button Styling */

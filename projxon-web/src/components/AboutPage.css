@@ -6,6 +6,18 @@
     padding: 20px 0;
     text-align: center;
   }
+
+  .about-hero-section::before {
+    content: '';
+    position: absolute;
+    width: 400%;
+    height: 400%;
+    top: -200%;
+    left: -200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    animation: rotate 10s linear infinite;
+}
+
   
   .hero-title {
     font-size: 3.5rem;

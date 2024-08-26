@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import './NavBar.css'
 
 const NavBar = () => {
     const [expanded, setExpanded] = useState(false);
@@ -19,29 +20,29 @@ const NavBar = () => {
                 onToggle={handleToggle}
                 className="fixed-top"
             >
-                <Navbar.Brand as={Link} to="/Projxon" className="">
+                <Navbar.Brand as={NavLink} to="/Projxon" className="">
                     PROJXON
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Container className="d-flex justify-content-center">
                         <Nav className="ml-auto">
-                            <Nav.Link as={Link} to="/services" onClick={handleLinkClick}>
+                            <Nav.Link as={NavLink} to="/services" onClick={handleLinkClick} activeClassName="active">
                                 Services
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/about" onClick={handleLinkClick}>
+                            <Nav.Link as={NavLink} to="/about" onClick={handleLinkClick} activeClassName="active">
                                 About
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/partnership" onClick={handleLinkClick}>
+                            <Nav.Link as={NavLink} to="/partnership" onClick={handleLinkClick} activeClassName="active">
                                 Partnership
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/research" onClick={handleLinkClick}>
+                            <Nav.Link as={NavLink} to="/research" onClick={handleLinkClick} activeClassName="active">
                                 Research
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/contact" onClick={handleLinkClick}>
+                            <Nav.Link as={NavLink} to="/contact" onClick={handleLinkClick} activeClassName="active">
                                 Connect
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/career" onClick={handleLinkClick}>
+                            <Nav.Link as={NavLink} to="/career" onClick={handleLinkClick} activeClassName="active">
                                 Career
                             </Nav.Link>
                         </Nav>

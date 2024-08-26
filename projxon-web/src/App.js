@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import ContactPage from './components/ContactPage';
 import PartnershipPage from './components/PartnerShipPage';
+import CareerPage from './components/CareerPage';
 import './App.css';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -22,6 +23,7 @@ const App = () => {
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/partnership" element={<PartnershipPage />} />
+                    <Route path="/career" element={<CareerPage />} />
                 </Routes>
             </div>
             <Footer />

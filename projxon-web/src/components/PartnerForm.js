@@ -1,30 +1,39 @@
 import React from 'react';
 import { Form, Button, Col } from 'react-bootstrap';
-import './InfoForm.css'; // Custom CSS file
+import './PartnerForm.css'; // Custom CSS for additional styling
 
-const InfoForm = () => {
+const PartnerForm = () => {
     return (
-        <div className="infoform-container text-white p-2" data-aos="fade-up">
-            <Col className='m-4'>
-                <h2 className="text-center">Ready to Transform Your Business?</h2>
-                <p className="text-center">Contact us today to discuss how we can help you achieve your business goals.</p>
-                {/* Contact Form */}
+        <div className="partner-form-container text-white p-2 m-auto" >
+            <Col className='mb-4'>
+                <h2 className="text-center mt-4">PARTERSHIP REQUEST</h2>
                 <Form className="infoform mx-auto justify-content-center" style={{ maxWidth: '600px' }}>
                     <Form.Group controlId="formName">
-                        <Form.Label>Your Name</Form.Label>
-                        <Form.Control type="text" placeholder="Enter your name" required />
+                        <Form.Control type="text" placeholder="Name" required />
                     </Form.Group>
 
                     <Form.Group controlId="formEmail" className="mt-3">
-                        <Form.Label>Email Address</Form.Label>
-                        <Form.Control type="email" placeholder="Enter your email" required />
+                        <Form.Control type="email" placeholder="Email" required />
+                    </Form.Group>
+
+
+                    <Form.Group controlId="formPhone" className="mt-3">
+                        <Form.Control type="phone" placeholder="Phone" required />
+                    </Form.Group>
+
+                    <Form.Group controlId="formOrganization" className="mt-3">
+                        <Form.Control type="textarea" placeholder="Organization" required />
+                    </Form.Group>
+
+                    <Form.Group controlId="formServicesNeeded" className="mt-3">
+
+                        <Form.Control type="textarea" placeholder="Services needed" required />
                     </Form.Group>
 
                     <Form.Group controlId="formMessage" className="mt-3">
                         <Form.Label>Your Message</Form.Label>
                         <Form.Control as="textarea" rows={5} placeholder="Enter your message" required />
                     </Form.Group>
-
                     <div className="d-flex justify-content-center">
                         <Button
                             variant="light"
@@ -36,9 +45,10 @@ const InfoForm = () => {
                         </Button>
                     </div>
                 </Form>
+
             </Col>
         </div>
     );
 };
 
-export default InfoForm;
+export default PartnerForm;

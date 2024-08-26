@@ -14,10 +14,7 @@ const ContactPage = () => {
 
     return (
         <div >
-
-
-            {/* Promotional Section */}
-
+        
             <div className="contact-hero-section" data-aos="fade-in">
                 <Container className="text-center">
                     <h1 className="hero-title">Contact Us</h1>

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './PartnershipPage.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import InfoForm from './InfoForm';
+import PartnerForm from './PartnerForm';
 
 AOS.init();
 
@@ -84,7 +84,9 @@ const PartnershipPage = () => {
             </Container>
 
             {/* Call to Action Section */}
-            <InfoForm />
+            <PartnerForm />
+
+            {/* Contact Form Section */}
         </div>
     );
 };

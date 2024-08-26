@@ -10,6 +10,17 @@
   }
   
 
+  .partnership-hero-section::before {
+    content: '';
+    position: absolute;
+    width: 400%;
+    height: 400%;
+    top: -200%;
+    left: -200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    animation: rotate 10s linear infinite;
+}
+
 
   .hero-content {
     position: relative;
@@ -39,29 +50,5 @@
   .partnership-card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Call to Action Section */
-  .call-to-action-section {
-    background-color: #343a40;
-    padding: 50px 0;
-  }
-  
-  .call-to-action-section h2 {
-    margin-bottom: 30px;
-  }
-  
-  .call-to-action-section p {
-    margin-bottom: 40px;
-  }
-  
-  .call-to-action-section .btn {
-    background-color: #007bff;
-    border: none;
-    transition: background-color 0.3s;
-  }
-  
-  .call-to-action-section .btn:hover {
-    background-color: #0056b3;
   }
   

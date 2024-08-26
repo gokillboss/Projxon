@@ -1,48 +1,48 @@
+/* InfoForm.css */
 
-.infoform-container {
-
+.partner-form-container {
     background-color: #343a40;
     padding: 50px 0;
 }
 
-.infoform-container h2,
-.infoform-container p {
+.partner-form-container h2,
+.partner-form-container p {
     margin-bottom: 40px;
 }
 
-.infoform {
+.partner-form {
     max-width: 600px;
     margin: 0 auto;
 }
 
-.infoform .form-label {
+.partner-form .form-label {
     color: #f8f9fa;
 }
 
-.infoform .form-control {
+.partner-form .form-control {
     background-color: #495057;
     border: 1px solid #ced4da;
     color: #f8f9fa;
 }
 
-.infoform .form-control::placeholder {
+.partner-form .form-control::placeholder {
     color: #adb5bd;
 }
 
-.infoform .form-control:focus {
+.partner-form .form-control:focus {
     background-color: #495057;
     border-color: #80bdff;
     box-shadow: none;
     color: #f8f9fa;
 }
 
-.infoform .btn {
+.partner-form .btn {
     background-color: #007bff;
     border: none;
     transition: background-color 0.3s;
 }
 
-.infoform .btn:hover {
+.partner-form .btn:hover {
     background-color: #0056b3;
 }
 
