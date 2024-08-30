@@ -19,6 +19,8 @@
     animation: rotate 10s linear infinite;
 }
 
+
+
 @keyframes rotate {
     from {
         transform: rotate(0deg);
@@ -47,9 +49,6 @@
     font-size: 1.5rem;
 }
 
-.services-container {
-    padding: 80px 0;
-}
 
 .service-card {
     background: white;
@@ -85,6 +84,7 @@
     border-radius: 50%;
     transition: background 0.3s ease-in-out;
 }
+
 
 .card-content h3 {
     font-size: 1.5rem;

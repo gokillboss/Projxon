@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './ServicesPage.css';
 import { FaCogs, FaProjectDiagram, FaShoppingCart, FaLaptopCode, FaChartLine, FaChalkboardTeacher, FaLightbulb, FaLeaf, FaSmile, FaGlobe, FaMoneyCheckAlt, FaDigitalTachograph } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import InfoForm from './InfoForm';
+import './ServicesPage.css';
 
 
 const ServicesPage = () => {
@@ -15,7 +15,7 @@ const ServicesPage = () => {
     }, []);
 
     return (
-        <div>
+        <>
             {/* Hero Section */}
             <div className="services-hero-section justify-content-md-center" data-aos="fade-in">
                 <Container className="text-center hero-content ">
@@ -196,7 +196,7 @@ const ServicesPage = () => {
             </Container>
             <InfoForm />
             
-        </div>
+        </>
     );
 }
 
