@@ -9,8 +9,8 @@ const Footer = () => {
     return (
         <footer className="bg-dark text-white py-4 footer">
             <Container>
-                <Row >
-                    <Col className="">
+                <Row>
+                    <Col>
                         <Link to="/Projxon" className="footer-logo" style={{ textDecoration: 'none', color: 'inherit' }}>
                             <h1 className="footer-logo">PROJXON</h1>
                         </Link>
@@ -36,11 +36,11 @@ const Footer = () => {
                     <Col xs={6} md={2} className="mb-3">
                         <h2 className="footer-heading">Services</h2>
                         <ul className="list-unstyled">
-                            <li><a href="marketing" className="footer-link">Marketing + Social</a></li>
-                            <li><a href="ecommerce" className="footer-link">E-commerce Solutions</a></li>
-                            <li><a href="optimization" className="footer-link">Business Optimization</a></li>
-                            <li><a href="management" className="footer-link">Project Management</a></li>
-                            <li><a href="it" className="footer-link">IT Interactions</a></li>
+                            <li><Link to="/marketing" className="footer-link">Marketing + Social</Link></li>
+                            <li><Link to="/ecommerce" className="footer-link">E-commerce Solutions</Link></li>
+                            <li><Link to="/optimization" className="footer-link">Business Optimization</Link></li>
+                            <li><Link to="/management" className="footer-link">Project Management</Link></li>
+                            <li><Link to="/it" className="footer-link">IT Interactions</Link></li>
                         </ul>
                     </Col>
 
@@ -48,11 +48,11 @@ const Footer = () => {
                     <Col xs={6} md={2} className="mb-3">
                         <h2 className="footer-heading">About</h2>
                         <ul className="list-unstyled">
-                            <li><a href="about" className="footer-link">Vision</a></li>
-                            <li><a href="about" className="footer-link">Mission</a></li>
-                            <li><a href="about" className="footer-link">Core Value</a></li>
-                            <li><a href="about" className="footer-link">Meet the Team</a></li>
-                            <li><a href="about" className="footer-link">Our Journey</a></li>
+                            <li><Link to="/about" className="footer-link">Vision</Link></li>
+                            <li><Link to="/about" className="footer-link">Mission</Link></li>
+                            <li><Link to="/about" className="footer-link">Core Value</Link></li>
+                            <li><Link to="/about" className="footer-link">Meet the Team</Link></li>
+                            <li><Link to="/about" className="footer-link">Our Journey</Link></li>
                         </ul>
                     </Col>
 
@@ -60,8 +60,8 @@ const Footer = () => {
                     <Col xs={6} md={2} className="mb-3">
                         <h2 className="footer-heading">Partnerships</h2>
                         <ul className="list-unstyled">
-                            <li><a href="servicepartners" className="footer-link">Service Partners</a></li>
-                            <li><a href="referralpartners" className="footer-link">Referral Partners</a></li>
+                            <li><Link to="/servicepartners" className="footer-link">Service Partners</Link></li>
+                            <li><Link to="/referralpartners" className="footer-link">Referral Partners</Link></li>
                         </ul>
                     </Col>
 
@@ -69,11 +69,11 @@ const Footer = () => {
                     <Col xs={6} md={2} className="mb-3">
                         <h2 className="footer-heading">Connect</h2>
                         <ul className="list-unstyled">
-                            <li><a href="contact" className="footer-link">Contact</a></li>
-                            <li><a href="social" className="footer-link">Social</a></li>
-                            <li><a href="appoint" className="footer-link">Appoint</a></li>
-                            <li><a href="inquiries" className="footer-link">Inquiries</a></li>
-                            <li><a href="address" className="footer-link">Address (Google)</a></li>
+                            <li><Link to="/contact" className="footer-link">Contact</Link></li>
+                            <li><Link to="/social" className="footer-link">Social</Link></li>
+                            <li><Link to="/appoint" className="footer-link">Appoint</Link></li>
+                            <li><Link to="/inquiries" className="footer-link">Inquiries</Link></li>
+                            <li><Link to="/address" className="footer-link">Address (Google)</Link></li>
                         </ul>
                     </Col>
 
@@ -81,10 +81,10 @@ const Footer = () => {
                     <Col xs={6} md={2} className="mb-3">
                         <h2 className="footer-heading">Research</h2>
                         <ul className="list-unstyled">
-                            <li><a href="blog" className="footer-link">Blog</a></li>
-                            <li><a href="events" className="footer-link">Events</a></li>
-                            <li><a href="articles" className="footer-link">Articles</a></li>
-                            <li><a href="newsletter" className="footer-link">Newsletter</a></li>
+                            <li><Link to="/blog" className="footer-link">Blog</Link></li>
+                            <li><Link to="/events" className="footer-link">Events</Link></li>
+                            <li><Link to="/articles" className="footer-link">Articles</Link></li>
+                            <li><Link to="/newsletter" className="footer-link">Newsletter</Link></li>
                         </ul>
                     </Col>
 
@@ -92,8 +92,8 @@ const Footer = () => {
                     <Col xs={6} md={2} className="mb-3">
                         <h2 className="footer-heading">Careers</h2>
                         <ul className="list-unstyled">
-                            <li><a href="join" className="footer-link">Join Our Team</a></li>
-                            <li><a href="internship" className="footer-link">Internship Program</a></li>
+                            <li><Link to="/join" className="footer-link">Join Our Team</Link></li>
+                            <li><Link to="/internship" className="footer-link">Internship Program</Link></li>
                         </ul>
                     </Col>
                 </Row>
@@ -101,8 +101,6 @@ const Footer = () => {
                 <Row className="mt-4">
                     <Col className="text-center">
                         <p>&copy; {new Date().getFullYear()} PROJXON. All rights reserved.</p>
-
-
                     </Col>
                 </Row>
             </Container>

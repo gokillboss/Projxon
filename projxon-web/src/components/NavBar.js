@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import './NavBar.css'
+import './NavBar.css';
 
 const NavBar = () => {
     const [expanded, setExpanded] = useState(false);
@@ -20,29 +20,59 @@ const NavBar = () => {
                 onToggle={handleToggle}
                 className="fixed-top"
             >
-                <Navbar.Brand as={NavLink} to="/Projxon" className="">
+                <Navbar.Brand as={NavLink} to="/Projxon">
                     PROJXON
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Container className="d-flex justify-content-center">
                         <Nav className="ml-auto">
-                            <Nav.Link as={NavLink} to="/services" onClick={handleLinkClick} activeClassName="active">
+                            <Nav.Link 
+                                as={NavLink} 
+                                to="/services" 
+                                onClick={handleLinkClick} 
+                                className={({ isActive }) => isActive ? "active" : ""}
+                            >
                                 Services
                             </Nav.Link>
-                            <Nav.Link as={NavLink} to="/about" onClick={handleLinkClick} activeClassName="active">
+                            <Nav.Link 
+                                as={NavLink} 
+                                to="/about" 
+                                onClick={handleLinkClick} 
+                                className={({ isActive }) => isActive ? "active" : ""}
+                            >
                                 About
                             </Nav.Link>
-                            <Nav.Link as={NavLink} to="/partnership" onClick={handleLinkClick} activeClassName="active">
+                            <Nav.Link 
+                                as={NavLink} 
+                                to="/partnership" 
+                                onClick={handleLinkClick} 
+                                className={({ isActive }) => isActive ? "active" : ""}
+                            >
                                 Partnership
                             </Nav.Link>
-                            <Nav.Link as={NavLink} to="/research" onClick={handleLinkClick} activeClassName="active">
+                            <Nav.Link 
+                                as={NavLink} 
+                                to="/research" 
+                                onClick={handleLinkClick} 
+                                className={({ isActive }) => isActive ? "active" : ""}
+                            >
                                 Research
                             </Nav.Link>
-                            <Nav.Link as={NavLink} to="/contact" onClick={handleLinkClick} activeClassName="active">
+                            <Nav.Link 
+                                as={NavLink} 
+                                to="/contact" 
+                                onClick={handleLinkClick} 
+                                className={({ isActive }) => isActive ? "active" : ""}
+                            >
                                 Connect
                             </Nav.Link>
-                            <Nav.Link as={NavLink} to="/career" onClick={handleLinkClick} activeClassName="active">
+                            <Nav.Link 
+                                as={NavLink} 
+                                to="/career" 
+                                onClick={handleLinkClick} 
+                                className={({ isActive }) => isActive ? "active" : ""}
+                            >
                                 Career
                             </Nav.Link>
                         </Nav>
