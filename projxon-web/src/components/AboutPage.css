@@ -5,15 +5,45 @@
     color: white;
     padding: 20px 0;
     text-align: center;
+    height: 15rem;
 }
 
-.hero-title {
+
+.about-hero-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    animation: rotate 10s linear infinite;
+}
+
+.about-hero-section h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
-.hero-subtitle {
+.about-hero-content {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.about-hero-title {
+    margin: 20px;
+    padding-top: 10px;
+}
+
+.about-hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 40px;
 }

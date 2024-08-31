@@ -16,9 +16,9 @@ const AboutPage = () => {
         <div className="about-page">
             {/* Hero Section */}
             <div className="about-hero-section" data-aos="fade-in">
-                <Container className="text-center hero-content">
-                    <h1 className="hero-title">About PROJXON</h1>
-                    <p className="hero-subtitle">Empowering Businesses to Reach Their Full Potential</p>
+                <Container className="text-center about-hero-content">
+                    <h1 className="about-hero-title">About PROJXON</h1>
+                    <p className="about-hero-subtitle">Empowering Businesses to Reach Their Full Potential</p>
                 </Container>
             </div>
 
@@ -116,9 +116,9 @@ const AboutPage = () => {
             {/* Our Team Section */}
             <Container className="my-5">
                 <h2 className="text-center mb-4" data-aos="fade-up">Meet Our Team</h2>
-                <Row>
+                <Row className='my-4'>
                     <Col md={4} data-aos="fade-up" data-aos-delay="100">
-                        <Card className="team-card align-items-center">
+                        <Card className="team-card align-items-center my-3">
                             <Image src="https://via.placeholder.com/150" roundedCircle className="team-image" />
                             <Card.Body>
                                 <Card.Title>John Doe</Card.Title>
@@ -127,7 +127,7 @@ const AboutPage = () => {
                         </Card>
                     </Col>
                     <Col md={4} data-aos="fade-up" data-aos-delay="200">
-                        <Card className="team-card align-items-center">
+                        <Card className="team-card align-items-center my-3">
                             <Image src="https://via.placeholder.com/150" roundedCircle className="team-image" />
                             <Card.Body>
                                 <Card.Title>Jane Smith</Card.Title>
@@ -136,7 +136,7 @@ const AboutPage = () => {
                         </Card>
                     </Col>
                     <Col md={4} data-aos="fade-up" data-aos-delay="300">
-                        <Card className="team-card align-items-center">
+                        <Card className="team-card align-items-center my-3">
                             <Image src="https://via.placeholder.com/150" roundedCircle className="team-image" />
                             <Card.Body>
                                 <Card.Title>Emily Johnson</Card.Title>

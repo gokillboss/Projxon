@@ -1,55 +1,76 @@
-
-
 .contact-hero-section {
     background: linear-gradient(135deg, #ffd700, #000000);
     color: white;
     padding: 40px 0;
     position: relative;
     overflow: hidden;
+}
+
+
+
+.contact-hero-section::before {
+    content: '';
+    position: absolute;
+    width: 400%;
+    height: 400%;
+    top: -200%;
+    left: -200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    animation: rotate 10s linear infinite;
+}
+
+
+body {
+    overflow-x: hidden;
   }
-  
 
-
-
-  .hero-title {
+.contact-hero-title {
     font-size: 3rem;
     margin-bottom: 20px;
-  }
-  
+}
 
-  
-  .promotional-section {
+
+.value-card,
+.team-card {
+    text-align: center;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.promotional-section {
     background-color: #f8f9fa;
     padding: 40px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding-top: 50px;
-  }
-  
-  .promotional-section h2 {
+}
+
+.promotional-section h2 {
     margin-bottom: 20px;
     font-size: 2rem;
-  }
-  
-  .promotional-section p {
+}
+
+.promotional-section p {
     font-size: 1.2rem;
     color: #555;
-  }
-  
+}
 
-  
-  
-  @media (max-width: 768px) {
+
+
+
+@media (max-width: 768px) {
     .hero-title {
-      font-size: 2rem;
+        font-size: 2rem;
     }
-  
+
     .promotional-section h2 {
-      font-size: 1.8rem;
+        font-size: 1.8rem;
     }
-  
+
     .promotional-section p {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  }
-  
+}

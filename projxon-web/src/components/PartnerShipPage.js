@@ -13,9 +13,9 @@ const PartnershipPage = () => {
         <div>
             {/* Hero Section */}
             <div className="partnership-hero-section" data-aos="fade-in">
-                <Container className="text-center hero-content">
-                    <h1 className="hero-title">Partner with PROJXON</h1>
-                    <p className="hero-subtitle">Collaborate with us to drive success and innovation.</p>
+                <Container className="text-center partnership-hero-content">
+                    <h1 className="partnership-hero-title">Partner with PROJXON</h1>
+                    <p className="partnership-hero-subtitle">Collaborate with us to drive success and innovation.</p>
                 </Container>
             </div>
 

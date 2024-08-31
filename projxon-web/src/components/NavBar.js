@@ -15,7 +15,7 @@ const NavBar = () => {
             <Navbar
                 bg="dark"
                 variant="dark"
-                expand="lg"
+                expand="md"
                 expanded={expanded}
                 onToggle={handleToggle}
                 className="fixed-top"

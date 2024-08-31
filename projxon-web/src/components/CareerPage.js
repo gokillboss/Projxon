@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './CareerPage.css'; // Custom CSS for styling
-import internPic from '../assets/internPic.png'; // Importing the image correctly
+import './CareerPage.css'; 
+import internPic from '../assets/internPic.png'; 
 import InfoForm from './InfoForm';
 
 const CareerPage = () => {
@@ -22,7 +22,8 @@ const CareerPage = () => {
 
             <Container className="intern-section my-5">
                 <Row className="align-items-center">
-                    <Col md={6} data-aos="fade-right" data-aos-delay="200" data-aos-duration="1200">
+                    <Col xs={12} md={6} data-aos="fade-right" data-aos-delay="200" data-aos-duration="1200" className='left
+                    '>
                         <h2>Future-Proof Your Career</h2>
                         <p className="my-3" data-aos="fade-up" data-aos-delay="300">
                             At PROJXON, we help young professionals realize their full potential while building their personal brand and understanding their value. Are you ready to launch your career in strategic consulting and digital marketing?
@@ -42,17 +43,23 @@ const CareerPage = () => {
                         <p className="my-3" data-aos="fade-up" data-aos-delay="700">
                             Discover the power of tailored strategies and make your mark with PROJXON. As part of our team, you'll contribute to strategies that drive sustainable growth for our clients. This is your opportunity to forge long-lasting partnerships and be part of a team that values growth, productivity, and commercialization.
                         </p>
-
-                       
                     </Col>
-                    <Col md={6} data-aos="fade-left" data-aos-delay="500" data-aos-duration="1200">
-                        <Card className="image-card" data-aos="zoom-in" data-aos-delay="600">
-                            <Card.Img variant="top" src={internPic} alt="Internship" className="rounded" />
+
+                    <Col xs={12} md={6} className="mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <Card className="">
+                            <div className="">
+                                <i className="fas fa-balance-scale"></i>
+                            </div>
+                            <Card.Body>
+                                <Card className="">
+                                    <Card.Img variant="top" src={internPic} alt="Promotional" fluid rounded />
+                                </Card>
+                            </Card.Body>
                         </Card>
                     </Col>
                 </Row>
             </Container>
-            <InfoForm />
+            <InfoForm/>
         </div>
     );
 };
