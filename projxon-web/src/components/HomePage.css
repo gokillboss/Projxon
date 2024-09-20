@@ -36,7 +36,7 @@ body {
 .homepage-hero-content {
     position: relative;
     z-index: 1;
-    top: 20%;
+    top: 48%;
     transform: translateY(-50%);
 }
 
