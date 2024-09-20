@@ -16,7 +16,7 @@ const HomePage = () => {
             <div className="homepage-hero-section">
                 <Container className="text-center text-white homepage-hero-content">
                     <h1 className="homepage-hero-title" data-aos="fade-up">Turning Chaos to Opportunity</h1>
-                    <p className="homepage-hero-subtitle">Empowering medium-sized businesses to achieve their full potential.</p>
+                    {/* <p className="homepage-hero-subtitle">Empowering medium-sized businesses to achieve their full potential.</p> */}
                 </Container>
             </div>
 

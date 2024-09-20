@@ -1,9 +1,41 @@
 /* CareerPage.css */
 
 .career-page-container {
-    background-color: #000;
-    color: #fff;
-    padding: 2rem;
-    min-height: 100vh;
+    background: linear-gradient(135deg, #ffd700, #000000);
+    color: white;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+    height: 15rem;
 }
 
+.career-hero-section {
+    background: linear-gradient(135deg, #ffd700, #000000);
+    color: white;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+    height: 15rem;
+
+}
+
+
+
+.career-hero-section::before {
+    content: '';
+    position: absolute;
+    width: 400%;
+    height: 400%;
+    top: -200%;
+    left: -200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    animation: rotate 10s linear infinite;
+}
+
+
+
+
+.career-hero-title {
+    margin: 20px;
+    padding-top: 10px;
+}

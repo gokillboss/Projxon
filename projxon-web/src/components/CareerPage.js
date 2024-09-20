@@ -14,9 +14,9 @@ const CareerPage = () => {
 
     return (
         <div>
-            <div className="contact-hero-section" data-aos="fade-in" data-aos-duration="1500">
+            <div className="career-hero-section" data-aos="fade-in" data-aos-duration="1500">
                 <Container className="text-center">
-                    <h1 className="hero-title">Join Our Team</h1>
+                    <h1 className="career-hero-title">Join Our Team</h1>
                 </Container>
             </div>
 

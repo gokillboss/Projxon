@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import ContactPage from './components/ContactPage';
 import PartnershipPage from './components/PartnerShipPage';
 import CareerPage from './components/CareerPage';
+import ResearchPage from './components/ResearchPage';
 import './App.css';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -25,6 +26,7 @@ const App = () => {
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/partnership" element={<PartnershipPage />} />
                     <Route path="/career" element={<CareerPage />} />
+                    <Route path="/research" element={<ResearchPage />} />
                 </Routes>
             </div>
             <Footer />
