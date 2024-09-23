@@ -34,7 +34,7 @@ const HomePage = () => {
                             ></iframe>
                         </div>
                     </Col>
-                </Row>
+                </Row> 
             </Container>
 
 
