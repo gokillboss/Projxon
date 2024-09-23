@@ -4,6 +4,7 @@
     padding: 40px 0;
     position: relative;
     overflow: hidden;
+    height: 15rem;
 }
 
 
@@ -25,8 +26,8 @@ body {
   }
 
 .contact-hero-title {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    margin: 20px;
+    padding-top: 10px;
 }
 
 
