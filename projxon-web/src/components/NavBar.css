@@ -11,7 +11,7 @@
     font-weight: bold;
     color: #f8f9fa;
     transition: color 0.3s ease;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
 }
 
 .navbar-brand:hover {
