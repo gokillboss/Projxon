@@ -15,10 +15,10 @@ body {
 
 @media (max-width: 767px) {
     .homepage-hero-section {
-        /* background-image: url('../assets/Icon-logo.png'); */
+        background-image: url('../assets/Icon-logo.png');
         background-size: 100%; 
         background-position: center;
-        background-attachment: fixed;
+        background-repeat: no-repeat;
     }
 }
 
@@ -84,4 +84,22 @@ body {
     margin-top: auto;
     font-size: 1.2rem;
     color: #6c757d;
+}
+
+
+@media (max-width: 780px) {
+    .homepage-hero-title {
+        font-size: 1.1rem;
+        margin-bottom: 150px;
+    }
+    
+    .homepage-hero-subtitle {
+        font-size: 1rem;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .homepage-hero-section {
+        background-size: 90%; 
+    }
 }
