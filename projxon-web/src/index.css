@@ -1,11 +1,11 @@
 html{
-  font-family: "Geologica", system-ui, sans-serif;
+  font-family: "Geologica", 'Roboto', system-ui, sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Geologica", system-ui, sans-serif;
+  font-family: "Geologica", 'Roboto', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
