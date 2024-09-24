@@ -10,6 +10,7 @@ import PartnershipPage from './components/PartnerShipPage';
 import CareerPage from './components/CareerPage';
 import ResearchPage from './components/ResearchPage';
 import './App.css';
+import "./index.css";
 import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {

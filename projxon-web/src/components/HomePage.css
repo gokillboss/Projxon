@@ -15,7 +15,7 @@ body {
 
 @media (max-width: 767px) {
     .homepage-hero-section {
-        background-image: url('../assets/Icon-logo.png');
+        /* background-image: url('../assets/Icon-logo.png'); */
         background-size: 100%; 
         background-position: center;
         background-attachment: fixed;
