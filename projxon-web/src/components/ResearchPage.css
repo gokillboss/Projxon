@@ -85,6 +85,18 @@
     border-color: #ffc107;
 }
 
+.blog-img{
+    height: 300px;
+}
+
+.card-excerpt{
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical; 
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .research-hero-section {

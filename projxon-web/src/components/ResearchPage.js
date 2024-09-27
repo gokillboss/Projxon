@@ -1,9 +1,62 @@
 import React from 'react';
+import { useState, useEffect } from "react"
+
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import InfoForm from './InfoForm';
+import axios from 'axios';
+import DOMPurify from 'dompurify';
+
 import './ResearchPage.css';
 
 const ResearchPage = () => {
+
+    const [blogs, setBlogs] = useState([])
+
+    const cleanContent = (content) => {
+        const sanitizedHtml = DOMPurify.sanitize(content)
+
+        // Parse the content to extract the image src from <figure>
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(sanitizedHtml, 'text/html');
+        const figureImg = doc.querySelector('figure img');  // Selects the image inside <figure>
+
+        let imgSrc = ''
+        if (figureImg) {
+            imgSrc = figureImg.getAttribute('src')
+        }
+
+
+        return { sanitizedHtml, imgSrc }
+    };
+
+    const cleanExcerpt = (excerpt) => {
+        return DOMPurify.sanitize(excerpt);
+    };
+    
+    const formatDate = (date) => {
+        const dateObj = new Date(date);
+
+        const options = { year: 'numeric', month: 'short', day: 'numeric' };
+        const formattedDate = dateObj.toLocaleDateString('en-US', options);
+        return formattedDate
+    }
+
+    useEffect(() => {
+        const fetchBlogs = async () => {
+            try{
+                const response = await axios.get('http://projxon.local/wp-json/wp/v2/posts?_embed')
+                setBlogs(response.data)
+            }
+            catch(error){
+                console.log(error)
+            }
+
+        }
+        fetchBlogs()
+
+    }, [])
+
+
     return (
         <>
             {/* Hero Section */}
@@ -55,6 +108,49 @@ const ResearchPage = () => {
                     </Col>
                 </Row>
             </Container>
+
+            <Container className="my-5 container">
+
+
+                <h2>Recent Posts</h2>
+                <ul className="list-unstyled row row-cols-1 row-cols-md-2 row-cols-lg-3">
+
+                    {blogs && blogs.map((blog) => {
+                        
+                        const { sanitizedHtml, imgSrc } = cleanContent(blog.content.rendered)
+                        const sanitizedExcerpt = cleanExcerpt(blog.excerpt.rendered)
+                        return (
+                                <li key={blog.id} className="col mb-4 d-flex align-items-stretch">          
+                                <Card className='overflow-hidden'>
+                                <Card.Img 
+                                    variant="top" 
+                                    className="blog-img w-100 object-fit-cover" 
+                                    src={imgSrc} 
+                                    alt={blog.title.rendered} 
+                                />
+                                <Card.Body>
+                                    <Card.Title className='mb-0'>{blog.title.rendered}</Card.Title>
+                                    <div className='d-flex align-items-center gap-2 mt-1'>
+                                        <span className='text-muted'>{blog._embedded.author[0].name}</span>
+                                        <span className='text-muted dot-seperator '>·</span>
+                                        <span className='text-muted'>{formatDate(blog.date)}</span>
+                                    </div>
+                                    <div className='clamped-container py-4'>
+                                        <div dangerouslySetInnerHTML={{ __html: sanitizedExcerpt }}  className='card-excerpt text-muted'/>
+
+
+                                    </div>
+
+
+                                    <Button variant="primary">Read More</Button>
+                                </Card.Body>
+                                </Card>
+                            </li>
+                        )
+                    })}
+                </ul> 
+            </Container>
+
 
             {/* Footer CTA Section */}
             <div className="research-footer-cta text-center py-5">
