@@ -9,6 +9,8 @@ import ContactPage from './components/ContactPage';
 import PartnershipPage from './components/PartnerShipPage';
 import CareerPage from './components/CareerPage';
 import ResearchPage from './components/ResearchPage';
+import BlogPage from './components/BlogPage';
+
 import './App.css';
 import "./index.css";
 import ScrollToTop from './components/ScrollToTop';
@@ -28,6 +30,7 @@ const App = () => {
                     <Route path="/partnership" element={<PartnershipPage />} />
                     <Route path="/career" element={<CareerPage />} />
                     <Route path="/research" element={<ResearchPage />} />
+                    <Route path="/research/:blogId" element={<BlogPage />}/>
                 </Routes>
             </div>
             <Footer />

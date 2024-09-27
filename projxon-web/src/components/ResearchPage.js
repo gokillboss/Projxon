@@ -5,6 +5,7 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import InfoForm from './InfoForm';
 import axios from 'axios';
 import DOMPurify from 'dompurify';
+import { Link } from 'react-router-dom'
 
 import './ResearchPage.css';
 
@@ -108,10 +109,10 @@ const ResearchPage = () => {
                     </Col>
                 </Row>
             </Container>
+            
 
+            {/* Recent Blogs Section */}
             <Container className="my-5 container">
-
-
                 <h2>Recent Posts</h2>
                 <ul className="list-unstyled row row-cols-1 row-cols-md-2 row-cols-lg-3">
 
@@ -122,28 +123,26 @@ const ResearchPage = () => {
                         return (
                                 <li key={blog.id} className="col mb-4 d-flex align-items-stretch">          
                                 <Card className='overflow-hidden'>
-                                <Card.Img 
-                                    variant="top" 
-                                    className="blog-img w-100 object-fit-cover" 
-                                    src={imgSrc} 
-                                    alt={blog.title.rendered} 
-                                />
-                                <Card.Body>
-                                    <Card.Title className='mb-0'>{blog.title.rendered}</Card.Title>
-                                    <div className='d-flex align-items-center gap-2 mt-1'>
-                                        <span className='text-muted'>{blog._embedded.author[0].name}</span>
-                                        <span className='text-muted dot-seperator '>·</span>
-                                        <span className='text-muted'>{formatDate(blog.date)}</span>
-                                    </div>
-                                    <div className='clamped-container py-4'>
-                                        <div dangerouslySetInnerHTML={{ __html: sanitizedExcerpt }}  className='card-excerpt text-muted'/>
-
-
-                                    </div>
-
-
-                                    <Button variant="primary">Read More</Button>
-                                </Card.Body>
+                                    <Card.Img 
+                                        variant="top" 
+                                        className="blog-img w-100 object-fit-cover" 
+                                        src={imgSrc} 
+                                        alt={blog.title.rendered} 
+                                    />
+                                    <Card.Body>
+                                        <Card.Title className='mb-0'>{blog.title.rendered}</Card.Title>
+                                        <div className='d-flex align-items-center gap-2 mt-1'>
+                                            <span className='text-muted'>{blog._embedded.author[0].name}</span>
+                                            <span className='text-muted dot-seperator fs-6'>•</span>
+                                            <span className='text-muted'>{formatDate(blog.date)}</span>
+                                        </div>
+                                        <div className='clamped-container py-4'>
+                                            <div dangerouslySetInnerHTML={{ __html: sanitizedExcerpt }}  className='card-excerpt text-muted'/>
+                                        </div>
+                                        <Link key={blog.id} to={`/research/${blog.id}`} className="mt-5">
+                                            <Button variant="primary blog-button">Read More</Button>
+                                        </Link>
+                                    </Card.Body>
                                 </Card>
                             </li>
                         )

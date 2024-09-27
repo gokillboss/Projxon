@@ -85,8 +85,18 @@
     border-color: #ffc107;
 }
 
+.blog-button.btn-primary {
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.blog-button.btn-primary:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
 .blog-img{
-    height: 300px;
+    height: 250px;
 }
 
 .card-excerpt{
