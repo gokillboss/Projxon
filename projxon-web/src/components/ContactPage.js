@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './ContactPage.css'; // Custom CSS file
+import './ContactPage.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import contactPic from '../assets/contact.jpg'; // Importing the image correctly
+import contactPic from '../assets/contact.jpg';
 import InfoForm from './InfoForm';
 
 const ContactPage = () => {

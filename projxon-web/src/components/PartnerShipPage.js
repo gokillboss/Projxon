@@ -83,10 +83,8 @@ const PartnershipPage = () => {
                 </Row>
             </Container>
 
-            {/* Call to Action Section */}
-            <PartnerForm />
-
             {/* Contact Form Section */}
+            <PartnerForm />
         </div>
     );
 };
