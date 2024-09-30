@@ -40,7 +40,12 @@ const BlogPage = () => {
     useEffect(() => {
         const fetchBlog = async () => {
             try{
-                const response = await axios.get(`http://projxon.local/wp-json/wp/v2/posts/${blogId}?_embed`)
+                const response = await axios.get(`https://real-smash.localsite.io/wp-json/wp/v2/posts/${blogId}?_embed`, {
+                    auth: {
+                        username: 'produce',
+                        password: 'instinctive'
+                    }
+                })
                 setBlog(response.data)
             }
             catch(error){
@@ -69,7 +74,7 @@ const BlogPage = () => {
                     <h2>{blog.title.rendered}</h2>
                     <h5>{blog._embedded.author[0].name}</h5>
                     <p>{formatDate(blog.date)}</p>
-
+                    
                     <div dangerouslySetInnerHTML={{ __html: sanitizedHtml }} />
 
             

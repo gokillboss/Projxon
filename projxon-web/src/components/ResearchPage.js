@@ -27,7 +27,7 @@ const ResearchPage = () => {
         }
 
 
-        return { sanitizedHtml, imgSrc }
+        return { imgSrc }
     };
 
     const cleanExcerpt = (excerpt) => {
@@ -45,7 +45,12 @@ const ResearchPage = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             try{
-                const response = await axios.get('http://projxon.local/wp-json/wp/v2/posts?_embed')
+                const response = await axios.get('https://real-smash.localsite.io/wp-json/wp/v2/posts?_embed', {
+                    auth: {
+                        username: process.env.REACT_APP_API_USERNAME,
+                        password: process.env.REACT_APP_API_PASSWORD
+                    }
+                })
                 setBlogs(response.data)
             }
             catch(error){
@@ -118,15 +123,22 @@ const ResearchPage = () => {
 
                     {blogs && blogs.map((blog) => {
                         
-                        const { sanitizedHtml, imgSrc } = cleanContent(blog.content.rendered)
+                        const { imgSrc } = cleanContent(blog.content.rendered)
                         const sanitizedExcerpt = cleanExcerpt(blog.excerpt.rendered)
+                        const featuredMedia = blog._embedded['wp:featuredmedia'];
+                        let sourceUrl = ''
+
+                        if (featuredMedia && featuredMedia.length > 0) {
+                            sourceUrl = featuredMedia[0].source_url
+                        }
+
                         return (
                                 <li key={blog.id} className="col mb-4 d-flex align-items-stretch">          
                                 <Card className='overflow-hidden'>
                                     <Card.Img 
                                         variant="top" 
                                         className="blog-img w-100 object-fit-cover" 
-                                        src={imgSrc} 
+                                        src={sourceUrl != null && imgSrc} 
                                         alt={blog.title.rendered} 
                                     />
                                     <Card.Body>
