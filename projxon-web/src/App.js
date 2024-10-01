@@ -1,19 +1,20 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import HomePage from './components/HomePage';
-import ServicesPage from './components/ServicesPage';
-import AboutPage from './components/AboutPage';
+import HomePage from './pages/HomePage';
+import ServicesPage from './pages/ServicesPage';
+import AboutPage from './pages/AboutPage';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import ContactPage from './components/ContactPage';
-import PartnershipPage from './components/PartnerShipPage';
-import CareerPage from './components/CareerPage';
-import ResearchPage from './components/ResearchPage';
-import BlogPage from './components/BlogPage';
+import ContactPage from './pages/ContactPage';
+import PartnershipPage from './pages/PartnerShipPage';
+import CareerPage from './pages/CareerPage';
+import ResearchPage from './pages/ResearchPage';
+import BlogPage from './pages/BlogPage';
 
 import './App.css';
 import "./index.css";
 import ScrollToTop from './components/ScrollToTop';
+
 
 const App = () => {
     return (

@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react"
 
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import InfoForm from './InfoForm';
+import InfoForm from '../components/InfoForm';
 import axios from 'axios';
 import DOMPurify from 'dompurify';
 import { Link } from 'react-router-dom'

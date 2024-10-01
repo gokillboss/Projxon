@@ -3,9 +3,9 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './CareerPage.css'; 
-import internPic from '../assets/internPic.png'; 
-import InfoForm from './InfoForm';
+import './CareerPage.css';
+import internPic from '../assets/internPic.png';
+import InfoForm from '../components/InfoForm';
 
 const CareerPage = () => {
     useEffect(() => {
@@ -59,7 +59,7 @@ const CareerPage = () => {
                     </Col>
                 </Row>
             </Container>
-            <InfoForm/>
+            <InfoForm />
         </div>
     );
 };

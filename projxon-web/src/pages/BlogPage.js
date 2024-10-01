@@ -64,7 +64,7 @@ const BlogPage = () => {
         return <div></div>;
     }
 
-    const { sanitizedHtml, imgSrc } = cleanContent(blog.content.rendered)
+    const { sanitizedHtml } = cleanContent(blog.content.rendered)
 
     return (
         <>    
@@ -74,7 +74,7 @@ const BlogPage = () => {
                     <h2>{blog.title.rendered}</h2>
                     <h5>{blog._embedded.author[0].name}</h5>
                     <p>{formatDate(blog.date)}</p>
-                    
+
                     <div dangerouslySetInnerHTML={{ __html: sanitizedHtml }} />
 
             

@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, Image } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import InfoForm from './InfoForm';
+import InfoForm from '../components/InfoForm';
 import './AboutPage.css';
 
 const AboutPage = () => {

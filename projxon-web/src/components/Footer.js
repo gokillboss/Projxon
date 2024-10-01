@@ -3,7 +3,7 @@ import { FaEnvelope, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
-import './Footer.css'; // Custom CSS file
+import './Footer.css';
 
 const Footer = () => {
     return (
@@ -36,11 +36,11 @@ const Footer = () => {
                     <Col xs={6} md={2} className="mb-3">
                         <h2 className="footer-heading">Services</h2>
                         <ul className="list-unstyled">
-                            <li><Link to="/marketing" className="footer-link">Marketing + Social</Link></li>
-                            <li><Link to="/ecommerce" className="footer-link">E-commerce Solutions</Link></li>
-                            <li><Link to="/optimization" className="footer-link">Business Optimization</Link></li>
-                            <li><Link to="/management" className="footer-link">Project Management</Link></li>
-                            <li><Link to="/it" className="footer-link">IT Interactions</Link></li>
+                            <li><Link to="/services" className="footer-link">Marketing + Social</Link></li>
+                            <li><Link to="/services" className="footer-link">E-commerce Solutions</Link></li>
+                            <li><Link to="/services" className="footer-link">Business Optimization</Link></li>
+                            <li><Link to="/services" className="footer-link">Project Management</Link></li>
+                            <li><Link to="/services" className="footer-link">IT Interactions</Link></li>
                         </ul>
                     </Col>
 
@@ -70,10 +70,10 @@ const Footer = () => {
                         <h2 className="footer-heading">Connect</h2>
                         <ul className="list-unstyled">
                             <li><Link to="/contact" className="footer-link">Contact</Link></li>
-                            <li><Link to="/social" className="footer-link">Social</Link></li>
-                            <li><Link to="/appoint" className="footer-link">Appoint</Link></li>
-                            <li><Link to="/inquiries" className="footer-link">Inquiries</Link></li>
-                            <li><Link to="/address" className="footer-link">Address (Google)</Link></li>
+                            <li><Link to="/contact" className="footer-link">Social</Link></li>
+                            <li><Link to="/contact" className="footer-link">Appoint</Link></li>
+                            <li><Link to="/contact" className="footer-link">Inquiries</Link></li>
+                            <li><Link to="/contact" className="footer-link">Address (Google)</Link></li>
                         </ul>
                     </Col>
 
@@ -81,10 +81,10 @@ const Footer = () => {
                     <Col xs={6} md={2} className="mb-3">
                         <h2 className="footer-heading">Research</h2>
                         <ul className="list-unstyled">
-                            <li><Link to="/blog" className="footer-link">Blog</Link></li>
-                            <li><Link to="/events" className="footer-link">Events</Link></li>
-                            <li><Link to="/articles" className="footer-link">Articles</Link></li>
-                            <li><Link to="/newsletter" className="footer-link">Newsletter</Link></li>
+                            <li><Link to="/research" className="footer-link">Blog</Link></li>
+                            <li><Link to="/research" className="footer-link">Events</Link></li>
+                            <li><Link to="/research" className="footer-link">Articles</Link></li>
+                            <li><Link to="/research" className="footer-link">Newsletter</Link></li>
                         </ul>
                     </Col>
 
@@ -92,8 +92,8 @@ const Footer = () => {
                     <Col xs={6} md={2} className="mb-3">
                         <h2 className="footer-heading">Careers</h2>
                         <ul className="list-unstyled">
-                            <li><Link to="/join" className="footer-link">Join Our Team</Link></li>
-                            <li><Link to="/internship" className="footer-link">Internship Program</Link></li>
+                            <li><Link to="/career" className="footer-link">Join Our Team</Link></li>
+                            <li><Link to="/career" className="footer-link">Internship Program</Link></li>
                         </ul>
                     </Col>
                 </Row>
