@@ -5,7 +5,7 @@ import './ContactPage.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import contactPic from '../assets/contact.jpg';
-import InfoForm from './InfoForm';
+import InfoForm from '../components/InfoForm';
 
 const ContactPage = () => {
     useEffect(() => {
@@ -62,7 +62,7 @@ const ContactPage = () => {
             </Container>
 
 
-    
+
             {/* Contact Form Section */}
             <InfoForm />
 

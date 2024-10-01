@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './PartnershipPage.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import PartnerForm from './PartnerForm';
+import PartnerForm from '../components/PartnerForm';
 
 AOS.init();
 
