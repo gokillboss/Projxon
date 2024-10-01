@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaCogs, FaProjectDiagram, FaShoppingCart, FaLaptopCode, FaChartLine, FaChalkboardTeacher, FaLightbulb, FaLeaf, FaSmile, FaGlobe, FaMoneyCheckAlt, FaDigitalTachograph } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import InfoForm from './InfoForm';
+import InfoForm from '../components/InfoForm';
 import './ServicesPage.css';
 
 
@@ -163,7 +163,7 @@ const ServicesPage = () => {
                             </div>
                         </Card>
                     </Col>
-                    
+
                 </Row>
 
                 <Row>
@@ -196,7 +196,7 @@ const ServicesPage = () => {
 
             </Container>
             <InfoForm />
-            
+
         </>
     );
 }
