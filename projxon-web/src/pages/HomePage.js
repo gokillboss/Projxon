@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './HomePage.css'; // Custom CSS file
 import 'aos/dist/aos.css'; // Animation library
 import AOS from 'aos';
-import InfoForm from './InfoForm';
+import InfoForm from '../components/InfoForm';
 
 AOS.init();
 
@@ -34,7 +34,7 @@ const HomePage = () => {
                             ></iframe>
                         </div>
                     </Col>
-                </Row> 
+                </Row>
             </Container>
 
 

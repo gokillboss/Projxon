@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import InfoForm from './InfoForm';
+import InfoForm from '../components/InfoForm';
 import './ResearchPage.css';
 
 const ResearchPage = () => {
