@@ -5,7 +5,9 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import InfoForm from '../components/InfoForm';
 import axios from 'axios';
 import DOMPurify from 'dompurify';
+import { getPosts } from '../services/api'
 import { Link } from 'react-router-dom'
+
 
 import './ResearchPage.css';
 
@@ -45,13 +47,8 @@ const ResearchPage = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             try{
-                const response = await axios.get('https://real-smash.localsite.io/wp-json/wp/v2/posts?_embed', {
-                    auth: {
-                        username: process.env.REACT_APP_API_USERNAME,
-                        password: process.env.REACT_APP_API_PASSWORD
-                    }
-                })
-                setBlogs(response.data)
+                const response = await getPosts()
+                setBlogs(response)
             }
             catch(error){
                 console.log(error)

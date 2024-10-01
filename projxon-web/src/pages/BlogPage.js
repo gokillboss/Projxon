@@ -5,6 +5,7 @@ import DOMPurify from 'dompurify';
 import { Container } from 'react-bootstrap';
 
 import { useParams } from 'react-router-dom'
+import { getPost } from '../services/api'
 
 const BlogPage = () => {
 
@@ -40,13 +41,8 @@ const BlogPage = () => {
     useEffect(() => {
         const fetchBlog = async () => {
             try{
-                const response = await axios.get(`https://real-smash.localsite.io/wp-json/wp/v2/posts/${blogId}?_embed`, {
-                    auth: {
-                        username: 'produce',
-                        password: 'instinctive'
-                    }
-                })
-                setBlog(response.data)
+                const response = await getPost(blogId)
+                setBlog(response)
             }
             catch(error){
                 console.log(error)
