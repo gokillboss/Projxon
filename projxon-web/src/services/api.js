@@ -19,14 +19,13 @@ const api = axios.create({
 export const getPosts = async () => {
     try {
         const response = await api.get(`/posts?_embed`);
-        console.log(response.data)
         return response.data;
     } catch (error) {
         throw error;
     }
 };
 
-//get individual post
+// get individual post
 export const getPost = async (id) => {
     try {
         const response = await api.get(`/posts/${id}?_embed`);

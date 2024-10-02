@@ -3,7 +3,8 @@ import { useState, useEffect } from "react"
 
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import InfoForm from '../components/InfoForm';
-import axios from 'axios';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import DOMPurify from 'dompurify';
 import { getPosts } from '../services/api'
 import { Link } from 'react-router-dom'
@@ -11,26 +12,10 @@ import { Link } from 'react-router-dom'
 
 import './ResearchPage.css';
 
+
 const ResearchPage = () => {
 
     const [blogs, setBlogs] = useState([])
-
-    const cleanContent = (content) => {
-        const sanitizedHtml = DOMPurify.sanitize(content)
-
-        // Parse the content to extract the image src from <figure>
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(sanitizedHtml, 'text/html');
-        const figureImg = doc.querySelector('figure img');  // Selects the image inside <figure>
-
-        let imgSrc = ''
-        if (figureImg) {
-            imgSrc = figureImg.getAttribute('src')
-        }
-
-
-        return { imgSrc }
-    };
 
     const cleanExcerpt = (excerpt) => {
         return DOMPurify.sanitize(excerpt);
@@ -45,6 +30,7 @@ const ResearchPage = () => {
     }
 
     useEffect(() => {
+        AOS.init({ duration: 1200 })
         const fetchBlogs = async () => {
             try{
                 const response = await getPosts()
@@ -120,7 +106,6 @@ const ResearchPage = () => {
 
                     {blogs && blogs.map((blog) => {
                         
-                        const { imgSrc } = cleanContent(blog.content.rendered)
                         const sanitizedExcerpt = cleanExcerpt(blog.excerpt.rendered)
                         const featuredMedia = blog._embedded['wp:featuredmedia'];
                         let sourceUrl = ''
@@ -130,12 +115,12 @@ const ResearchPage = () => {
                         }
 
                         return (
-                                <li key={blog.id} className="col mb-4 d-flex align-items-stretch">          
+                                <li key={blog.id} className="col mb-4 d-flex align-items-stretch" data-aos="fade-up">          
                                 <Card className='overflow-hidden'>
                                     <Card.Img 
                                         variant="top" 
                                         className="blog-img w-100 object-fit-cover" 
-                                        src={sourceUrl != null && imgSrc} 
+                                        src={sourceUrl} 
                                         alt={blog.title.rendered} 
                                     />
                                     <Card.Body>
