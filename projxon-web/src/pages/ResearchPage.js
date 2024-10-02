@@ -115,16 +115,23 @@ const ResearchPage = () => {
                         }
 
                         return (
-                                <li key={blog.id} className="col mb-4 d-flex align-items-stretch" data-aos="fade-up">          
-                                <Card className='overflow-hidden'>
-                                    <Card.Img 
-                                        variant="top" 
-                                        className="blog-img w-100 object-fit-cover" 
-                                        src={sourceUrl} 
-                                        alt={blog.title.rendered} 
-                                    />
+                            <li key={blog.id} className="col mb-4 d-flex align-items-stretch" data-aos="fade-up">  
+                                    
+                                <Card className='overflow-hidden blog-card'>
+                                    <Link to={`/research/${blog.id}`}>
+                                        <Card.Img 
+                                            variant="top" 
+                                            className="blog-img w-100 object-fit-cover" 
+                                            src={sourceUrl} 
+                                            alt={blog.title.rendered} 
+                                        />
+                                    </Link>
+
                                     <Card.Body>
-                                        <Card.Title className='mb-0'>{blog.title.rendered}</Card.Title>
+                                        <Link to={`/research/${blog.id}`} className='blog-card-title'>
+                                            <Card.Title className='mb-0'>{blog.title.rendered}</Card.Title>
+                                        </Link>
+
                                         <div className='d-flex align-items-center gap-2 mt-1'>
                                             <span className='text-muted'>{blog._embedded.author[0].name}</span>
                                             <span className='text-muted dot-seperator fs-6'>•</span>

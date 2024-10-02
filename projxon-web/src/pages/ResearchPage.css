@@ -99,6 +99,22 @@
     height: 250px;
 }
 
+
+.blog-card:hover{
+    box-shadow: 0 0 24px 0 rgba(0,0,0,.4);
+    transition: .2s ease-in-out
+}
+
+.blog-card-title{
+    text-decoration: none;
+    color: #000000;
+}
+
+/* .blog-card-title:hover{
+    color: #2251ff;
+    text-decoration: underline;
+} */
+
 .card-excerpt{
     overflow: hidden; 
     text-overflow: ellipsis; 
