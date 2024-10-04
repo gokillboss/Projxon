@@ -115,6 +115,20 @@
     text-decoration: underline;
 } */
 
+
+.blog-button, .research-button{
+    background-color: #FACC15 !important;
+    border: #FACC15;
+    color: #000000;
+}
+
+
+.blog-button:hover, .research-button:hover{
+    background-color: rgb(234 179 8 / 1) !important;
+    border: rgb(234 179 8 / 1);
+    color: #000000;
+}
+
 .card-excerpt{
     overflow: hidden; 
     text-overflow: ellipsis; 

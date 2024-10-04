@@ -64,7 +64,7 @@ const ResearchPage = () => {
                             <Card.Body>
                                 <Card.Title>Blog</Card.Title>
                                 <Card.Text>Discover insightful articles and updates from industry experts.</Card.Text>
-                                <Button variant="primary">Read More</Button>
+                                <Button variant="primary" className='research-button'>Read More</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -73,7 +73,7 @@ const ResearchPage = () => {
                             <Card.Body>
                                 <Card.Title>Events</Card.Title>
                                 <Card.Text>Join our upcoming events and webinars to stay ahead in the industry.</Card.Text>
-                                <Button variant="primary">View Events</Button>
+                                <Button variant="primary" className='research-button'>View Events</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -82,7 +82,7 @@ const ResearchPage = () => {
                             <Card.Body>
                                 <Card.Title>Articles</Card.Title>
                                 <Card.Text>Read our detailed articles and case studies on various topics.</Card.Text>
-                                <Button variant="primary">Explore Articles</Button>
+                                <Button variant="primary" className='research-button'>Explore Articles</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -91,7 +91,7 @@ const ResearchPage = () => {
                             <Card.Body>
                                 <Card.Title>Newsletter</Card.Title>
                                 <Card.Text>Subscribe to our newsletter for the latest updates and exclusive content.</Card.Text>
-                                <Button variant="primary">Subscribe</Button>
+                                <Button variant="primary" className='research-button'>Subscribe</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -101,7 +101,7 @@ const ResearchPage = () => {
 
             {/* Recent Blogs Section */}
             <Container className="my-5 container">
-                <h2>Recent Posts</h2>
+                <h2 className='mb-3'>Recent Posts</h2>
                 <ul className="list-unstyled row row-cols-1 row-cols-md-2 row-cols-lg-3">
 
                     {blogs && blogs.map((blog) => {
