@@ -115,7 +115,7 @@
     text-decoration: underline;
 } */
 
-
+/* Blog Cards Styling */
 .blog-button, .research-button{
     background-color: #FACC15 !important;
     border: #FACC15;
@@ -127,6 +127,10 @@
     background-color: rgb(234 179 8 / 1) !important;
     border: rgb(234 179 8 / 1);
     color: #000000;
+}
+
+.blog-button:active, .research-button:active{
+    color: #000000 !important; 
 }
 
 .card-excerpt{

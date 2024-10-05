@@ -15,6 +15,29 @@ import './ResearchPage.css';
 
 const ResearchPage = () => {
 
+    const cards = [
+        {
+            title: 'Blog',
+            description: 'Stay Updated with the Latest News, Events, and Insights.',
+            action: 'Read More'
+        },
+        {
+            title: 'Events',
+            description: 'Join our upcoming events and webinars to stay ahead in the industry.',
+            action: 'View Events'
+        },
+        {
+            title: 'Articles',
+            description: 'Read our detailed articles and case studies on various topics.',
+            action: 'Explore Articles'
+        },
+        {
+            title: 'Newsletter',
+            description: 'Subscribe to our newsletter for the latest updates and exclusive content.',
+            action: 'Subscribe'
+        },
+    ]
+
     const [blogs, setBlogs] = useState([])
 
     const cleanExcerpt = (excerpt) => {
@@ -58,43 +81,20 @@ const ResearchPage = () => {
 
             {/* Research Content Section */}
             <Container className="my-5">
-                <Row>
-                    <Col md={3}>
-                        <Card className="research-card">
-                            <Card.Body>
-                                <Card.Title>Blog</Card.Title>
-                                <Card.Text>Discover insightful articles and updates from industry experts.</Card.Text>
-                                <Button variant="primary" className='research-button'>Read More</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col md={3}>
-                        <Card className="research-card">
-                            <Card.Body>
-                                <Card.Title>Events</Card.Title>
-                                <Card.Text>Join our upcoming events and webinars to stay ahead in the industry.</Card.Text>
-                                <Button variant="primary" className='research-button'>View Events</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col md={3}>
-                        <Card className="research-card">
-                            <Card.Body>
-                                <Card.Title>Articles</Card.Title>
-                                <Card.Text>Read our detailed articles and case studies on various topics.</Card.Text>
-                                <Button variant="primary" className='research-button'>Explore Articles</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col md={3}>
-                        <Card className="research-card">
-                            <Card.Body>
-                                <Card.Title>Newsletter</Card.Title>
-                                <Card.Text>Subscribe to our newsletter for the latest updates and exclusive content.</Card.Text>
-                                <Button variant="primary" className='research-button'>Subscribe</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
+                <Row className="g-4">
+                    {cards.map((card, index) => (
+                        <Col key={index} lg={3} md={6} sm={12}>
+                            <Card className="research-card h-100">
+                                <Card.Body className='d-flex flex-column'>
+                                    <Card.Title>{card.title}</Card.Title>
+                                    <Card.Text className='flex-grow-1'>{card.description}</Card.Text>
+                                    <Button variant="primary" className='research-button'>
+                                        {card.action}
+                                    </Button>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    ))}
                 </Row>
             </Container>
             
@@ -117,7 +117,7 @@ const ResearchPage = () => {
                         return (
                             <li key={blog.id} className="col mb-4 d-flex align-items-stretch" data-aos="fade-up">  
                                     
-                                <Card className='overflow-hidden blog-card'>
+                                <Card className='overflow-hidden blog-card h-100'>
                                     <Link to={`/research/${blog.id}`}>
                                         <Card.Img 
                                             variant="top" 
@@ -127,7 +127,7 @@ const ResearchPage = () => {
                                         />
                                     </Link>
 
-                                    <Card.Body>
+                                    <Card.Body className='d-flex flex-column'>
                                         <Link to={`/research/${blog.id}`} className='blog-card-title'>
                                             <Card.Title className='mb-0'>{blog.title.rendered}</Card.Title>
                                         </Link>
@@ -137,10 +137,10 @@ const ResearchPage = () => {
                                             <span className='text-muted dot-seperator fs-6'>•</span>
                                             <span className='text-muted'>{formatDate(blog.date)}</span>
                                         </div>
-                                        <div className='clamped-container py-4'>
+                                        <div className='clamped-container py-4 flex-grow-1'>
                                             <div dangerouslySetInnerHTML={{ __html: sanitizedExcerpt }}  className='card-excerpt text-muted'/>
                                         </div>
-                                        <Link key={blog.id} to={`/research/${blog.id}`} className="mt-5">
+                                        <Link key={blog.id} to={`/research/${blog.id}`} className="mt-auto">
                                             <Button variant="primary blog-button">Read More</Button>
                                         </Link>
                                     </Card.Body>
