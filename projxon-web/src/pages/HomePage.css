@@ -86,6 +86,13 @@ body {
     color: #6c757d;
 }
 
+.choose-us{
+    padding: 30px;
+}
+.stat-desc{
+    font-size: 0.9rem;
+}
+
 
 @media (max-width: 780px) {
     .homepage-hero-title {

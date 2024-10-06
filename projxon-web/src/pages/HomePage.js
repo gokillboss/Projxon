@@ -1,14 +1,42 @@
 import React from 'react';
-import { Container, Row, Col, Card, Image } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './HomePage.css'; // Custom CSS file
 import 'aos/dist/aos.css'; // Animation library
 import AOS from 'aos';
+import { LuTrendingUp, LuUsers, LuLightbulb } from "react-icons/lu";
+
+
 import InfoForm from '../components/InfoForm';
 
 AOS.init();
 
 const HomePage = () => {
+    const reasons = [
+        {
+            icon: <LuUsers size={50} />,
+            title: "Expert Team",
+            description: "Our team consists of industry experts with years of experience in their respective fields. With diverse backgrounds and deep knowledge, we bring unparalleled expertise to every project.",
+            stat: "10+",
+            statDescription: "years combined experience"
+        },
+        {
+            icon: <LuTrendingUp size={50}  />,
+            title: "Proven Results",
+            description: "We have a track record of delivering successful projects and measurable improvements for our clients. Our results speak for themselves, with consistent client satisfaction and tangible outcomes.",
+            stat: "95%",
+            statDescription: "customer satisfaction rate"
+        },
+        {
+            icon: <LuLightbulb size={50}  />,
+            title: "Innovative Solutions",
+            description: "We leverage the latest technologies and methodologies to provide innovative solutions to our clients. Our forward-thinking approach ensures that you stay ahead of the curve in your industry.",
+            stat: "20+",
+            statDescription: "innovative projects delivered"
+        },
+    ]
+
+
     return (
         <>
 
@@ -73,21 +101,24 @@ const HomePage = () => {
             <Container className="text-center my-5">
                 <h2 data-aos="fade-up">Why Choose Us?</h2>
                 <Row className="my-5">
-                    <Col md={4} data-aos="fade-up" data-aos-delay="500">
-                        <Image src="https://via.placeholder.com/150" roundedCircle className="homepage-image mb-3" />
-                        <h4>Expert Team</h4>
-                        <p>Our team consists of industry experts with years of experience in their respective fields.</p>
-                    </Col>
-                    <Col md={4} data-aos="fade-up" data-aos-delay="500">
-                        <Image src="https://via.placeholder.com/150" roundedCircle className="homepage-image mb-3" />
-                        <h4>Proven Results</h4>
-                        <p>We have a track record of delivering successful projects and measurable improvements for our clients.</p>
-                    </Col>
-                    <Col md={4} data-aos="fade-up" data-aos-delay="500">
-                        <Image src="https://via.placeholder.com/150" roundedCircle className="homepage-image mb-3" />
-                        <h4>Innovative Solutions</h4>
-                        <p>We leverage the latest technologies and methodologies to provide innovative solutions to our clients.</p>
-                    </Col>
+                    {reasons.map((reason, index) => (
+                        <Col key={index} md={12} lg={4} className='mb-4' data-aos="fade-up" data-aos-delay="500">
+                            <Card className="research-card h-100">
+                                <Card.Body className='d-flex flex-column choose-us'>
+                                    <div className='d-flex align-items-center mb-4'>
+                                        {reason.icon}
+                                        <Card.Title className='fs-4 ms-3 mb-0'>{reason.title}</Card.Title>
+                                    </div>
+                                    
+                                    <Card.Text className='text-start text-muted mb-4'>{reason.description}</Card.Text>
+                                    <div className='text-start border-top border-secondary-subtle pt-4 flex-grow-1'>
+                                        <span className='fs-3 fw-bold'>{reason.stat}</span>
+                                        <span className='text-muted stat-desc d-block'>{reason.statDescription}</span>
+                                    </div>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    ))}
                 </Row>
             </Container>
 
