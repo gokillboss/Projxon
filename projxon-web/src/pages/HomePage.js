@@ -1,10 +1,11 @@
-import React from 'react';
+import { useState, useEffect } from "react"
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './HomePage.css'; // Custom CSS file
 import 'aos/dist/aos.css'; // Animation library
 import AOS from 'aos';
 import { LuTrendingUp, LuUsers, LuLightbulb } from "react-icons/lu";
+import { useInView } from 'react-intersection-observer';
 
 
 import InfoForm from '../components/InfoForm';
@@ -17,24 +18,58 @@ const HomePage = () => {
             icon: <LuUsers size={50} />,
             title: "Expert Team",
             description: "Our team consists of industry experts with years of experience in their respective fields. With diverse backgrounds and deep knowledge, we bring unparalleled expertise to every project.",
-            stat: "10+",
+            stat: "10",
+            statSuffix: "+",
             statDescription: "years combined experience"
         },
         {
             icon: <LuTrendingUp size={50}  />,
             title: "Proven Results",
             description: "We have a track record of delivering successful projects and measurable improvements for our clients. Our results speak for themselves, with consistent client satisfaction and tangible outcomes.",
-            stat: "95%",
+            stat: "95",
+            statSuffix: "%",
             statDescription: "customer satisfaction rate"
         },
         {
             icon: <LuLightbulb size={50}  />,
             title: "Innovative Solutions",
             description: "We leverage the latest technologies and methodologies to provide innovative solutions to our clients. Our forward-thinking approach ensures that you stay ahead of the curve in your industry.",
-            stat: "20+",
+            stat: "20",
+            statSuffix: "+",
             statDescription: "innovative projects delivered"
         },
     ]
+
+    const AnimatedNumber = ({ value }) => {
+        const [count, setCount] = useState(0);
+        const { ref, inView } = useInView({
+          triggerOnce: true,
+          threshold: 0.1, // Adjust the threshold as per your design needs
+        });
+      
+        useEffect(() => {
+          if (inView) {
+            let start = 0;
+            const end = value;
+            const duration = 2000; // Duration for the animation (2 seconds)
+            const increment = end / (duration / 16); // Increment per frame (60 FPS)
+      
+            const timer = setInterval(() => {
+              start += increment;
+              if (start >= end) {
+                clearInterval(timer);
+                setCount(end);
+              } else {
+                setCount(Math.floor(start));
+              }
+            }, 16);
+      
+            return () => clearInterval(timer);
+          }
+        }, [inView, value]);
+      
+        return <span ref={ref}>{count}</span>;
+      };
 
 
     return (
@@ -112,7 +147,10 @@ const HomePage = () => {
                                     
                                     <Card.Text className='text-start text-muted mb-4'>{reason.description}</Card.Text>
                                     <div className='text-start border-top border-secondary-subtle pt-4 flex-grow-1'>
-                                        <span className='fs-3 fw-bold'>{reason.stat}</span>
+                                        <span className='fs-3 fw-bold'>
+                                            <AnimatedNumber value={parseInt(reason.stat)} />
+                                            {reason.statSuffix}
+                                        </span>
                                         <span className='text-muted stat-desc d-block'>{reason.statDescription}</span>
                                     </div>
                                 </Card.Body>
