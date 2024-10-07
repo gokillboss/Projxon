@@ -6,6 +6,7 @@ import InfoForm from '../components/InfoForm';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import DOMPurify from 'dompurify';
+import { LuBookOpen , LuCalendar, LuFileText, LuMail } from "react-icons/lu";
 import { getPosts } from '../services/api'
 import { Link } from 'react-router-dom'
 
@@ -17,21 +18,25 @@ const ResearchPage = () => {
 
     const cards = [
         {
+            icon: <LuBookOpen size={23} />,
             title: 'Blog',
             description: 'Stay Updated with the Latest News, Events, and Insights.',
             action: 'Read More'
         },
         {
+            icon: <LuCalendar size={23} />,
             title: 'Events',
             description: 'Join our upcoming events and webinars to stay ahead in the industry.',
             action: 'View Events'
         },
         {
+            icon: <LuFileText size={23} />,
             title: 'Articles',
             description: 'Read our detailed articles and case studies on various topics.',
             action: 'Explore Articles'
         },
         {
+            icon: <LuMail size={23} />,
             title: 'Newsletter',
             description: 'Subscribe to our newsletter for the latest updates and exclusive content.',
             action: 'Subscribe'
@@ -86,7 +91,11 @@ const ResearchPage = () => {
                         <Col key={index} lg={3} md={6} sm={12}>
                             <Card className="research-card h-100">
                                 <Card.Body className='d-flex flex-column'>
-                                    <Card.Title>{card.title}</Card.Title>
+                                    <div className='d-flex align-items-center'>
+                                        {card.icon}
+                                        <Card.Title className='fs-4 ms-2 mb-0'>{card.title}</Card.Title>
+                                    </div>
+                                    
                                     <Card.Text className='flex-grow-1'>{card.description}</Card.Text>
                                     <Button variant="primary" className='research-button'>
                                         {card.action}

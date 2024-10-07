@@ -50,14 +50,14 @@ body {
     margin-bottom: 0px;
 }
 
-.homepage-service-card {
+/* .homepage-service-card {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .homepage-service-card:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+} */
 
 
 .homepage-video-container {
@@ -79,6 +79,10 @@ body {
     border: 0;
 }
 
+.services{
+    background-color: white;
+    padding: 128px 80px;
+}
 
 .blockquote-footer {
     margin-top: auto;
