@@ -7,7 +7,6 @@
 
 .navbar-brand {
     font-size: 2rem;
-    font-weight: bold;
     color: #f8f9fa;
     transition: color 0.3s ease;
     letter-spacing: 0.1rem;
@@ -21,10 +20,13 @@
 /* Navbar Links Styling */
 .nav-link {
     color: #f8f9fa;
-    font-size: 1rem;
+    font-size: 0.95rem;
     border-radius: 5px;
     transition: color 0.3s ease, background-color 0.3s ease;
     text-decoration: none;
+    letter-spacing: 0.04rem;
+    font-family: 'Roboto', system-ui, sans-serif;
+
 }
 
 .nav-link:hover {
@@ -38,6 +40,7 @@
 .nav-link.active {
     color: #ffd700 !important;
     text-decoration: underline; 
+    text-underline-offset: 4px
 }
 
 /* Navbar Toggle Button Styling */

@@ -20,14 +20,14 @@ const NavBar = () => {
                 onToggle={handleToggle}
                 className="fixed-top"
             >
-                <Container className='d-flex justify-content-between'>
+                <Container className='d-flex justify-content-between py-1'>
                     <Navbar.Brand as={NavLink} to="/Projxon" className='text-light'>
                         PROJXON
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Container className="d-flex justify-content-sm-start justify-content-md-end">
-                            <Nav className="ml-auto">
+                            <Nav className="ml-auto text-uppercase">
                                 <Nav.Link 
                                     as={NavLink} 
                                     to="/Projxon" 
