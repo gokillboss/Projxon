@@ -15,21 +15,25 @@ import InfoForm from '../components/InfoForm';
 AOS.init();
 
 const HomePage = () => {
+    
     const services = [
         {
             icon: <FaCogs size={50} />,
             title: "Business Process Optimization",
-            description: "Streamline your business processes to improve efficiency and reduce costs."
+            description: "Streamline your business processes to improve efficiency and reduce costs.",
+            dataAOSDelay: "300"
         },
         {
             icon: <FaProjectDiagram size={50} />,
             title: "Project Management",
-            description: "End-to-end project management services to ensure successful project outcomes."
+            description: "End-to-end project management services to ensure successful project outcomes.",
+            dataAOSDelay: "400"
         },
         {
             icon: <FaShoppingCart size={50} />,
             title: "E-commerce Solutions",
-            description: "Streamline your business processes to improve efficiency and reduce costs."
+            description: "Optimize your online sales with our comprehensive e-commerce solutions.",
+            dataAOSDelay: "500"
         },
     ]
 
@@ -122,11 +126,11 @@ const HomePage = () => {
 
 
             {/* Services Overview */}
-            <div className="text-center my-5 py-20 mx-0 services">
+            <section className="text-center my-5 py-20 mx-0 services">
                 <h2 data-aos="fade-up" className="mb-5 fw-bold fs-1">Our Services</h2>
                 <Row>
                     {services.map((service, index) => (
-                        <Col key={index} md={4} className="homepage-service-card" data-aos="zoom-in" data-aos-delay="300">
+                        <Col key={index} md={4} className="homepage-service-card" data-aos="zoom-in" data-aos-delay={service.dataAOSDelay}>
                                 <section className="mb-4">
                                     <div className="mb-3">{service.icon}</div>
                                     <h3>{service.title}</h3>
@@ -135,7 +139,7 @@ const HomePage = () => {
                         </Col>
                     ))}
                 </Row>
-            </div>
+            </section>
 
             {/* Detailed Services Section */}
             <Container className="text-center my-5">
