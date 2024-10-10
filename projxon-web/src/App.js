@@ -9,7 +9,10 @@ import ContactPage from './pages/ContactPage';
 import PartnershipPage from './pages/PartnerShipPage';
 import CareerPage from './pages/CareerPage';
 import ResearchPage from './pages/ResearchPage';
+import BlogPage from './pages/BlogPage';
+
 import './App.css';
+import "./index.css";
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -28,6 +31,7 @@ const App = () => {
                     <Route path="/partnership" element={<PartnershipPage />} />
                     <Route path="/career" element={<CareerPage />} />
                     <Route path="/research" element={<ResearchPage />} />
+                    <Route path="/research/:blogId" element={<BlogPage />}/>
                 </Routes>
             </div>
             <Footer />

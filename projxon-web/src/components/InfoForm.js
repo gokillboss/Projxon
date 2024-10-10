@@ -11,7 +11,7 @@ const InfoForm = () => {
                 {/* Contact Form */}
                 <Form className="infoform mx-auto justify-content-center" style={{ maxWidth: '600px' }}>
                     <Form.Group controlId="formName">
-                        <Form.Label>Your Name</Form.Label>
+                        <Form.Label>Name</Form.Label>
                         <Form.Control type="text" placeholder="Enter your name" required />
                     </Form.Group>
 
@@ -21,7 +21,7 @@ const InfoForm = () => {
                     </Form.Group>
 
                     <Form.Group controlId="formMessage" className="mt-3">
-                        <Form.Label>Your Message</Form.Label>
+                        <Form.Label>Message</Form.Label>
                         <Form.Control as="textarea" rows={5} placeholder="Enter your message" required />
                     </Form.Group>
 

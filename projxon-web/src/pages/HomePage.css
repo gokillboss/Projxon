@@ -4,22 +4,13 @@ body {
 }
 
 .homepage-hero-section {
-    background-image: url('../assets/projxonBanner.png');
-    background-color: #000;
+    background: rgba(0, 0, 0, 0.5) url('../assets/city.jpeg');
+    background-blend-mode: overlay;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     height: 100vh;
-}
-
-
-@media (max-width: 767px) {
-    .homepage-hero-section {
-        background-image: url('../assets/Icon-logo.png');
-        background-size: 100%; 
-        background-position: center;
-        background-attachment: fixed;
-    }
 }
 
 
@@ -42,21 +33,32 @@ body {
 
 .homepage-hero-title {
     font-size: 4rem;
-    margin-bottom: 250px;
 }
 
 .homepage-hero-subtitle {
     font-size: 2rem;
-    margin-bottom: 0px;
+    max-width: 42rem;
+    font-weight: normal;
 }
 
-.homepage-service-card {
-    transition: transform 0.3s, box-shadow 0.3s;
+.homepage-hero-button{
+    background-color: #FACC15 !important;
+    border: #FACC15;
+    color: #000000;
+    height: 48px;
+    padding-left: 2rem; 
+    padding-right: 2rem;
 }
 
-.homepage-service-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+.homepage-hero-button:hover{
+    background-color: rgb(234 179 8 / 1) !important;
+    border: rgb(234 179 8 / 1);
+    color: #000000;
+}
+
+.homepage-hero-button:active{
+    color: #000000 !important; 
 }
 
 
@@ -79,9 +81,31 @@ body {
     border: 0;
 }
 
+.services{
+    background-color: white;
+    padding: 128px 80px;
+}
 
 .blockquote-footer {
     margin-top: auto;
     font-size: 1.2rem;
     color: #6c757d;
+}
+
+.choose-us{
+    padding: 30px;
+}
+.stat-desc{
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 780px) {
+    .homepage-hero-title {
+        font-size: 3rem;
+    }
+    
+    .homepage-hero-subtitle {
+        font-size: 1.5rem;
+    }
 }

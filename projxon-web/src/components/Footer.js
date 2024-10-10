@@ -7,7 +7,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-white py-4 footer">
+        <footer className="bg-black text-white py-4 footer">
             <Container>
                 <Row>
                     <Col>

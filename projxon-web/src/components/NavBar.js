@@ -13,71 +13,74 @@ const NavBar = () => {
     return (
         <div className='w-100'>
             <Navbar
-                bg="dark"
-                variant="dark"
-                expand="md"
+                bg="black"
+                variant="black"
+                expand="lg"
                 expanded={expanded}
                 onToggle={handleToggle}
                 className="fixed-top"
             >
-                <Navbar.Brand as={NavLink} to="/Projxon">
-                    PROJXON
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Container className="d-flex justify-content-center">
-                        <Nav className="ml-auto">
-                            <Nav.Link 
-                                as={NavLink} 
-                                to="/services" 
-                                onClick={handleLinkClick} 
-                                className={({ isActive }) => isActive ? "active" : ""}
-                            >
-                                Services
-                            </Nav.Link>
-                            <Nav.Link 
-                                as={NavLink} 
-                                to="/about" 
-                                onClick={handleLinkClick} 
-                                className={({ isActive }) => isActive ? "active" : ""}
-                            >
-                                About
-                            </Nav.Link>
-                            <Nav.Link 
-                                as={NavLink} 
-                                to="/partnership" 
-                                onClick={handleLinkClick} 
-                                className={({ isActive }) => isActive ? "active" : ""}
-                            >
-                                Partnership
-                            </Nav.Link>
-                            <Nav.Link 
-                                as={NavLink} 
-                                to="/research" 
-                                onClick={handleLinkClick} 
-                                className={({ isActive }) => isActive ? "active" : ""}
-                            >
-                                Research
-                            </Nav.Link>
-                            <Nav.Link 
-                                as={NavLink} 
-                                to="/contact" 
-                                onClick={handleLinkClick} 
-                                className={({ isActive }) => isActive ? "active" : ""}
-                            >
-                                Connect
-                            </Nav.Link>
-                            <Nav.Link 
-                                as={NavLink} 
-                                to="/career" 
-                                onClick={handleLinkClick} 
-                                className={({ isActive }) => isActive ? "active" : ""}
-                            >
-                                Career
-                            </Nav.Link>
-                        </Nav>
-                    </Container>
-                </Navbar.Collapse>
+                <Container className='d-flex justify-content-between py-1'>
+                    <Navbar.Brand as={NavLink} to="/Projxon" className='text-light'>
+                        PROJXON
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Container className="d-flex justify-content-md-start justify-content-lg-end">
+                            <Nav className="ml-auto text-uppercase">
+                                <Nav.Link 
+                                    as={NavLink} 
+                                    to="/Projxon" 
+                                    onClick={handleLinkClick} 
+                                >
+                                    Home
+                                </Nav.Link>
+                                <Nav.Link 
+                                    as={NavLink} 
+                                    to="/services" 
+                                    onClick={handleLinkClick} 
+                                >
+                                    Services
+                                </Nav.Link>
+                                <Nav.Link 
+                                    as={NavLink} 
+                                    to="/about" 
+                                    onClick={handleLinkClick} 
+                                >
+                                    About
+                                </Nav.Link>
+                                <Nav.Link 
+                                    as={NavLink} 
+                                    to="/partnership" 
+                                    onClick={handleLinkClick} 
+                                >
+                                    Partnership
+                                </Nav.Link>
+                                <Nav.Link 
+                                    as={NavLink} 
+                                    to="/research" 
+                                    onClick={handleLinkClick} 
+                                >
+                                    Research
+                                </Nav.Link>
+                                <Nav.Link 
+                                    as={NavLink} 
+                                    to="/contact" 
+                                    onClick={handleLinkClick} 
+                                >
+                                    Connect
+                                </Nav.Link>
+                                <Nav.Link 
+                                    as={NavLink} 
+                                    to="/career" 
+                                    onClick={handleLinkClick} 
+                                >
+                                    Career
+                                </Nav.Link>
+                            </Nav>
+                        </Container>
+                    </Navbar.Collapse>
+                </Container>
             </Navbar>
         </div>
     );

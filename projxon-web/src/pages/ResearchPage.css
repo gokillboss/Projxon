@@ -85,6 +85,63 @@
     border-color: #ffc107;
 }
 
+.blog-button.btn-primary {
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.blog-button.btn-primary:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.blog-img{
+    height: 250px;
+}
+
+
+.blog-card:hover{
+    box-shadow: 0 0 24px 0 rgba(0,0,0,.4);
+    transition: .2s ease-in-out
+}
+
+.blog-card-title{
+    text-decoration: none;
+    color: #000000;
+}
+
+/* .blog-card-title:hover{
+    color: #2251ff;
+    text-decoration: underline;
+} */
+
+/* Blog Cards Styling */
+.blog-button, .research-button{
+    background-color: #FACC15 !important;
+    border: #FACC15;
+    color: #000000;
+}
+
+
+.blog-button:hover, .research-button:hover{
+    background-color: rgb(234 179 8 / 1) !important;
+    border: rgb(234 179 8 / 1);
+    color: #000000;
+}
+
+.blog-button:active, .research-button:active{
+    color: #000000 !important; 
+}
+
+.card-excerpt{
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 3; 
+    line-clamp: 3;
+    -webkit-box-orient: vertical; 
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .research-hero-section {

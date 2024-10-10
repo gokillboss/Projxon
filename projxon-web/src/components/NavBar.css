@@ -6,10 +6,10 @@
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 2rem;
     color: #f8f9fa;
     transition: color 0.3s ease;
+    letter-spacing: 0.1rem;
 }
 
 .navbar-brand:hover {
@@ -20,23 +20,27 @@
 /* Navbar Links Styling */
 .nav-link {
     color: #f8f9fa;
-    font-size: 1rem;
+    font-size: 0.95rem;
     border-radius: 5px;
     transition: color 0.3s ease, background-color 0.3s ease;
     text-decoration: none;
+    letter-spacing: 0.05rem;
+    font-family: 'Roboto', system-ui, sans-serif;
+
 }
 
 .nav-link:hover {
     color: #ffd700;
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.1); */
     border-radius: 5px;
     text-decoration: none;
 }
 
 /* Active link styling - underline the active button */
 .nav-link.active {
-    color: #ffd700;
+    color: #ffd700 !important;
     text-decoration: underline; 
+    text-underline-offset: 4px
 }
 
 /* Navbar Toggle Button Styling */
@@ -50,6 +54,11 @@
 /* Centering the Navbar Items */
 .navbar-collapse {
     justify-content: center;
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    color: white;
 }
 
 /* Fixed Top Navbar */
