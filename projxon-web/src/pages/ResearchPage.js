@@ -124,7 +124,7 @@ const ResearchPage = () => {
                         }
 
                         return (
-                            <li key={blog.id} className="col mb-4 d-flex align-items-stretch" data-aos="fade-up">  
+                            <li key={blog.id} className="col mb-4" data-aos="fade-up">  
                                     
                                 <Card className='overflow-hidden blog-card h-100'>
                                     <Link to={`/research/${blog.id}`}>
