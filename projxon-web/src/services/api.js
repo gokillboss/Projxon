@@ -4,7 +4,7 @@ import axios from 'axios';
 // REACT_APP_API_USERNAME=#######
 // REACT_APP_API_PASSWORD=#######
 
-const API_URL = 'https://real-smash.localsite.io/wp-json/wp/v2';
+const API_URL = 'https://standing-piano.localsite.io/wp-json/wp/v2';
 
 const api = axios.create({
     baseURL: API_URL,
