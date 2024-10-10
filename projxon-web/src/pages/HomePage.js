@@ -6,7 +6,7 @@ import 'aos/dist/aos.css'; // Animation library
 import AOS from 'aos';
 import { LuTrendingUp, LuUsers, LuLightbulb } from "react-icons/lu";
 import { FaCogs, FaProjectDiagram, FaShoppingCart } from 'react-icons/fa';
-
+import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
 
 
@@ -101,9 +101,40 @@ const HomePage = () => {
 
             {/* Hero Section */}
             <div className="homepage-hero-section">
-                <Container className="text-center text-white homepage-hero-content">
-                    <h1 className="homepage-hero-title" data-aos="fade-up">Turning Chaos to Opportunity</h1>
-                    <p className="homepage-hero-subtitle">Optimize your online sales with our comprehensive e-commerce solutions.</p>
+                <Container className="text-center text-white homepage-hero-content d-flex flex-column align-items-center">
+                    <motion.h1 
+                        className="homepage-hero-title"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        Turning Chaos Into Opportunity
+                    </motion.h1>
+
+
+                    <motion.div 
+                        className="w-25 bg-primary my-4 bg-warning" 
+                        style={{ height: '4px' }}  
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: 1 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                    />
+                    <motion.h2 
+                        className="homepage-hero-subtitle mt-1"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                    >
+                        Empowering medium-sized businesses to achieve their full potential
+                    </motion.h2>
+                    <motion.button 
+                        className="mt-4 btn btn-primary fs-5 px-4 homepage-hero-button"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.7 }}
+                    >
+                        Get Started
+                    </motion.button>
                 </Container>
             </div>
 

@@ -24,7 +24,7 @@
     border-radius: 5px;
     transition: color 0.3s ease, background-color 0.3s ease;
     text-decoration: none;
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.05rem;
     font-family: 'Roboto', system-ui, sans-serif;
 
 }

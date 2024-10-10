@@ -15,7 +15,7 @@ const NavBar = () => {
             <Navbar
                 bg="black"
                 variant="black"
-                expand="md"
+                expand="lg"
                 expanded={expanded}
                 onToggle={handleToggle}
                 className="fixed-top"
@@ -26,7 +26,7 @@ const NavBar = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Container className="d-flex justify-content-sm-start justify-content-md-end">
+                        <Container className="d-flex justify-content-md-start justify-content-lg-end">
                             <Nav className="ml-auto text-uppercase">
                                 <Nav.Link 
                                     as={NavLink} 
