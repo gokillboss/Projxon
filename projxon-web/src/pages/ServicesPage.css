@@ -57,7 +57,7 @@
 
 
 .service-card {
-    background: white;
+    background-color: rgba(255, 255, 255, 0.8); /* Màu trắng với độ trong suốt 80% */
     border: none;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -107,4 +107,10 @@
 
 .homepage-call-to-action-section {
     background-color: #666;
+}
+
+.carousel-item img {
+    width: 100%; /* Chiều rộng 100% của container */
+    height: 600px; /* Đặt chiều cao cố định cho ảnh */
+    object-fit: cover; /* Đảm bảo ảnh được cắt vừa với kích thước mà không bị méo */
 }
