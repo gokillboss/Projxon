@@ -1,6 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #fff;
 }
 
 .homepage-hero-section {
@@ -82,9 +81,10 @@ body {
 }
 
 .services{
-    background-color: white;
-    padding: 128px 80px;
+    background-color: #fff;
+    padding: 108px 80px;
 }
+
 
 .blockquote-footer {
     margin-top: auto;
@@ -92,11 +92,64 @@ body {
     color: #6c757d;
 }
 
-.choose-us{
+.choose-us, .testimonials, .introduction{
+    padding-top: 108px;
+    padding-bottom: 108px;
+}
+
+.choose-us-body{
     padding: 30px;
 }
+
+.choose-us-card {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 8px 15px #FFD700; */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.choose-us-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #FFD700;
+}
+
 .stat-desc{
     font-size: 0.9rem;
+}
+
+.carousel-item{
+    min-height: 500px;
+    position: relative;
+}
+
+.testimonial-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #dee2e6;
+}
+
+.carousel-caption{
+    position: absolute;
+    right: 15%;
+    left: 15%;
+    bottom: 50px;
+    padding: 50px 0;
+    color: #000;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+
+.quote-icon{
+    margin-top: -5px;
+    margin-right: 5px;
+    color: #FFD700;
 }
 
 
@@ -107,5 +160,14 @@ body {
     
     .homepage-hero-subtitle {
         font-size: 1.5rem;
+    }
+
+    .carousel-caption p{
+        font-size: 1rem !important ;
+    }
+
+    .choose-us-container{
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }

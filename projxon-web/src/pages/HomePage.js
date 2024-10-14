@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react"
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Carousel  } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './HomePage.css'; // Custom CSS file
 import 'aos/dist/aos.css'; // Animation library
 import AOS from 'aos';
 import { LuTrendingUp, LuUsers, LuLightbulb } from "react-icons/lu";
-import { FaCogs, FaProjectDiagram, FaShoppingCart } from 'react-icons/fa';
+import { FaCogs, FaProjectDiagram, FaShoppingCart, FaQuoteLeft } from 'react-icons/fa';
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
+import client from '../assets/default-pic.jpg'
 
 
 import InfoForm from '../components/InfoForm';
@@ -64,6 +65,27 @@ const HomePage = () => {
         },
     ]
 
+    const clients = [
+        {
+            image: client,
+            quote: "PROJXON transformed our onboarding process, reducing it from 90 days to just 14 days. This efficiency gain translated to an additional 2.5 months of revenue annually. Their expertise in process optimization is unparalleled.",
+            name: "Brandon D.",
+            title: "CEO of XYZ Core"
+        },
+        {
+            image: client,
+            quote: "If it wasn't for PROJXON, my company wouldn't have been where it is today. They saved us time and showed us a clear path of where our company is heading.",
+            name: "Jane Smith",
+            title: "Operations Manager at ABC Inc"
+        },
+        {
+            image: client,
+            quote: "Thanks to PROJXON's innovative strategies, our operational costs decreased by 20% and our productivity improved dramatically. Their team is incredibly knowledgeable and dedicated.",
+            name: "John Doe",
+            title: "CEO of Tech Inc"
+        },
+    ]
+
     const AnimatedNumber = ({ value }) => {
         const [count, setCount] = useState(0);
         const { ref, inView } = useInView({
@@ -110,8 +132,6 @@ const HomePage = () => {
                     >
                         Turning Chaos Into Opportunity
                     </motion.h1>
-
-
                     <motion.div 
                         className="w-25 bg-primary my-4 bg-warning" 
                         style={{ height: '4px' }}  
@@ -139,25 +159,27 @@ const HomePage = () => {
             </div>
 
             {/* Introductory Video Section */}
-            <Container className="my-5 text-center">
-                <h2 data-aos="fade-up" className="mb-5 fw-bold fs-1">Welcome to PROJXON</h2>
-                <Row className="justify-content-center">
-                    <Col md={10} lg={8}>
-                        <div className="homepage-video-container rounded-3" data-aos="fade-up" data-aos-delay="500">
-                            <iframe
-                                className="homepage-video-iframe"
-                                src="https://www.youtube.com/embed/ad79nYk2keg"
-                                allowFullScreen
-                                title="Introductory Video"
-                            ></iframe>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+            <section className="text-center bg-black introduction">
+                <Container>
+                    <h2 data-aos="fade-up" className="mb-5 fw-bold fs-1 text-white mx-auto">Welcome to PROJXON</h2>
+                    <Row className="justify-content-center">
+                        <Col md={10} lg={8}>
+                            <div className="homepage-video-container rounded-3" data-aos="fade-up" data-aos-delay="500">
+                                <iframe
+                                    className="homepage-video-iframe"
+                                    src="https://www.youtube.com/embed/ad79nYk2keg"
+                                    allowFullScreen
+                                    title="Introductory Video"
+                                ></iframe>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
 
 
             {/* Services Overview */}
-            <section className="text-center my-5 py-20 mx-0 services">
+            <section className="text-center mx-0 services">
                 <h2 data-aos="fade-up" className="mb-5 fw-bold fs-1">Our Services</h2>
                 <Row>
                     {services.map((service, index) => (
@@ -172,60 +194,56 @@ const HomePage = () => {
                 </Row>
             </section>
 
-            {/* Detailed Services Section */}
-            <Container className="text-center my-5">
-                <h2 className="fw-bold fs-1">Why Choose Us?</h2>
-                <Row className="my-5">
-                    {reasons.map((reason, index) => (
-                        <Col key={index} md={12} lg={4} className='mb-4' data-aos="fade-up" data-aos-delay="500">
-                            <Card className="research-card h-100">
-                                <Card.Body className='d-flex flex-column choose-us'>
-                                    <div className='d-flex align-items-center mb-4'>
-                                        {reason.icon}
-                                        <Card.Title className='fs-4 ms-3 mb-0'>{reason.title}</Card.Title>
-                                    </div>
-                                    
-                                    <Card.Text className='text-start text-muted mb-4'>{reason.description}</Card.Text>
-                                    <div className='text-start border-top border-secondary-subtle pt-4 flex-grow-1'>
-                                        <span className='fs-3 fw-bold'>
-                                            <AnimatedNumber value={parseInt(reason.stat)} />
-                                            {reason.statSuffix}
-                                        </span>
-                                        <span className='text-muted stat-desc d-block'>{reason.statDescription}</span>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))}
-                </Row>
-            </Container>
+            {/* Choose Us Section */}
+            <section className="bg-black choose-us">
+                <Container className="text-center">
+                    <h2 className="fw-bold fs-1 text-white">Why Choose Us?</h2>
+                    <Row className="my-5">
+                        {reasons.map((reason, index) => (
+                            <Col key={index} md={12} lg={4} className='mb-4 choose-us-container' data-aos="fade-up" data-aos-delay="500">
+                                <Card className="choose-us-card h-100">
+                                    <Card.Body className='d-flex flex-column choose-us-body'>
+                                        <div className='d-flex align-items-center mb-4'>
+                                            {reason.icon}
+                                            <Card.Title className='fs-4 ms-3 mb-0'>{reason.title}</Card.Title>
+                                        </div>
+                                        
+                                        <Card.Text className='text-start text-muted mb-4 flex-grow-1'>{reason.description}</Card.Text>
+                                        <div className='text-start border-top border-secondary-subtle pt-4'>
+                                            <span className='fs-3 fw-bold'>
+                                                <AnimatedNumber value={parseInt(reason.stat)} />
+                                                {reason.statSuffix}
+                                            </span>
+                                            <span className='text-muted stat-desc d-block'>{reason.statDescription}</span>
+                                        </div>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        ))}
+                    </Row>
+                </Container>
+            </section>
 
             {/* Client Testimonials */}
-            <Container className="text-center my-5">
-                <h2 data-aos="fade-up">Client Testimonials</h2>
-                <Row>
-                    <Col md={6} data-aos="fade-up" data-aos-delay="500">
-                        <Card className="mb-4">
-                            <Card.Body>
-                                <Card.Text>
-                                    "PROJXON transformed our onboarding process, reducing it from 90 days to just 14 days. This efficiency gain translated to an additional 2.5 months of revenue annually. Their expertise in process optimization is unparalleled."
-                                </Card.Text>
-                                <div className="blockquote-footer">John Doe, CEO of XYZ Corp</div>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col md={6} data-aos="fade-up" data-aos-delay="500">
-                        <Card className="mb-4">
-                            <Card.Body>
-                                <Card.Text>
-                                    "Thanks to PROJXON's innovative strategies, our operational costs decreased by 20% and our productivity improved dramatically. Their team is incredibly knowledgeable and dedicated."
-                                </Card.Text>
-                                <div className="blockquote-footer">Jane Smith, Operations Manager at ABC Inc</div>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
-            </Container>
+            <section className="testimonials">
+                <Container className="text-center">
+                    <h2 data-aos="fade-up" className="fw-bold fs-1 text-black">Testimonials</h2>
+                    <Carousel>
+                        {clients.map((client, index) => (
+                            <Carousel.Item key={index}>
+                                <Carousel.Caption>
+                                    <img className="testimonial-img mb-5" src={client.image} alt="" />       
+                                    <p className="mb-4 fs-5"><FaQuoteLeft className="quote-icon" size={25}/>{client.quote}</p>
+                                    <h5>{client.name}</h5>
+                                    <span>{client.title}</span>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        ))}
+                    </Carousel>
+                </Container>
+
+            </section>
+            
 
             {/* Call to Action Section */}
             <InfoForm />
