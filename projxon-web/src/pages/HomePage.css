@@ -2,6 +2,14 @@ body {
     background-color: #fff;
 }
 
+.bg-yellow {
+    background: radial-gradient(circle, #ffd700 68%, #000 100%);
+}
+
+.homepage-sections-heading{
+    font-size: 3rem
+}
+
 .homepage-hero-section {
     background: rgba(0, 0, 0, 0.5) url('../assets/city.jpeg');
     background-blend-mode: overlay;
@@ -20,7 +28,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-   
 }
 
 .homepage-hero-content {
@@ -60,6 +67,29 @@ body {
     color: #000000 !important; 
 }
 
+.homepage-hero-divider{
+    background-color: #FFD700;
+}
+
+.about-us-button{
+    background-color: #000 !important;
+    border: #000;
+    color: #fff;
+    height: 48px;
+    padding-left: 2rem; 
+    padding-right: 2rem;
+}
+
+
+.about-us-button:hover{
+    background-color: rgb(31 41 55 / 1) !important;
+    border: rgb(31 41 55 / 1);
+    color: #fff;
+}
+
+.about-us-button:active{
+    color: #fff !important; 
+}
 
 .homepage-video-container {
     position: relative;
@@ -81,7 +111,6 @@ body {
 }
 
 .services{
-    background-color: #fff;
     padding: 108px 80px;
 }
 
@@ -101,21 +130,38 @@ body {
     padding: 30px;
 }
 
-.choose-us-card {
-    background-color: #fff;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* box-shadow: 0 8px 15px #FFD700; */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.choose-us-desc{
+    padding-bottom: 32px;
+    color: rgb(209 213 219 / 1)
 }
 
-.choose-us-card:hover {
-    transform: translateY(-5px);
+.choose-stat-desc{
+    color: rgb(156 163 175 / 1)
+}
+
+.choose-us-stat{
+    color: #FFD700;
+    font-size: 3rem;
+}
+
+.text-yellow{
+    color: #FFD700;
+}
+
+.choose-us-card {
+    box-shadow: rgba(255, 215, 0, 0.16) 0px 10px 15px 0px, rgba(255, 215, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    position: relative
+}
+
+
+ .choose-us-card:hover {
+    transform: scale(1.05); 
     box-shadow: 0 8px 20px #FFD700;
 }
-
-.stat-desc{
+.choose-stat-desc{
     font-size: 0.9rem;
 }
 
@@ -141,15 +187,10 @@ body {
     color: #000;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
-    filter: invert(100%);
-}
-
 .quote-icon{
     margin-top: -5px;
     margin-right: 5px;
-    color: #FFD700;
+    color: #000;
 }
 
 
