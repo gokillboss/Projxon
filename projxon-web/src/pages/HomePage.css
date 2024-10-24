@@ -1,17 +1,8 @@
 /* || General styles */
 
-body {
-    background-color: #fff;
-}
-
 .bg-yellow {
     background: #ffd700; 
-    background: radial-gradient(circle, #ffd700 68%, #000 100%);
-}
-
-.bg-yellow-gradient{
-    background: #ffd700; 
-    background: radial-gradient(circle, #ffd700 68%, #000 100%);
+    background: radial-gradient(circle, #ffd700 80%, #000 100%);
 }
 
 .homepage-sections-heading{
@@ -26,7 +17,7 @@ body {
 }
 
 .homepage-hero-section {
-    background: rgba(0, 0, 0, 0.5) url('../assets/city.jpeg');
+    background: rgba(0, 0, 0, 0.5) url('../assets/city.webp');
     background-blend-mode: overlay;
     background-size: cover;
     background-position: center;
@@ -95,7 +86,6 @@ body {
     padding-left: 2rem; 
     padding-right: 2rem;
 }
-
 
 .black-button:hover{
     background-color: rgb(31 41 55 / 1) !important;
@@ -247,7 +237,7 @@ body {
         bottom: 30px;
     }
 
-    .bg-yellow-gradient {
+    .bg-yellow {
         background: #ffd700;
         background: radial-gradient(circle, #ffd700 92%, #000 100%);
     }
