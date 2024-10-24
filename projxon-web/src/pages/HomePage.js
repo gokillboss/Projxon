@@ -1,18 +1,25 @@
-import { useState, useEffect } from "react"
-import { Container, Row, Col, Carousel  } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './HomePage.css'; // Custom CSS file
 import 'aos/dist/aos.css'; // Animation library
 import AOS from 'aos';
-import { LuTrendingUp, LuUsers, LuLightbulb } from "react-icons/lu";
-import { FaQuoteLeft, FaCogs, FaProjectDiagram, FaShoppingCart, FaLaptopCode } from 'react-icons/fa';
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer';
-import client from '../assets/default-pic.jpg'
 import { Link } from 'react-router-dom'
 
+import { Container, Row, Col, Carousel, Card  } from 'react-bootstrap';
+import { LuTrendingUp, LuUsers, LuLightbulb } from "react-icons/lu";
+import { FaQuoteLeft, FaMobile, FaCogs, FaProjectDiagram, FaShoppingCart, FaLaptopCode } from 'react-icons/fa';
+
+import client from '../assets/default-pic.jpg'
+import market from '../assets/services-img/market.png'
+import eccom from '../assets/services-img/eccom.png'
+import business from '../assets/services-img/business.png'
+import manage from '../assets/services-img/manage.png'
+import it from '../assets/services-img/it.png'
 
 import InfoForm from '../components/InfoForm';
+import AnimatedNumber from '../components/AnimatedNumber';
+import AnimatedButton from '../components/AnimatedButton';
+
 
 AOS.init();
 
@@ -20,34 +27,39 @@ const HomePage = () => {
     
     const services = [
         {
-            icon: <FaShoppingCart size={50} />,
+            image: market,
+            icon: <FaMobile size={40} />,
             title: "Marketing + Social Media",
-            description: "Optimize your online sales with our comprehensive e-commerce solutions.",
-            dataAOSDelay: "500"
+            description: "Amplify your brand’s impact with expert marketing and social media strategies. Engage your audience, accelerate growth, and redefine your digital presence.",
+            dataAOSDelay: "150"
         },
         {
-            icon: <FaCogs size={50} />,
-            title: "Business Process Optimization",
-            description: "Streamline your business processes to improve efficiency and reduce costs.",
-            dataAOSDelay: "300"
-        },
-        {
-            icon: <FaProjectDiagram size={50} />,
-            title: "Project Management",
-            description: "End-to-end project management services to ensure successful project outcomes.",
-            dataAOSDelay: "400"
-        },
-        {
-            icon: <FaShoppingCart size={50} />,
+            image: eccom,
+            icon: <FaShoppingCart size={40} />,
             title: "E-commerce Solutions",
-            description: "Optimize your online sales with our comprehensive e-commerce solutions.",
-            dataAOSDelay: "500"
+            description: "Transform your online business with tailored e-commerce solutions. Optimize performance, boost sales, and enhance customer satisfaction.",
+            dataAOSDelay: "350"
         },
         {
-            icon: <FaLaptopCode size={50} />,
-            title: "IT Consulting",
-            description: "Streamline your business processes to improve efficiency and reduce costs.",
-            dataAOSDelay: "300"
+            image: business,
+            icon: <FaCogs size={40} />,
+            title: "Business Process Optimization",
+            description: "Streamline your operations and enhance efficiency with our business optimization services. Achieve greater productivity and profitability.",
+            dataAOSDelay: "550"
+        },
+        {
+            image: manage,
+            icon: <FaProjectDiagram size={40} />,
+            title: "Project Management",
+            description: "Ensure timely, budget-friendly project delivery with our expert management services. We focus on seamless project process management with an emphasis on continuity to improve efficiency and achieve your goals.",
+            dataAOSDelay: "250"
+        },
+        {
+            image: it,
+            icon: <FaLaptopCode size={40} />,
+            title: "IT + Tech Integrations",
+            description: "Boost your business with our innovative IT solutions. We design custom IT and tech packages to increase efficiencies and maximize output.",
+            dataAOSDelay: "450"
         },
     ]
 
@@ -99,37 +111,6 @@ const HomePage = () => {
         },
     ]
 
-    const AnimatedNumber = ({ value }) => {
-        const [count, setCount] = useState(0);
-        const { ref, inView } = useInView({
-          triggerOnce: true,
-          threshold: 0.1, // Adjust the threshold as per your design needs
-        });
-      
-        useEffect(() => {
-          if (inView) {
-            let start = 0;
-            const end = value;
-            const duration = 2000; // Duration for the animation (2 seconds)
-            const increment = end / (duration / 16); // Increment per frame (60 FPS)
-      
-            const timer = setInterval(() => {
-              start += increment;
-              if (start >= end) {
-                clearInterval(timer);
-                setCount(end);
-              } else {
-                setCount(Math.floor(start));
-              }
-            }, 16);
-      
-            return () => clearInterval(timer);
-          }
-        }, [inView, value]);
-      
-        return <span ref={ref}>{count}</span>;
-      };
-
 
     return (
         <>
@@ -161,7 +142,6 @@ const HomePage = () => {
                         Empowering medium-sized businesses to achieve their full potential
                     </motion.h2>
                     <Link to="/contact" >
-
                         <motion.button 
                             className="mt-4 btn btn-primary fs-5 px-4 homepage-hero-button"
                             initial={{ opacity: 0, y: 50 }}
@@ -178,24 +158,16 @@ const HomePage = () => {
             {/* About Us Section */}
             <section className="text-center introduction bg-yellow">
                 <Container>
-                    <h2 className="mb-5 fw-bold fs-3 text-black mx-auto">About</h2>
-                    <p data-aos="fade-up" className="fs-4 text-black">
+                    <h2 className="mb-5 fw-bold fs-3 text-black mx-auto text-uppercase">About</h2>
+                    <p data-aos="fade-up" data-aos-once="true" className="fs-4 text-black">
                         PROJXON is a leading Holistic Business Optimization Consulting Agency, partnering with high-impact
                         organizations across the Health & Wellness, Tech, and Nonprofit sectors. Our customized business strategies are
                         designed to tackle chaos, transforming potential failures into opportunities for growth and scalable success.
                         Through strategic and tailored consulting, we drive growth, enhance productivity, and increase market value for
                         our clients.
                     </p>
-                    <Link to="/about" >
-                        <motion.button 
-                            className="mt-4 btn btn-primary fs-5 px-4 about-us-button"
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.7 }}
-                        >
-                            Learn More
-                        </motion.button>
-                    </Link>
+                    <hr className="divider"/>
+                    <AnimatedButton buttonText="Learn More" link="/about" buttonStyle="black-button" delayTime={0.3}/>
                 </Container>
 
             </section>
@@ -203,10 +175,10 @@ const HomePage = () => {
             {/* Introductory Video Section */}
             <section className="text-center bg-black introduction">
                 <Container>
-                    <h2 data-aos="fade-up" className="mb-5 fw-bold fs-1 text-white mx-auto">Welcome to PROJXON</h2>
+                    <h2 data-aos="fade-up" data-aos-once="true" className="mb-5 fw-bold text-yellow mx-auto homepage-sections-heading">Welcome to PROJXON</h2>
                     <Row className="justify-content-center">
                         <Col md={10} lg={8}>
-                            <div className="homepage-video-container rounded-3" data-aos="fade-up" data-aos-delay="500">
+                            <div className="homepage-video-container rounded-3" data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
                                 <iframe
                                     className="homepage-video-iframe"
                                     src="https://www.youtube.com/embed/ad79nYk2keg"
@@ -221,28 +193,77 @@ const HomePage = () => {
 
 
             {/* Services Overview */}
-            <section className="text-center mx-0 services bg-yellow">
-                <h2 data-aos="fade-up" className="mb-5 fw-bold fs-1">Our Services</h2>
-                <Row>
-                    {services.map((service, index) => (
-                        <Col key={index} md={4} className="homepage-service-card" data-aos="zoom-in" data-aos-delay={service.dataAOSDelay}>
-                                <section className="mb-4">
-                                    <div className="mb-3">{service.icon}</div>
-                                    <h3>{service.title}</h3>
-                                    <p>{service.description}</p>
-                                </section>    
+            <section className="bg-yellow-gradient services">
+                <Container className="overflow-hidden">
+                    <Row className="gy-4 gy-md-5 gy-lg-0 align-items-center">
+                        <Col xs={12} lg={5}>
+                            <Row>
+                                <Col xs={12} xl={11} data-aos="fade-up" data-aos-delay="100"  data-aos-once="true">
+                                    <h3 className="fs-6 mb-3 mb-xl-4 text-uppercase text-black">Our Services</h3>
+                                    <h2 className="display-5 mb-3 mb-xl-4">We are giving you perfect solutions with our proficient services.</h2>
+                                    <p className="mb-3 mb-xl-4">
+                                    Our commitment in helping brands reach their full potential is dynamic and unconventional providing strategic and customized consulting plans that drive growth, enhance productivity, and increase market value.
+                                    </p>
+                                    <AnimatedButton buttonText="Learn More" link="/services" buttonStyle="black-button" delayTime={0}/>
+                                </Col>
+                            </Row>
                         </Col>
-                    ))}
-                </Row>
+                        <Col xs={12} lg={7}>
+                            <Row>
+                                <Col xs={12} md={6}>
+                                    <div>
+                                        {services.slice(0, 3).map((service, index) => (
+                                            <Card
+                                                className="p-3 border-0 mt-4 homepage-service-card"
+                                                key={index}
+                                                style={{
+                                                    backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${service.image})`,
+                                                    backgroundSize: 'cover',
+                                                    backgroundPosition: 'center',
+                                                }}
+                                                >                                                     
+                                                <Card.Body className='text-white' >
+                                                    <div className="text-yellow">{service.icon}</div>
+                                                    <h5 className="my-4 text-yellow">{service.title}</h5>
+                                                    <p className="services-description mt-3">{service.description}</p>
+                                                </Card.Body>
+                                            </Card>
+                                        ))}
+                                    </div>
+                                </Col>
+                                <Col xs={12} md={6}>
+                                    <div className="mt-md-5 pt-md-5">
+                                        {services.slice(3, 5).map((service, index) => (
+                                            <Card
+                                                className="p-3 border-0 mt-4 homepage-service-card"
+                                                key={index}
+                                                style={{
+                                                    backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${service.image})`,
+                                                    backgroundSize: 'cover',
+                                                    backgroundPosition: 'center',
+                                                }}
+>                                               <Card.Body className='text-white'>
+                                                    <div className="text-yellow">{service.icon}</div>
+                                                    <h5 className="my-4 text-yellow">{service.title}</h5>
+                                                    <p className="services-description mt-3">{service.description}</p>
+                                                </Card.Body>
+                                            </Card>
+                                        ))}
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
             </section>
 
             {/* Choose Us Section */}
             <section className="bg-black choose-us">
                 <Container className="text-center">
-                    <h2 className="fw-bold homepage-sections-heading text-white">Why Choose Us?</h2>
+                    <h2 className="fw-bold homepage-sections-heading text-yellow" data-aos="fade-up" data-aos-once="true">Why Choose Us?</h2>
                     <Row className="my-5 g-5">
                         {reasons.map((reason, index) => (
-                            <Col key={index} md={12} lg={4} className='mb-4 choose-us-container' data-aos="fade-up" data-aos-delay="500">
+                            <Col key={index} md={12} lg={4} className='mb-4 choose-us-container' data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
                                 <div className='d-flex flex-column choose-us-body h-100 choose-us-card'>
                                     <div className='mb-4'>
                                         {reason.icon}
@@ -250,14 +271,14 @@ const HomePage = () => {
 
                                     <h3 className='fs-2 mb-3 text-yellow'>{reason.title}</h3>
                                     
-                                    <p className='choose-us-desc flex-grow-1 mb-0'>{reason.description}</p>
+                                    <p className='flex-grow-1 mb-0 choose-us-desc'>{reason.description}</p>
 
                                     <div>
                                         <span className='fw-bold choose-us-stat'>
                                             <AnimatedNumber value={parseInt(reason.stat)} />
                                             {reason.statSuffix}
                                         </span>
-                                        <span className='choose-stat-desc d-block'>{reason.statDescription}</span>
+                                        <span className='choose-us-stat-desc d-block'>{reason.statDescription}</span>
                                     </div>
                                 </div>
                             </Col>
@@ -268,13 +289,13 @@ const HomePage = () => {
 
             {/* Client Testimonials */}
             <section className="testimonials bg-yellow carousel-dark slide">
-                <Container className="text-center">
-                    <h2 data-aos="fade-up" className="fw-bold fs-1 text-black">Testimonials</h2>
+                <Container className="text-center" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+                    <h2 className="fw-bold text-black homepage-sections-heading">Testimonials</h2>
                     <Carousel>
                         {clients.map((client, index) => (
                             <Carousel.Item key={index}>
                                 <Carousel.Caption>
-                                    <img className="testimonial-img mb-5" src={client.image} alt="" />       
+                                    <img className="testimonial-img mb-5" src={client.image} alt={`${client.name}`} />       
                                     <p className="mb-4 fs-5"><FaQuoteLeft className="quote-icon" size={25}/>{client.quote}</p>
                                     <h5>{client.name}</h5>
                                     <span>{client.title}</span>

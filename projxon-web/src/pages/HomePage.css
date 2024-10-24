@@ -1,13 +1,28 @@
+/* || General styles */
+
 body {
     background-color: #fff;
 }
 
 .bg-yellow {
+    background: #ffd700; 
+    background: radial-gradient(circle, #ffd700 68%, #000 100%);
+}
+
+.bg-yellow-gradient{
+    background: #ffd700; 
     background: radial-gradient(circle, #ffd700 68%, #000 100%);
 }
 
 .homepage-sections-heading{
     font-size: 3rem
+}
+
+/* || Hero */
+
+.divider{
+    margin: 36px 0;
+    border-color: black;
 }
 
 .homepage-hero-section {
@@ -19,7 +34,6 @@ body {
     position: relative;
     height: 100vh;
 }
-
 
 .homepage-hero-section::before {
     content: '';
@@ -71,7 +85,9 @@ body {
     background-color: #FFD700;
 }
 
-.about-us-button{
+/* || About Us */
+
+.black-button{
     background-color: #000 !important;
     border: #000;
     color: #fff;
@@ -81,15 +97,17 @@ body {
 }
 
 
-.about-us-button:hover{
+.black-button:hover{
     background-color: rgb(31 41 55 / 1) !important;
     border: rgb(31 41 55 / 1);
     color: #fff;
 }
 
-.about-us-button:active{
+.black-button:active{
     color: #fff !important; 
 }
+
+/* || Video */
 
 .homepage-video-container {
     position: relative;
@@ -110,18 +128,32 @@ body {
     border: 0;
 }
 
-.services{
-    padding: 108px 80px;
+
+/* || Service */
+
+.homepage-service-card {
+    background-color: #000 !important; 
+    border-radius: 10px;
+    box-shadow: 0 8px 20px #000000 !important;
+    transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.homepage-service-card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.services-description{
+    color: rgb(209 213 219 / 1)
 }
 
 
-.blockquote-footer {
-    margin-top: auto;
-    font-size: 1.2rem;
-    color: #6c757d;
-}
+/* || Choose Us */
 
-.choose-us, .testimonials, .introduction{
+.choose-us, .testimonials, .introduction, .services{
     padding-top: 108px;
     padding-bottom: 108px;
 }
@@ -135,7 +167,7 @@ body {
     color: rgb(209 213 219 / 1)
 }
 
-.choose-stat-desc{
+.choose-us-stat-desc{
     color: rgb(156 163 175 / 1)
 }
 
@@ -148,7 +180,7 @@ body {
     color: #FFD700;
 }
 
-.choose-us-card {
+.choose-us-card, .service-card {
     box-shadow: rgba(255, 215, 0, 0.16) 0px 10px 15px 0px, rgba(255, 215, 0, 0.06) 0px 0px 0px 1px;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -157,13 +189,16 @@ body {
 }
 
 
- .choose-us-card:hover {
+.choose-us-card:hover {
     transform: scale(1.05); 
     box-shadow: 0 8px 20px #FFD700;
 }
+
 .choose-stat-desc{
     font-size: 0.9rem;
 }
+
+/* || Testimonials */
 
 .carousel-item{
     min-height: 500px;
@@ -179,17 +214,13 @@ body {
 }
 
 .carousel-caption{
-    position: absolute;
-    right: 15%;
-    left: 15%;
-    bottom: 50px;
+    bottom: 70px;
     padding: 50px 0;
-    color: #000;
 }
 
 .quote-icon{
-    margin-top: -5px;
-    margin-right: 5px;
+    margin-top: -10px;
+    margin-right: 10px;
     color: #000;
 }
 
@@ -210,5 +241,14 @@ body {
     .choose-us-container{
         padding-left: 40px;
         padding-right: 40px;
+    }
+
+    .carousel-caption{
+        bottom: 30px;
+    }
+
+    .bg-yellow-gradient {
+        background: #ffd700;
+        background: radial-gradient(circle, #ffd700 92%, #000 100%);
     }
 }
