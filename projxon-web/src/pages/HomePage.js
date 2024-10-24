@@ -10,11 +10,11 @@ import { LuTrendingUp, LuUsers, LuLightbulb } from "react-icons/lu";
 import { FaQuoteLeft, FaMobile, FaCogs, FaProjectDiagram, FaShoppingCart, FaLaptopCode } from 'react-icons/fa';
 
 import client from '../assets/default-pic.jpg'
-import market from '../assets/services-img/market.png'
-import eccom from '../assets/services-img/eccom.png'
-import business from '../assets/services-img/business.png'
-import manage from '../assets/services-img/manage.png'
-import it from '../assets/services-img/it.png'
+import market from '../assets/services-img/market.webp'
+import eccom from '../assets/services-img/ecom.webp'
+import business from '../assets/services-img/business.webp'
+import manage from '../assets/services-img/manage.webp'
+import it from '../assets/services-img/it.webp'
 
 import InfoForm from '../components/InfoForm';
 import AnimatedNumber from '../components/AnimatedNumber';
@@ -167,7 +167,7 @@ const HomePage = () => {
                         our clients.
                     </p>
                     <hr className="divider"/>
-                    <AnimatedButton buttonText="Learn More" link="/about" buttonStyle="black-button" delayTime={0.3}/>
+                    <AnimatedButton buttonText="Learn About Us" link="/about" buttonStyle="black-button" delayTime={0.3}/>
                 </Container>
 
             </section>
@@ -193,7 +193,7 @@ const HomePage = () => {
 
 
             {/* Services Overview */}
-            <section className="bg-yellow-gradient services">
+            <section className="bg-yellow services">
                 <Container className="overflow-hidden">
                     <Row className="gy-4 gy-md-5 gy-lg-0 align-items-center">
                         <Col xs={12} lg={5}>
@@ -204,7 +204,7 @@ const HomePage = () => {
                                     <p className="mb-3 mb-xl-4">
                                     Our commitment in helping brands reach their full potential is dynamic and unconventional providing strategic and customized consulting plans that drive growth, enhance productivity, and increase market value.
                                     </p>
-                                    <AnimatedButton buttonText="Learn More" link="/services" buttonStyle="black-button" delayTime={0}/>
+                                    <AnimatedButton buttonText="See Services" link="/services" buttonStyle="black-button" delayTime={0}/>
                                 </Col>
                             </Row>
                         </Col>
@@ -224,7 +224,7 @@ const HomePage = () => {
                                                 >                                                     
                                                 <Card.Body className='text-white' >
                                                     <div className="text-yellow">{service.icon}</div>
-                                                    <h5 className="my-4 text-yellow">{service.title}</h5>
+                                                    <h3 className="my-4 fs-5 text-yellow">{service.title}</h3>
                                                     <p className="services-description mt-3">{service.description}</p>
                                                 </Card.Body>
                                             </Card>
@@ -244,7 +244,7 @@ const HomePage = () => {
                                                 }}
 >                                               <Card.Body className='text-white'>
                                                     <div className="text-yellow">{service.icon}</div>
-                                                    <h5 className="my-4 text-yellow">{service.title}</h5>
+                                                    <h4 className="my-4 fs-5 text-yellow">{service.title}</h4>
                                                     <p className="services-description mt-3">{service.description}</p>
                                                 </Card.Body>
                                             </Card>
@@ -297,7 +297,7 @@ const HomePage = () => {
                                 <Carousel.Caption>
                                     <img className="testimonial-img mb-5" src={client.image} alt={`${client.name}`} />       
                                     <p className="mb-4 fs-5"><FaQuoteLeft className="quote-icon" size={25}/>{client.quote}</p>
-                                    <h5>{client.name}</h5>
+                                    <h3 className='fs-5'>{client.name}</h3>
                                     <span>{client.title}</span>
                                 </Carousel.Caption>
                             </Carousel.Item>
