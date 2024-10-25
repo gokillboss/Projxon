@@ -80,7 +80,7 @@ const ResearchPage = () => {
             {/* Hero Section */}
             <div className="research-hero-section text-center">
                 <Container className="services-hero-content text-center">
-                    <h1 className="research-title">Blog & Research</h1>
+                    <h1 className="research-title text-uppercase">Blog & Research</h1>
                     <p className="hero-subtitle">Stay Updated with the Latest News, Events, and Insights</p>
                 </Container>
             </div>
@@ -125,7 +125,7 @@ const ResearchPage = () => {
                         }
 
                         return (
-                            <li key={blog.id} className="col mb-4 d-flex align-items-stretch" data-aos="fade-up">  
+                            <li key={blog.id} className="col mb-4" data-aos="fade-up">  
                                     
                                 <Card className='overflow-hidden blog-card h-100'>
                                     <Link to={`/research/${blog.id}`}>

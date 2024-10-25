@@ -1,16 +1,25 @@
-import { useState, useEffect } from "react"
-import { Container, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './HomePage.css'; // Custom CSS file
 import 'aos/dist/aos.css'; // Animation library
 import AOS from 'aos';
-import { LuTrendingUp, LuUsers, LuLightbulb } from "react-icons/lu";
-import { FaCogs, FaProjectDiagram, FaShoppingCart } from 'react-icons/fa';
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom'
 
+import { Container, Row, Col, Carousel, Card  } from 'react-bootstrap';
+import { LuTrendingUp, LuUsers, LuLightbulb } from "react-icons/lu";
+import { FaQuoteLeft, FaMobile, FaCogs, FaProjectDiagram, FaShoppingCart, FaLaptopCode } from 'react-icons/fa';
+
+import client from '../assets/default-pic.jpg'
+import market from '../assets/services-img/market.webp'
+import eccom from '../assets/services-img/ecom.webp'
+import business from '../assets/services-img/business.webp'
+import manage from '../assets/services-img/manage.webp'
+import it from '../assets/services-img/it.webp'
 
 import InfoForm from '../components/InfoForm';
+import AnimatedNumber from '../components/AnimatedNumber';
+import AnimatedButton from '../components/AnimatedButton';
+
 
 AOS.init();
 
@@ -18,28 +27,45 @@ const HomePage = () => {
     
     const services = [
         {
-            icon: <FaCogs size={50} />,
-            title: "Business Process Optimization",
-            description: "Streamline your business processes to improve efficiency and reduce costs.",
-            dataAOSDelay: "300"
+            image: market,
+            icon: <FaMobile size={40} />,
+            title: "Marketing + Social Media",
+            description: "Amplify your brand’s impact with expert marketing and social media strategies. Engage your audience, accelerate growth, and redefine your digital presence.",
+            dataAOSDelay: "150"
         },
         {
-            icon: <FaProjectDiagram size={50} />,
-            title: "Project Management",
-            description: "End-to-end project management services to ensure successful project outcomes.",
-            dataAOSDelay: "400"
-        },
-        {
-            icon: <FaShoppingCart size={50} />,
+            image: eccom,
+            icon: <FaShoppingCart size={40} />,
             title: "E-commerce Solutions",
-            description: "Optimize your online sales with our comprehensive e-commerce solutions.",
-            dataAOSDelay: "500"
+            description: "Transform your online business with tailored e-commerce solutions. Optimize performance, boost sales, and enhance customer satisfaction.",
+            dataAOSDelay: "350"
+        },
+        {
+            image: business,
+            icon: <FaCogs size={40} />,
+            title: "Business Process Optimization",
+            description: "Streamline your operations and enhance efficiency with our business optimization services. Achieve greater productivity and profitability.",
+            dataAOSDelay: "550"
+        },
+        {
+            image: manage,
+            icon: <FaProjectDiagram size={40} />,
+            title: "Project Management",
+            description: "Ensure timely, budget-friendly project delivery with our expert management services. We focus on seamless project process management with an emphasis on continuity to improve efficiency and achieve your goals.",
+            dataAOSDelay: "250"
+        },
+        {
+            image: it,
+            icon: <FaLaptopCode size={40} />,
+            title: "IT + Tech Integrations",
+            description: "Boost your business with our innovative IT solutions. We design custom IT and tech packages to increase efficiencies and maximize output.",
+            dataAOSDelay: "450"
         },
     ]
 
     const reasons = [
         {
-            icon: <LuUsers size={50} />,
+            icon: <LuUsers size={64} className="text-yellow"/>,
             title: "Expert Team",
             description: "Our team consists of industry experts with years of experience in their respective fields. With diverse backgrounds and deep knowledge, we bring unparalleled expertise to every project.",
             stat: "10",
@@ -47,7 +73,7 @@ const HomePage = () => {
             statDescription: "years combined experience"
         },
         {
-            icon: <LuTrendingUp size={50}  />,
+            icon: <LuTrendingUp size={64} className="text-yellow"/>,
             title: "Proven Results",
             description: "We have a track record of delivering successful projects and measurable improvements for our clients. Our results speak for themselves, with consistent client satisfaction and tangible outcomes.",
             stat: "95",
@@ -55,7 +81,7 @@ const HomePage = () => {
             statDescription: "customer satisfaction rate"
         },
         {
-            icon: <LuLightbulb size={50}  />,
+            icon: <LuLightbulb size={64} className="text-yellow" />,
             title: "Innovative Solutions",
             description: "We leverage the latest technologies and methodologies to provide innovative solutions to our clients. Our forward-thinking approach ensures that you stay ahead of the curve in your industry.",
             stat: "20",
@@ -64,36 +90,26 @@ const HomePage = () => {
         },
     ]
 
-    const AnimatedNumber = ({ value }) => {
-        const [count, setCount] = useState(0);
-        const { ref, inView } = useInView({
-          triggerOnce: true,
-          threshold: 0.1, // Adjust the threshold as per your design needs
-        });
-      
-        useEffect(() => {
-          if (inView) {
-            let start = 0;
-            const end = value;
-            const duration = 2000; // Duration for the animation (2 seconds)
-            const increment = end / (duration / 16); // Increment per frame (60 FPS)
-      
-            const timer = setInterval(() => {
-              start += increment;
-              if (start >= end) {
-                clearInterval(timer);
-                setCount(end);
-              } else {
-                setCount(Math.floor(start));
-              }
-            }, 16);
-      
-            return () => clearInterval(timer);
-          }
-        }, [inView, value]);
-      
-        return <span ref={ref}>{count}</span>;
-      };
+    const clients = [
+        {
+            image: client,
+            quote: "PROJXON transformed our onboarding process, reducing it from 90 days to just 14 days. This efficiency gain translated to an additional 2.5 months of revenue annually. Their expertise in process optimization is unparalleled.",
+            name: "Brandon D.",
+            title: "CEO of XYZ Core"
+        },
+        {
+            image: client,
+            quote: "If it wasn't for PROJXON, my company wouldn't have been where it is today. They saved us time and showed us a clear path of where our company is heading.",
+            name: "Jane Smith",
+            title: "Operations Manager at ABC Inc"
+        },
+        {
+            image: client,
+            quote: "Thanks to PROJXON's innovative strategies, our operational costs decreased by 20% and our productivity improved dramatically. Their team is incredibly knowledgeable and dedicated.",
+            name: "John Doe",
+            title: "CEO of Tech Inc"
+        },
+    ]
 
 
     return (
@@ -110,10 +126,8 @@ const HomePage = () => {
                     >
                         Turning Chaos Into Opportunity
                     </motion.h1>
-
-
                     <motion.div 
-                        className="w-25 bg-primary my-4 bg-warning" 
+                        className="w-25 my-4 homepage-hero-divider" 
                         style={{ height: '4px' }}  
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
@@ -127,106 +141,171 @@ const HomePage = () => {
                     >
                         Empowering medium-sized businesses to achieve their full potential
                     </motion.h2>
-                    <motion.button 
-                        className="mt-4 btn btn-primary fs-5 px-4 homepage-hero-button"
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.7 }}
-                    >
-                        Get Started
-                    </motion.button>
+                    <Link to="/contact" >
+                        <motion.button 
+                            className="mt-4 btn btn-primary fs-5 px-4 homepage-hero-button"
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.7 }}
+                        >
+                            Get Started
+                        </motion.button>
+                    </Link>
+
                 </Container>
             </div>
 
+            {/* About Us Section */}
+            <section className="text-center introduction bg-yellow">
+                <Container>
+                    <h2 className="mb-5 fw-bold fs-3 text-black mx-auto text-uppercase">About</h2>
+                    <p data-aos="fade-up" data-aos-once="true" className="fs-4 text-black">
+                        PROJXON is a leading Holistic Business Optimization Consulting Agency, partnering with high-impact
+                        organizations across the Health & Wellness, Tech, and Nonprofit sectors. Our customized business strategies are
+                        designed to tackle chaos, transforming potential failures into opportunities for growth and scalable success.
+                        Through strategic and tailored consulting, we drive growth, enhance productivity, and increase market value for
+                        our clients.
+                    </p>
+                    <hr className="divider"/>
+                    <AnimatedButton buttonText="Learn About Us" link="/about" buttonStyle="black-button" delayTime={0.3}/>
+                </Container>
+
+            </section>
+
             {/* Introductory Video Section */}
-            <Container className="my-5 text-center">
-                <h2 data-aos="fade-up" className="mb-5 fw-bold fs-1">Welcome to PROJXON</h2>
-                <Row className="justify-content-center">
-                    <Col md={10} lg={8}>
-                        <div className="homepage-video-container rounded-3" data-aos="fade-up" data-aos-delay="500">
-                            <iframe
-                                className="homepage-video-iframe"
-                                src="https://www.youtube.com/embed/ad79nYk2keg"
-                                allowFullScreen
-                                title="Introductory Video"
-                            ></iframe>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+            <section className="text-center bg-black introduction">
+                <Container>
+                    <h2 data-aos="fade-up" data-aos-once="true" className="mb-5 fw-bold text-yellow mx-auto homepage-sections-heading">Welcome to PROJXON</h2>
+                    <Row className="justify-content-center">
+                        <Col md={10} lg={8}>
+                            <div className="homepage-video-container rounded-3" data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
+                                <iframe
+                                    className="homepage-video-iframe"
+                                    src="https://www.youtube.com/embed/ad79nYk2keg"
+                                    allowFullScreen
+                                    title="Introductory Video"
+                                ></iframe>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
 
 
             {/* Services Overview */}
-            <section className="text-center my-5 py-20 mx-0 services">
-                <h2 data-aos="fade-up" className="mb-5 fw-bold fs-1">Our Services</h2>
-                <Row>
-                    {services.map((service, index) => (
-                        <Col key={index} md={4} className="homepage-service-card" data-aos="zoom-in" data-aos-delay={service.dataAOSDelay}>
-                                <section className="mb-4">
-                                    <div className="mb-3">{service.icon}</div>
-                                    <h3>{service.title}</h3>
-                                    <p>{service.description}</p>
-                                </section>    
+            <section className="bg-yellow services">
+                <Container className="overflow-hidden">
+                    <Row className="gy-4 gy-md-5 gy-lg-0 align-items-center">
+                        <Col xs={12} lg={5}>
+                            <Row>
+                                <Col xs={12} xl={11} data-aos="fade-up" data-aos-delay="100"  data-aos-once="true">
+                                    <h3 className="fs-6 mb-3 mb-xl-4 text-uppercase text-black">Our Services</h3>
+                                    <h2 className="display-5 mb-3 mb-xl-4">We are giving you perfect solutions with our proficient services.</h2>
+                                    <p className="mb-3 mb-xl-4">
+                                    Our commitment in helping brands reach their full potential is dynamic and unconventional providing strategic and customized consulting plans that drive growth, enhance productivity, and increase market value.
+                                    </p>
+                                    <AnimatedButton buttonText="See Services" link="/services" buttonStyle="black-button" delayTime={0}/>
+                                </Col>
+                            </Row>
                         </Col>
-                    ))}
-                </Row>
+                        <Col xs={12} lg={7}>
+                            <Row>
+                                <Col xs={12} md={6}>
+                                    <div>
+                                        {services.slice(0, 3).map((service, index) => (
+                                            <Card
+                                                className="p-3 border-0 mt-4 homepage-service-card"
+                                                key={index}
+                                                style={{
+                                                    backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${service.image})`,
+                                                    backgroundSize: 'cover',
+                                                    backgroundPosition: 'center',
+                                                }}
+                                                >                                                     
+                                                <Card.Body className='text-white' >
+                                                    <div className="text-yellow">{service.icon}</div>
+                                                    <h3 className="my-4 fs-5 text-yellow">{service.title}</h3>
+                                                    <p className="services-description mt-3">{service.description}</p>
+                                                </Card.Body>
+                                            </Card>
+                                        ))}
+                                    </div>
+                                </Col>
+                                <Col xs={12} md={6}>
+                                    <div className="mt-md-5 pt-md-5">
+                                        {services.slice(3, 5).map((service, index) => (
+                                            <Card
+                                                className="p-3 border-0 mt-4 homepage-service-card"
+                                                key={index}
+                                                style={{
+                                                    backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${service.image})`,
+                                                    backgroundSize: 'cover',
+                                                    backgroundPosition: 'center',
+                                                }}
+>                                               <Card.Body className='text-white'>
+                                                    <div className="text-yellow">{service.icon}</div>
+                                                    <h4 className="my-4 fs-5 text-yellow">{service.title}</h4>
+                                                    <p className="services-description mt-3">{service.description}</p>
+                                                </Card.Body>
+                                            </Card>
+                                        ))}
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
             </section>
 
-            {/* Detailed Services Section */}
-            <Container className="text-center my-5">
-                <h2 className="fw-bold fs-1">Why Choose Us?</h2>
-                <Row className="my-5">
-                    {reasons.map((reason, index) => (
-                        <Col key={index} md={12} lg={4} className='mb-4' data-aos="fade-up" data-aos-delay="500">
-                            <Card className="research-card h-100">
-                                <Card.Body className='d-flex flex-column choose-us'>
-                                    <div className='d-flex align-items-center mb-4'>
+            {/* Choose Us Section */}
+            <section className="bg-black choose-us">
+                <Container className="text-center">
+                    <h2 className="fw-bold homepage-sections-heading text-yellow" data-aos="fade-up" data-aos-once="true">Why Choose Us?</h2>
+                    <Row className="my-5 g-5">
+                        {reasons.map((reason, index) => (
+                            <Col key={index} md={12} lg={4} className='mb-4 choose-us-container' data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
+                                <div className='d-flex flex-column choose-us-body h-100 choose-us-card'>
+                                    <div className='mb-4'>
                                         {reason.icon}
-                                        <Card.Title className='fs-4 ms-3 mb-0'>{reason.title}</Card.Title>
                                     </div>
+
+                                    <h3 className='fs-2 mb-3 text-yellow'>{reason.title}</h3>
                                     
-                                    <Card.Text className='text-start text-muted mb-4'>{reason.description}</Card.Text>
-                                    <div className='text-start border-top border-secondary-subtle pt-4 flex-grow-1'>
-                                        <span className='fs-3 fw-bold'>
+                                    <p className='flex-grow-1 mb-0 choose-us-desc'>{reason.description}</p>
+
+                                    <div>
+                                        <span className='fw-bold choose-us-stat'>
                                             <AnimatedNumber value={parseInt(reason.stat)} />
                                             {reason.statSuffix}
                                         </span>
-                                        <span className='text-muted stat-desc d-block'>{reason.statDescription}</span>
+                                        <span className='choose-us-stat-desc d-block'>{reason.statDescription}</span>
                                     </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))}
-                </Row>
-            </Container>
+                                </div>
+                            </Col>
+                        ))}
+                    </Row>
+                </Container>
+            </section>
 
             {/* Client Testimonials */}
-            <Container className="text-center my-5">
-                <h2 data-aos="fade-up">Client Testimonials</h2>
-                <Row>
-                    <Col md={6} data-aos="fade-up" data-aos-delay="500">
-                        <Card className="mb-4">
-                            <Card.Body>
-                                <Card.Text>
-                                    "PROJXON transformed our onboarding process, reducing it from 90 days to just 14 days. This efficiency gain translated to an additional 2.5 months of revenue annually. Their expertise in process optimization is unparalleled."
-                                </Card.Text>
-                                <div className="blockquote-footer">John Doe, CEO of XYZ Corp</div>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col md={6} data-aos="fade-up" data-aos-delay="500">
-                        <Card className="mb-4">
-                            <Card.Body>
-                                <Card.Text>
-                                    "Thanks to PROJXON's innovative strategies, our operational costs decreased by 20% and our productivity improved dramatically. Their team is incredibly knowledgeable and dedicated."
-                                </Card.Text>
-                                <div className="blockquote-footer">Jane Smith, Operations Manager at ABC Inc</div>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
-            </Container>
-
+            <section className="testimonials bg-yellow carousel-dark slide">
+                <Container className="text-center" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+                    <h2 className="fw-bold text-black homepage-sections-heading">Testimonials</h2>
+                    <Carousel>
+                        {clients.map((client, index) => (
+                            <Carousel.Item key={index}>
+                                <Carousel.Caption>
+                                    <img className="testimonial-img mb-5" src={client.image} alt={`${client.name}`} />       
+                                    <p className="mb-4 fs-5"><FaQuoteLeft className="quote-icon" size={25}/>{client.quote}</p>
+                                    <h3 className='fs-5'>{client.name}</h3>
+                                    <span>{client.title}</span>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        ))}
+                    </Carousel>
+                </Container>
+            </section>
+            
             {/* Call to Action Section */}
             <InfoForm />
         </>

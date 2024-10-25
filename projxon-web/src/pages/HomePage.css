@@ -1,10 +1,23 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* || General styles */
+
+.bg-yellow {
+    background: #ffd700; 
+    background: radial-gradient(circle, #ffd700 80%, #000 100%);
+}
+
+.homepage-sections-heading{
+    font-size: 3rem
+}
+
+/* || Hero */
+
+.divider{
+    margin: 36px 0;
+    border-color: black;
 }
 
 .homepage-hero-section {
-    background: rgba(0, 0, 0, 0.5) url('../assets/city.jpeg');
+    background: rgba(0, 0, 0, 0.5) url('../assets/city.webp');
     background-blend-mode: overlay;
     background-size: cover;
     background-position: center;
@@ -13,7 +26,6 @@ body {
     height: 100vh;
 }
 
-
 .homepage-hero-section::before {
     content: '';
     position: absolute;
@@ -21,7 +33,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-   
 }
 
 .homepage-hero-content {
@@ -61,6 +72,32 @@ body {
     color: #000000 !important; 
 }
 
+.homepage-hero-divider{
+    background-color: #FFD700;
+}
+
+/* || About Us */
+
+.black-button{
+    background-color: #000 !important;
+    border: #000;
+    color: #fff;
+    height: 48px;
+    padding-left: 2rem; 
+    padding-right: 2rem;
+}
+
+.black-button:hover{
+    background-color: rgb(31 41 55 / 1) !important;
+    border: rgb(31 41 55 / 1);
+    color: #fff;
+}
+
+.black-button:active{
+    color: #fff !important; 
+}
+
+/* || Video */
 
 .homepage-video-container {
     position: relative;
@@ -81,22 +118,100 @@ body {
     border: 0;
 }
 
-.services{
-    background-color: white;
-    padding: 128px 80px;
+
+/* || Service */
+
+.homepage-service-card {
+    background-color: #000 !important; 
+    border-radius: 10px;
+    box-shadow: 0 8px 20px #000000 !important;
+    transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
 }
 
-.blockquote-footer {
-    margin-top: auto;
-    font-size: 1.2rem;
-    color: #6c757d;
+.homepage-service-card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-.choose-us{
+.services-description{
+    color: rgb(209 213 219 / 1)
+}
+
+
+/* || Choose Us */
+
+.choose-us, .testimonials, .introduction, .services{
+    padding-top: 108px;
+    padding-bottom: 108px;
+}
+
+.choose-us-body{
     padding: 30px;
 }
-.stat-desc{
+
+.choose-us-desc{
+    padding-bottom: 32px;
+    color: rgb(209 213 219 / 1)
+}
+
+.choose-us-stat-desc{
+    color: rgb(156 163 175 / 1)
+}
+
+.choose-us-stat{
+    color: #FFD700;
+    font-size: 3rem;
+}
+
+.text-yellow{
+    color: #FFD700;
+}
+
+.choose-us-card, .service-card {
+    box-shadow: rgba(255, 215, 0, 0.16) 0px 10px 15px 0px, rgba(255, 215, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    position: relative
+}
+
+
+.choose-us-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 20px #FFD700;
+}
+
+.choose-stat-desc{
     font-size: 0.9rem;
+}
+
+/* || Testimonials */
+
+.carousel-item{
+    min-height: 500px;
+    position: relative;
+}
+
+.testimonial-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #dee2e6;
+}
+
+.carousel-caption{
+    bottom: 70px;
+    padding: 50px 0;
+}
+
+.quote-icon{
+    margin-top: -10px;
+    margin-right: 10px;
+    color: #000;
 }
 
 
@@ -107,5 +222,23 @@ body {
     
     .homepage-hero-subtitle {
         font-size: 1.5rem;
+    }
+
+    .carousel-caption p{
+        font-size: 1rem !important ;
+    }
+
+    .choose-us-container{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .carousel-caption{
+        bottom: 30px;
+    }
+
+    .bg-yellow {
+        background: #ffd700;
+        background: radial-gradient(circle, #ffd700 92%, #000 100%);
     }
 }
