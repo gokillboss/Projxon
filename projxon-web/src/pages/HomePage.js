@@ -200,8 +200,8 @@ const HomePage = () => {
                             <Row>
                                 <Col xs={12} xl={11} data-aos="fade-up" data-aos-delay="100"  data-aos-once="true">
                                     <h3 className="fs-6 mb-3 mb-xl-4 text-uppercase text-black">Our Services</h3>
-                                    <h2 className="display-5 mb-3 mb-xl-4">We are giving you perfect solutions with our proficient services.</h2>
-                                    <p className="mb-3 mb-xl-4">
+                                    <h2 className="display-5 mb-3 mb-xl-4 text-black">We are giving you perfect solutions with our proficient services.</h2>
+                                    <p className="mb-3 mb-xl-4 text-black">
                                     Our commitment in helping brands reach their full potential is dynamic and unconventional providing strategic and customized consulting plans that drive growth, enhance productivity, and increase market value.
                                     </p>
                                     <AnimatedButton buttonText="See Services" link="/services" buttonStyle="black-button" delayTime={0}/>
