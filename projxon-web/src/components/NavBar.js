@@ -9,9 +9,9 @@ const NavBar = () => {
 
     const handleToggle = () => setExpanded(!expanded);
     const handleLinkClick = () => setExpanded(false);
-
+    
     return (
-        <div className='w-100'>
+        <div className='w-100 my-1'>
             <Navbar
                 bg="black"
                 variant="black"

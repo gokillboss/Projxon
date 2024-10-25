@@ -14,6 +14,7 @@ const CareerPage = () => {
 
     return (
         <div>
+            {/* Hero Section with Background Image */}
             <div className="career-hero-section" data-aos="fade-in" data-aos-duration="1500">
                 <Container className="text-center">
                     <h1 className="career-hero-title text-uppercase">Join Our Team</h1>
@@ -22,8 +23,7 @@ const CareerPage = () => {
 
             <Container className="intern-section my-5">
                 <Row className="align-items-center">
-                    <Col xs={12} md={6} data-aos="fade-right" data-aos-delay="200" data-aos-duration="1200" className='left
-                    '>
+                    <Col xs={12} md={6} data-aos="fade-right" data-aos-delay="200" data-aos-duration="1200">
                         <h2>Future-Proof Your Career</h2>
                         <p className="my-3" data-aos="fade-up" data-aos-delay="300">
                             At PROJXON, we help young professionals realize their full potential while building their personal brand and understanding their value. Are you ready to launch your career in strategic consulting and digital marketing?
@@ -47,9 +47,6 @@ const CareerPage = () => {
 
                     <Col xs={12} md={6} className="mb-4" data-aos="fade-up" data-aos-delay="200">
                         <Card className="">
-                            <div className="">
-                                <i className="fas fa-balance-scale"></i>
-                            </div>
                             <Card.Body>
                                 <Card className="">
                                     <Card.Img variant="top" src={internPic} alt="Promotional" fluid rounded />

@@ -21,8 +21,9 @@ const App = () => {
         <>
 
             <div className="content">
+                <ScrollToTop />F
                 <NavBar />
-                <ScrollToTop />
+
                 <Routes>
                     <Route path="/Projxon" element={<HomePage />} />
                     <Route path="/services" element={<ServicesPage />} />
@@ -31,7 +32,7 @@ const App = () => {
                     <Route path="/partnership" element={<PartnershipPage />} />
                     <Route path="/career" element={<CareerPage />} />
                     <Route path="/research" element={<ResearchPage />} />
-                    <Route path="/research/:blogId" element={<BlogPage />}/>
+                    <Route path="/research/:blogId" element={<BlogPage />} />
                 </Routes>
             </div>
             <Footer />

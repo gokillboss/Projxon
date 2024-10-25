@@ -9,15 +9,6 @@
     height: 15rem;
 }
 
-.career-hero-section {
-    background: linear-gradient(135deg, #ffd700, #000000);
-    color: white;
-    padding: 40px 0;
-    position: relative;
-    overflow: hidden;
-    height: 15rem;
-
-}
 
 
 
@@ -31,7 +22,31 @@
     background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
     animation: rotate 10s linear infinite;
 }
+/* 
 
+.career-hero-section {
+    background: linear-gradient(135deg, #ffd700, #000000);
+    color: white;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+    height: 15rem;
+
+} */
+
+
+.career-hero-section {
+    background-image: url('../assets/carreer-hero.png');
+    background-size: 100% 18rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 15rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: ;
+}
 
 
 
@@ -40,3 +55,4 @@
     margin-bottom: 20px;
     font-weight: 700;
 }
+

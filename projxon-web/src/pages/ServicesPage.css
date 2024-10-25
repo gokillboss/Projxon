@@ -1,7 +1,8 @@
 /* ServicesPage.css */
 
 .services-hero-section {
-    background: linear-gradient(110deg, #ffd700, #000000);
+    background-image: url('../assets/Service-hero.png');
+    background-size: 100% 18rem;
     color: white;
     padding: 20px 0;
     position: relative;
@@ -20,6 +21,13 @@
     animation: rotate 10s linear infinite;
 }
 
+
+body {
+    background: url('../assets/PROX-background.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #000; /* Fallback color */
+    color: #fff; /* Optional: Set text color if needed */
+}
 
 @keyframes rotate {
     from {
@@ -57,7 +65,7 @@
 
 
 .service-card {
-    background: white;
+    background-color: rgba(255, 255, 255, 0.8); /* Màu trắng với độ trong suốt 80% */
     border: none;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -107,4 +115,10 @@
 
 .homepage-call-to-action-section {
     background-color: #666;
+}
+
+.carousel-item img {
+    width: 100%; /* Chiều rộng 100% của container */
+    height: 600px; /* Đặt chiều cao cố định cho ảnh */
+    object-fit: cover; /* Đảm bảo ảnh được cắt vừa với kích thước mà không bị méo */
 }
