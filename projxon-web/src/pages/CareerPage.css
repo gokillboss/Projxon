@@ -37,16 +37,18 @@
 
 .career-hero-section {
     background-image: url('../assets/carreer-hero.png');
-    background-size: 100% 18rem; /* Chiều rộng 100%, chiều cao 8rem */
+    background-size: 100% 18rem;
     background-position: center;
     background-repeat: no-repeat;
-    height: 15rem; /* Chiều cao của Hero section */
+    height: 15rem; 
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     margin-top: ;
 }
+
+
 
 .career-hero-title {
     font-size: 3rem;
