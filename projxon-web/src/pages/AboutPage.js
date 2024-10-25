@@ -17,7 +17,7 @@ const AboutPage = () => {
             {/* Hero Section */}
             <div className="about-hero-section" data-aos="fade-in">
                 <Container className="text-center about-hero-content">
-                    <h1 className="about-hero-title">About PROJXON</h1>
+                    <h1 className="about-hero-title text-uppercase">About PROJXON</h1>
                     <p className="about-hero-subtitle">Empowering Businesses to Reach Their Full Potential</p>
                 </Container>
             </div>
