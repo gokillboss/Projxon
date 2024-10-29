@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 import { CiCalendar } from "react-icons/ci";
 
 import { useParams } from 'react-router-dom'
-import { getPost } from '../services/api'
+import { fetchBlog } from '../services/blogService'
 import './BlogPage.css';
 
 const BlogPage = () => {
@@ -39,9 +39,10 @@ const BlogPage = () => {
     }
 
     useEffect(() => {
-        const fetchBlog = async () => {
+        const loadBlog = async () => {
             try{
-                const response = await getPost(blogId)
+                const response = await fetchBlog(blogId)
+                console.log(response)
                 setBlog(response)
             }
             catch(error){
@@ -52,7 +53,7 @@ const BlogPage = () => {
             }
 
         }
-        fetchBlog()
+        loadBlog()
 
     }, [blogId])
 
