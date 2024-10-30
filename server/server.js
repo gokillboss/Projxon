@@ -10,7 +10,7 @@ const app = express();
 // Enable CORS for client origin only
 const cors = require('cors')
 const corsOptions = {
-   origin : ['https://gokillboss.github.io/Projxon', 'https://localhost:3000'],
+   origin : ['https://testprojxon.onrender.com', 'https://gokillboss.github.io/Projxon', 'https://localhost:3000'],
 }
 app.use(cors(corsOptions))
 
