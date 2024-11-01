@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 
 const ServiceGrid = () => {
     return (
-        <Container className="my-5 services-container">
+        <Container className="py-5">
             <Row>
                 <Col md={6}>
                     <Card className="service-card" data-aos="fade-up" data-aos-delay="100">

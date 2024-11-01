@@ -42,7 +42,6 @@ const BlogPage = () => {
         const loadBlog = async () => {
             try{
                 const response = await fetchBlog(blogId)
-                console.log(response)
                 setBlog(response)
             }
             catch(error){

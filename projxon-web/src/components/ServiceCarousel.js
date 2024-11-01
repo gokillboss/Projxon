@@ -185,6 +185,23 @@ const ServiceCarousel = () => {
 
             {/* Digital Transformation Consulting */}
             <Carousel.Item>
+                <img className="d-block w-100" src={ITConsulting} alt="Financial Consulting" />
+                <Carousel.Caption>
+                    <Card className="service-card" data-aos="fade-up" data-aos-delay="1100">
+                        <div className="card-icon d-flex justify-content-center align-items-center">
+                            <FaMoneyCheckAlt />
+                        </div>
+                        <div className="card-content">
+                            <h3>Financial Consulting</h3>
+                            <p><strong>Financial Planning and Analysis:</strong> Offer financial planning, budgeting, and analysis services to help clients manage their finances effectively.</p>
+                            <p><strong>Funding and Investment Advisory:</strong> Assist clients in securing funding and making sound investment decisions.</p>
+                        </div>
+                    </Card>
+                </Carousel.Caption>
+            </Carousel.Item>
+
+            {/* Digital Transformation Consulting */}
+            <Carousel.Item>
                 <img className="d-block w-100" src={ITConsulting} alt="Digital Transformation Consulting" />
                 <Carousel.Caption>
                     <Card className="service-card" data-aos="fade-up" data-aos-delay="1200">
