@@ -34,14 +34,8 @@ const ContactPage = () => {
                                 <Card.Title>
                                     <h4 className='mb-4'>Our Mission</h4></Card.Title>
                                 <Card.Text>
-                                    <p>
-                                        Whether you have inquiries about our services, wish to explore partnership opportunities, or are ready to embark on a journey of growth and success, our team is eager to connect with you. Let’s Transform Chaos Into Opportunity together.
-
-                                    </p>
-                                    <p>
-
-                                        Fill out the contact request form below, and let’s begin a conversation that can elevate your brand to new heights.
-                                    </p>
+                                        Whether you have inquiries about our services, wish to explore partnership opportunities, or are ready to embark on a journey of growth and success, our team is eager to connect with you. Let's Transform Chaos Into Opportunity together.
+                                        Fill out the contact request form below, and let's begin a conversation that can elevate your brand to new heights.
                                 </Card.Text>
                             </Card.Body>
                         </Card>
@@ -53,7 +47,7 @@ const ContactPage = () => {
                             </div>
                             <Card.Body>
                                 <Card className="image-card">
-                                    <Card.Img variant="top" src={contactPic} alt="Promotional" fluid rounded />
+                                    <Card.Img variant="top" src={contactPic} alt="Promotional" className='img-fluid rounded' />
                                 </Card>
                             </Card.Body>
                         </Card>
