@@ -11,7 +11,7 @@ const AnimatedButton = ({buttonText, link, buttonStyle, delayTime}) => {
     return (
         <Link to={link} ref={ref}>
             <motion.button 
-                    className={`btn btn-primary fs-5 px-4 ${buttonStyle}`}
+                    className={`about-us-button btn btn-primary fs-5 px-4 ${buttonStyle}`}
                     initial={{ opacity: 0, y: 50 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: delayTime }}    

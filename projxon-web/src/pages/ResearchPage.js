@@ -7,7 +7,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import DOMPurify from 'dompurify';
 import { LuBookOpen , LuCalendar, LuFileText, LuMail } from "react-icons/lu";
-import { getPosts } from '../services/api'
+import { fetchBlogs } from '../services/blogService'
 import { Link } from 'react-router-dom'
 
 
@@ -60,18 +60,16 @@ const ResearchPage = () => {
 
     useEffect(() => {
         AOS.init({ duration: 1200 })
-        const fetchBlogs = async () => {
+        const loadBlogs = async () => {
             try{
-                const response = await getPosts()
+                const response = await fetchBlogs()
                 setBlogs(response)
             }
             catch(error){
                 console.log(error)
             }
-
         }
-        fetchBlogs()
-
+        loadBlogs()
     }, [])
 
 
@@ -128,7 +126,7 @@ const ResearchPage = () => {
                             <li key={blog.id} className="col mb-4" data-aos="fade-up">  
                                     
                                 <Card className='overflow-hidden blog-card h-100'>
-                                    <Link to={`/research/${blog.id}`}>
+                                    <Link to={`/research/${blog.slug}`}>
                                         <Card.Img 
                                             variant="top" 
                                             className="blog-img w-100 object-fit-cover" 
@@ -150,7 +148,7 @@ const ResearchPage = () => {
                                         <div className='clamped-container py-4 flex-grow-1'>
                                             <div dangerouslySetInnerHTML={{ __html: sanitizedExcerpt }}  className='card-excerpt text-muted'/>
                                         </div>
-                                        <Link key={blog.id} to={`/research/${blog.id}`} className="mt-auto">
+                                        <Link key={blog.id} to={`/research/${blog.slug}`} className="mt-auto">
                                             <Button variant="primary blog-button">Read More</Button>
                                         </Link>
                                     </Card.Body>
