@@ -25,12 +25,12 @@ const ServicesPage = () => {
                     <p className="services-hero-subtitle">Crafted with Excellence, Delivered with Precision</p>
                 </Container>
             </div>
-
-            {/* Services Carousel */}
-            <Container className='mt-4'>
-                <ServiceCarousel />
-                <ServiceGrid />
-            </Container>
+            <section className='services-container'>
+                <Container className='pt-4'>
+                    <ServiceCarousel />
+                    <ServiceGrid />
+                </Container>
+            </section>           
 
 
             <InfoForm />

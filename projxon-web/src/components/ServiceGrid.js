@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 
 const ServiceGrid = () => {
     return (
+
         <Container className="my-5 services-container">
             <Row className='my-4'>
                 <Col md={6}>
