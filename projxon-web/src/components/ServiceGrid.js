@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 const ServiceGrid = () => {
     return (
         <Container className="my-5 services-container">
-            <Row>
+            <Row className='my-4'>
                 <Col md={6}>
                     <Card className="service-card" data-aos="fade-up" data-aos-delay="100">
                         <div className="card-icon">
@@ -36,7 +36,7 @@ const ServiceGrid = () => {
                 </Col>
             </Row>
 
-            <Row>
+            <Row className='my-4'>
                 <Col md={6}>
                     <Card className="service-card" data-aos="fade-up" data-aos-delay="300">
                         <div className="card-icon">
@@ -67,7 +67,7 @@ const ServiceGrid = () => {
                 </Col>
             </Row>
 
-            <Row>
+            <Row className='my-4'>
                 <Col md={6}>
                     <Card className="service-card" data-aos="fade-up" data-aos-delay="500">
                         <div className="card-icon">
@@ -95,7 +95,7 @@ const ServiceGrid = () => {
                 </Col>
             </Row>
 
-            <Row>
+            <Row className='my-4'>
                 <Col md={6}>
                     <Card className="service-card" data-aos="fade-up" data-aos-delay="700">
                         <div className="card-icon">
@@ -122,7 +122,7 @@ const ServiceGrid = () => {
                 </Col>
             </Row>
 
-            <Row>
+            <Row className='my-4'>
                 <Col md={6}>
                     <Card className="service-card" data-aos="fade-up" data-aos-delay="900">
                         <div className="card-icon">
@@ -149,7 +149,7 @@ const ServiceGrid = () => {
                 </Col>
             </Row>
 
-            <Row>
+            <Row className='my-4'>
                 <Col md={6}>
                     <Card className="service-card" data-aos="fade-up" data-aos-delay="1100">
                         <div className="card-icon">
