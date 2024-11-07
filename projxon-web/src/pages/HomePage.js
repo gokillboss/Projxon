@@ -3,7 +3,7 @@ import './HomePage.css'; // Custom CSS file
 import 'aos/dist/aos.css'; // Animation library
 import AOS from 'aos';
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from "react"
 
 import { Container, Row, Col, Carousel, Card  } from 'react-bootstrap';
 import { LuTrendingUp, LuUsers, LuLightbulb } from "react-icons/lu";
@@ -16,9 +16,10 @@ import business from '../assets/services-img/business.webp'
 import manage from '../assets/services-img/manage.webp'
 import it from '../assets/services-img/it.webp'
 
-import InfoForm from '../components/InfoForm';
+import BlogCard from '../components/BlogCard';
 import AnimatedNumber from '../components/AnimatedNumber';
 import AnimatedButton from '../components/AnimatedButton';
+import { fetchBlogs } from '../services/blogService'
 
 
 AOS.init();
@@ -111,6 +112,22 @@ const HomePage = () => {
         },
     ]
 
+    const [blogs, setBlogs] = useState([])
+
+    useEffect(() => {
+        AOS.init({ duration: 1200 })
+        const loadBlogs = async () => {
+            try{
+                const response = await fetchBlogs()
+                setBlogs(response)
+            }
+            catch(error){
+                console.log(error)
+            }
+        }
+        loadBlogs()
+    }, [])
+
 
     return (
         <>
@@ -141,17 +158,7 @@ const HomePage = () => {
                     >
                         Empowering medium-sized businesses to achieve their full potential
                     </motion.h2>
-                    <Link to="/contact" >
-                        <motion.button 
-                            className="mt-4 btn btn-primary fs-5 px-4 homepage-hero-button"
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.7 }}
-                        >
-                            Get Started
-                        </motion.button>
-                    </Link>
-
+                    <AnimatedButton buttonText="Get Started" link="/contact" buttonStyle="mt-4 yellow-button" delayTime={0.7}/>
                 </Container>
             </div>
 
@@ -225,7 +232,7 @@ const HomePage = () => {
                                                 <Card.Body className='text-white' >
                                                     <div className="text-yellow">{service.icon}</div>
                                                     <h3 className="my-4 fs-5 text-yellow">{service.title}</h3>
-                                                    <p className="services-description mt-3">{service.description}</p>
+                                                    <p className="text-gray mt-3">{service.description}</p>
                                                 </Card.Body>
                                             </Card>
                                         ))}
@@ -245,7 +252,7 @@ const HomePage = () => {
 >                                               <Card.Body className='text-white'>
                                                     <div className="text-yellow">{service.icon}</div>
                                                     <h4 className="my-4 fs-5 text-yellow">{service.title}</h4>
-                                                    <p className="services-description mt-3">{service.description}</p>
+                                                    <p className="text-gray mt-3">{service.description}</p>
                                                 </Card.Body>
                                             </Card>
                                         ))}
@@ -271,7 +278,7 @@ const HomePage = () => {
 
                                     <h3 className='fs-2 mb-3 text-yellow'>{reason.title}</h3>
                                     
-                                    <p className='flex-grow-1 mb-0 choose-us-desc'>{reason.description}</p>
+                                    <p className='flex-grow-1 mb-0 choose-us-desc text-gray'>{reason.description}</p>
 
                                     <div>
                                         <span className='fw-bold choose-us-stat'>
@@ -305,9 +312,46 @@ const HomePage = () => {
                     </Carousel>
                 </Container>
             </section>
+                        
+
+            {/* Blogs Section */}
+            {blogs && blogs.length > 0 && (
+                <section className='bg-black'>
+                    <Container className="blogs">
+                        <h2 className='mb-5 homepage-sections-heading text-white'>
+                            Our Latest Blogs
+                            <span class="blog-heading-border mt-2"></span>
+                        </h2>
+                        <ul className={`list-unstyled row row-cols-1 row-cols-md-2 ${blogs.length === 2 ? "row-cols-lg-2" : "row-cols-lg-3"}`}>
+                            {blogs && blogs.slice(0,3).map((blog, index) => (    
+                                <BlogCard blog={blog} key={index} blogStyle="dark"/>                    
+                            ))}
+                        </ul> 
+                        <div className='d-flex justify-content-center mt-5'>
+                            <AnimatedButton buttonText="See All Blogs" link="/research" buttonStyle="yellow-button" delayTime={0}/>
+                        </div>
+                    </Container>
+                </section>
+            )}
+            
             
             {/* Call to Action Section */}
-            <InfoForm />
+            <section className='call-to-action'>
+                <Container className="text-center" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+                    <div>
+                        <h2 className="fw-bold text-white homepage-sections-heading">Ready to <span className='text-yellow'>Transform Your Business</span></h2>
+                        <p className='mt-3 mb-5 text-gray fs-5'>Contact us today to discuss how we can help you achieve your business goals.</p>
+                        <AnimatedButton 
+                            buttonText="Contact Us" 
+                            link="https://share.hsforms.com/1bKYf6vDKT9WleJf4zPxwUgrx61e"
+                            buttonStyle="yellow-button" 
+                            delayTime={0}
+                            isExternal={true}
+                        />
+                    </div>
+                </Container>
+            </section>
+            
         </>
     );
 }
