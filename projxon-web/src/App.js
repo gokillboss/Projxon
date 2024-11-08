@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
@@ -21,7 +20,7 @@ const App = () => {
         <>
 
             <div className="content">
-                <ScrollToTop />F
+                <ScrollToTop />
                 <NavBar />
 
                 <Routes>

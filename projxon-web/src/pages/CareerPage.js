@@ -49,7 +49,7 @@ const CareerPage = () => {
                         <Card className="">
                             <Card.Body>
                                 <Card className="">
-                                    <Card.Img variant="top" src={internPic} alt="Promotional" fluid rounded />
+                                    <Card.Img variant="top" src={internPic} alt="Promotional" className='img-fluid rounded'  />
                                 </Card>
                             </Card.Body>
                         </Card>

@@ -1,16 +1,15 @@
-import React from 'react';
 import { useState, useEffect } from "react"
 
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import InfoForm from '../components/InfoForm';
+import { LuBookOpen , LuCalendar, LuFileText, LuMail } from "react-icons/lu";
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import DOMPurify from 'dompurify';
-import { LuBookOpen , LuCalendar, LuFileText, LuMail } from "react-icons/lu";
+
+import InfoForm from '../components/InfoForm';
+import BlogCard from '../components/BlogCard';
+
 import { fetchBlogs } from '../services/blogService'
-import { Link } from 'react-router-dom'
-
-
 
 import './ResearchPage.css';
 
@@ -45,18 +44,6 @@ const ResearchPage = () => {
     ]
 
     const [blogs, setBlogs] = useState([])
-
-    const cleanExcerpt = (excerpt) => {
-        return DOMPurify.sanitize(excerpt);
-    };
-    
-    const formatDate = (date) => {
-        const dateObj = new Date(date);
-
-        const options = { year: 'numeric', month: 'short', day: 'numeric' };
-        const formattedDate = dateObj.toLocaleDateString('en-US', options);
-        return formattedDate
-    }
 
     useEffect(() => {
         AOS.init({ duration: 1200 })
@@ -111,51 +98,9 @@ const ResearchPage = () => {
             <Container className="my-5 container">
                 <h2 className='mb-3'>Recent Posts</h2>
                 <ul className="list-unstyled row row-cols-1 row-cols-md-2 row-cols-lg-3">
-
-                    {blogs && blogs.map((blog) => {
-                        
-                        const sanitizedExcerpt = cleanExcerpt(blog.excerpt.rendered)
-                        const featuredMedia = blog._embedded['wp:featuredmedia'];
-                        let sourceUrl = ''
-
-                        if (featuredMedia && featuredMedia.length > 0) {
-                            sourceUrl = featuredMedia[0].source_url
-                        }
-
-                        return (
-                            <li key={blog.id} className="col mb-4" data-aos="fade-up">  
-                                    
-                                <Card className='overflow-hidden blog-card h-100'>
-                                    <Link to={`/research/${blog.slug}`}>
-                                        <Card.Img 
-                                            variant="top" 
-                                            className="blog-img w-100 object-fit-cover" 
-                                            src={sourceUrl} 
-                                            alt={blog.title.rendered} 
-                                        />
-                                    </Link>
-
-                                    <Card.Body className='d-flex flex-column'>
-                                        <Link to={`/research/${blog.id}`} className='blog-card-title'>
-                                            <Card.Title className='mb-0'>{blog.title.rendered}</Card.Title>
-                                        </Link>
-
-                                        <div className='d-flex align-items-center gap-2 mt-1'>
-                                            <span className='text-muted'>{blog._embedded.author[0].name}</span>
-                                            <span className='text-muted dot-seperator fs-6'>•</span>
-                                            <span className='text-muted'>{formatDate(blog.date)}</span>
-                                        </div>
-                                        <div className='clamped-container py-4 flex-grow-1'>
-                                            <div dangerouslySetInnerHTML={{ __html: sanitizedExcerpt }}  className='card-excerpt text-muted'/>
-                                        </div>
-                                        <Link key={blog.id} to={`/research/${blog.slug}`} className="mt-auto">
-                                            <Button variant="primary blog-button">Read More</Button>
-                                        </Link>
-                                    </Card.Body>
-                                </Card>
-                            </li>
-                        )
-                    })}
+                    {blogs && blogs.map((blog, index) => (    
+                         <BlogCard blog={blog} key={index}/>                    
+                    ))}
                 </ul> 
             </Container>
 

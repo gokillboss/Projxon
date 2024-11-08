@@ -110,15 +110,14 @@
     color: #000000;
 }
 
-/* .blog-card-title:hover{
-    color: #2251ff;
-    text-decoration: underline;
-} */
+.blog-card-title:hover{
+    text-decoration: underline #ffd700;
+}
 
 /* Blog Cards Styling */
 .blog-button, .research-button{
-    background-color: #FACC15 !important;
-    border: #FACC15;
+    background-color: #ffd700 !important;
+    border: #ffd700;
     color: #000000;
 }
 
