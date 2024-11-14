@@ -41,7 +41,7 @@ const BlogCard = ({ blog, blogStyle }) => {
                 </Link>
 
                 <Card.Body className={`d-flex flex-column ${blogStyle === 'dark' && "px-0"}`}>
-                    <Link to={`/research/${blog.id}`} className={`blog-card-title ${blogStyle === 'dark' ? "text-white" : "text-black"}`}>
+                    <Link to={`/research/${blog.slug}`} className={`blog-card-title ${blogStyle === 'dark' ? "text-white" : "text-black"}`}>
                         <Card.Title className='mb-0'>{blog.title.rendered}</Card.Title>
                     </Link>
 
