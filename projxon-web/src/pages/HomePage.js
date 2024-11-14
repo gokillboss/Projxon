@@ -17,7 +17,7 @@ import manage from '../assets/services-img/manage.webp'
 import it from '../assets/services-img/it.webp'
 
 import BlogCard from '../components/BlogCard';
-import AnimatedNumber from '../components/AnimatedNumber';
+import BlackCard from '../components/BlackCard';
 import AnimatedButton from '../components/AnimatedButton';
 import { fetchBlogs } from '../services/blogService'
 
@@ -182,7 +182,7 @@ const HomePage = () => {
             {/* Introductory Video Section */}
             <section className="text-center bg-black introduction">
                 <Container>
-                    <h2 data-aos="fade-up" data-aos-once="true" className="mb-5 fw-bold text-yellow mx-auto homepage-sections-heading">Welcome to PROJXON</h2>
+                    <h2 data-aos="fade-up" data-aos-once="true" className="mb-5 fw-bold text-yellow mx-auto sections-heading">Welcome to PROJXON</h2>
                     <Row className="justify-content-center">
                         <Col md={10} lg={8}>
                             <div className="homepage-video-container rounded-3" data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
@@ -203,7 +203,7 @@ const HomePage = () => {
             <section className="bg-yellow services">
                 <Container className="overflow-hidden">
                     <Row className="gy-4 gy-md-5 gy-lg-0 align-items-center">
-                        <Col xs={12} lg={5}>
+                        <Col md={12} lg={5}>
                             <Row>
                                 <Col xs={12} xl={11} data-aos="fade-up" data-aos-delay="100"  data-aos-once="true">
                                     <h3 className="fs-6 mb-3 mb-xl-4 text-uppercase text-black">Our Services</h3>
@@ -215,7 +215,7 @@ const HomePage = () => {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col xs={12} lg={7}>
+                        <Col md={12} lg={7}>
                             <Row>
                                 <Col xs={12} md={6}>
                                     <div>
@@ -267,28 +267,10 @@ const HomePage = () => {
             {/* Choose Us Section */}
             <section className="bg-black choose-us">
                 <Container className="text-center">
-                    <h2 className="fw-bold homepage-sections-heading text-yellow" data-aos="fade-up" data-aos-once="true">Why Choose Us?</h2>
+                    <h2 className="fw-bold sections-heading text-yellow" data-aos="fade-up" data-aos-once="true">Why Choose Us?</h2>
                     <Row className="my-5 g-5">
                         {reasons.map((reason, index) => (
-                            <Col key={index} md={12} lg={4} className='mb-4 choose-us-container' data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
-                                <div className='d-flex flex-column choose-us-body h-100 choose-us-card'>
-                                    <div className='mb-4'>
-                                        {reason.icon}
-                                    </div>
-
-                                    <h3 className='fs-2 mb-3 text-yellow'>{reason.title}</h3>
-                                    
-                                    <p className='flex-grow-1 mb-0 choose-us-desc text-gray'>{reason.description}</p>
-
-                                    <div>
-                                        <span className='fw-bold choose-us-stat'>
-                                            <AnimatedNumber value={parseInt(reason.stat)} />
-                                            {reason.statSuffix}
-                                        </span>
-                                        <span className='choose-us-stat-desc d-block'>{reason.statDescription}</span>
-                                    </div>
-                                </div>
-                            </Col>
+                            <BlackCard key={index} item={reason} isStat={true}/>
                         ))}
                     </Row>
                 </Container>
@@ -297,12 +279,12 @@ const HomePage = () => {
             {/* Client Testimonials */}
             <section className="testimonials bg-yellow carousel-dark slide">
                 <Container className="text-center" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
-                    <h2 className="fw-bold text-black homepage-sections-heading">Testimonials</h2>
+                    <h2 className="fw-bold text-black sections-heading">Testimonials</h2>
                     <Carousel>
                         {clients.map((client, index) => (
                             <Carousel.Item key={index}>
                                 <Carousel.Caption>
-                                    <img className="testimonial-img mb-5" src={client.image} alt={`${client.name}`} />       
+                                    <img className="testimonial-img mb-5" src={client.image} alt={`${client.name}`} loading='lazy' />       
                                     <p className="mb-4 fs-5"><FaQuoteLeft className="quote-icon" size={25}/>{client.quote}</p>
                                     <h3 className='fs-5'>{client.name}</h3>
                                     <span>{client.title}</span>
@@ -318,9 +300,9 @@ const HomePage = () => {
             {blogs && blogs.length > 0 && (
                 <section className='bg-black'>
                     <Container className="blogs">
-                        <h2 className='mb-5 homepage-sections-heading text-white'>
+                        <h2 className='mb-5 sections-heading text-white'>
                             Our Latest Blogs
-                            <span class="blog-heading-border mt-2"></span>
+                            <span className="blog-heading-border mt-2"></span>
                         </h2>
                         <ul className={`list-unstyled row row-cols-1 row-cols-md-2 ${blogs.length === 2 ? "row-cols-lg-2" : "row-cols-lg-3"}`}>
                             {blogs && blogs.slice(0,3).map((blog, index) => (    
@@ -336,10 +318,10 @@ const HomePage = () => {
             
             
             {/* Call to Action Section */}
-            <section className='call-to-action'>
+            <section className='call-to-action' loading='lazy'>
                 <Container className="text-center" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
                     <div>
-                        <h2 className="fw-bold text-white homepage-sections-heading">Ready to <span className='text-yellow'>Transform Your Business</span></h2>
+                        <h2 className="fw-bold text-white sections-heading">Ready to <span className='text-yellow'>Transform Your Business</span></h2>
                         <p className='mt-3 mb-5 text-gray fs-5'>Contact us today to discuss how we can help you achieve your business goals.</p>
                         <AnimatedButton 
                             buttonText="Contact Us" 

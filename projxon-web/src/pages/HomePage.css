@@ -5,7 +5,7 @@
     background: radial-gradient(circle, #ffd700 80%, #000 100%);
 }
 
-.homepage-sections-heading{
+.sections-heading{
     font-size: 3rem
 }
 
@@ -156,45 +156,6 @@
     padding-bottom: 108px;
 }
 
-.choose-us, .choose-us-card {
-    overflow: hidden;
-}
-
-.choose-us-body{
-    padding: 30px;
-}
-
-.choose-us-desc{
-    padding-bottom: 32px;
-}
-
-.choose-us-stat-desc{
-    color: rgb(156 163 175 / 1)
-}
-
-.choose-us-stat{
-    color: #FFD700;
-    font-size: 3rem;
-}
-
-.choose-us-card, .service-card {
-    box-shadow: rgba(255, 215, 0, 0.16) 0px 10px 15px 0px, rgba(255, 215, 0, 0.06) 0px 0px 0px 1px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-    position: relative
-}
-
-
-.choose-us-card:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 8px 20px #FFD700;
-}
-
-.choose-stat-desc{
-    font-size: 0.9rem;
-}
-
 /* || Testimonials */
 
 .carousel-item{
@@ -256,9 +217,13 @@
         font-size: 1rem !important ;
     }
 
-    .choose-us-container{
-        padding-left: 40px;
-        padding-right: 40px;
+    .choose-us .row{
+        --bs-gutter-x: 0px;
+    }
+
+    .black-card-container{
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .carousel-caption{
