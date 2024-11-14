@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 });
 
 router.use('/blogs', blogRoute);
-router.use('/users', userRoute);
+// router.use('/users', userRoute);
 
 
 module.exports = router;
