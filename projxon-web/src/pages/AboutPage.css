@@ -1,23 +1,62 @@
 /* AboutPage.css */
 
+.bg-yellow-team {
+    background: #ffd700; 
+    background: radial-gradient(circle, #ffd700 80%, #000 100%);
+}
+
+.who-we-are, .mission-vision, .our-values, .our-team{
+    padding-top: 108px;
+    padding-bottom: 108px;
+}
+
+.who-we-are img{
+    aspect-ratio: 1 / 1;
+    height: auto;
+}
+
+.mission-values h2{
+    font-size: 3rem;
+}
+
+.our-team {
+	overflow: hidden;
+}
+
+.our-team-sub-heading {
+	font-size: 1.1rem;
+	color: #000;
+}
+
+.our-team-card {
+	background-color: #000;
+	border-radius: 25px;
+    box-shadow: 0 8px 15px #000000;
+	transition: transform 0.25s ease-in-out;
+}
+
+.our-team-card:hover {
+	transform: translateY(-5px);
+}
+
+.our-team img {
+	border-radius: 20px;
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.social-icons:hover{
+    color: rgb(234 179 8 / 1);
+}
+
 .about-hero-section {
     background: linear-gradient(135deg, #ffd700, #000000);
     color: white;
     padding: 20px 0;
     text-align: center;
-    height: 15rem;
-}
-
-
-.about-hero-section::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: -100%;
-    left: 0%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
-    animation: rotate 10s linear infinite;
+    height: 30rem;
 }
 
 .about-hero-section h1 {
@@ -78,16 +117,30 @@
 
 
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
+    /* .hero-subtitle {
         font-size: 1.2rem;
+    } */
+
+    .bg-yellow-team{
+        background: #ffd700; 
+        background: radial-gradient(circle, #ffd700 96%, #000 100%);
     }
 
-    .team-card,
-    .value-card {
-        padding: 20px;
+    .our-team .sections-heading{
+        text-align: center;
+    }
+
+    .mission-vision .row, .who-we-are .row, .our-values .row{
+        --bs-gutter-x: 0px;
+    }
+
+    .black-card-container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .our-team-card-body{
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
