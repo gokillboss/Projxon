@@ -64,9 +64,6 @@ body {
 
 
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
-    }
 
     .promotional-section h2 {
         font-size: 1.8rem;

@@ -1,5 +1,10 @@
 /* AboutPage.css */
 
+.bg-yellow-team {
+    background: #ffd700; 
+    background: radial-gradient(circle, #ffd700 80%, #000 100%);
+}
+
 .who-we-are, .mission-vision, .our-values, .our-team{
     padding-top: 108px;
     padding-bottom: 108px;
@@ -112,17 +117,17 @@
 
 
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
+    /* .hero-subtitle {
         font-size: 1.2rem;
+    } */
+
+    .bg-yellow-team{
+        background: #ffd700; 
+        background: radial-gradient(circle, #ffd700 96%, #000 100%);
     }
 
-    .team-card,
-    .value-card {
-        padding: 20px;
+    .our-team .sections-heading{
+        text-align: center;
     }
 
     .mission-vision .row, .who-we-are .row, .our-values .row{

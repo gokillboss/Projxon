@@ -191,18 +191,18 @@ const AboutPage = () => {
             </section>
 
             {/* Our Team Section */}
-            <section className='bg-yellow our-team'>
+            <section className='bg-yellow-team our-team'>
                 <Container>
                     <Row className="justify-content-center mb-4 mb-md-5">
                         <Col lg={6} xl={5} className="text-center">
                             <h2 className="sections-heading fw-bold mb-3">Meet Our Team</h2>
-                            <p className="our-team-sub-heading mb-0">
+                            <p className="our-team-sub-heading mb-3">
                                 Our talented team combines vision, skill, and innovation to create exceptional results for our clients.
                             </p>
                         </Col>
                     </Row>
 
-                    <h1 className='fw-bold sections-heading'>Consulting Leads</h1>
+                    <h2 className='fw-bold sections-heading'>Consulting Leads</h2>
                     <Row className="text-center">
                         {consultingLeads.map((member, i) => (
                             <Col md={6} lg={3} key={i} className='mb-5 our-team-card-body'>
@@ -235,7 +235,7 @@ const AboutPage = () => {
                     </Row>
 
 
-                    <h1 className='fw-bold sections-heading mt-5'>Delivery Team Leads</h1>
+                    <h2 className='fw-bold sections-heading mt-5'>Delivery Team Leads</h2>
                     <Row className="text-center">
                         {teamLeads.map((member, i) => (
                             <Col md={6} lg={3} key={i} className='mb-5 our-team-card-body'>
