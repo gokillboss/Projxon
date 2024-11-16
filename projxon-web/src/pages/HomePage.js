@@ -19,6 +19,7 @@ import it from '../assets/services-img/it.webp'
 import BlogCard from '../components/BlogCard';
 import BlackCard from '../components/BlackCard';
 import AnimatedButton from '../components/AnimatedButton';
+import CallToAction from '../components/CallToAction';
 import { fetchBlogs } from '../services/blogService'
 
 
@@ -115,7 +116,7 @@ const HomePage = () => {
     const [blogs, setBlogs] = useState([])
 
     useEffect(() => {
-        AOS.init({ duration: 1200 })
+        AOS.init()
         const loadBlogs = async () => {
             try{
                 const response = await fetchBlogs()
@@ -205,7 +206,7 @@ const HomePage = () => {
                     <Row className="gy-4 gy-md-5 gy-lg-0 align-items-center">
                         <Col md={12} lg={5}>
                             <Row>
-                                <Col xs={12} xl={11} data-aos="fade-up" data-aos-delay="100"  data-aos-once="true">
+                                <Col xs={12} xl={11} data-aos="fade-up"data-aos-once="true">
                                     <h3 className="fs-6 mb-3 mb-xl-4 text-uppercase text-black">Our Services</h3>
                                     <h2 className="display-5 mb-3 mb-xl-4 text-black">We are giving you perfect solutions with our proficient services.</h2>
                                     <p className="mb-3 mb-xl-4 text-black">
@@ -278,7 +279,7 @@ const HomePage = () => {
 
             {/* Client Testimonials */}
             <section className="testimonials bg-yellow carousel-dark slide">
-                <Container className="text-center" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+                <Container className="text-center" data-aos="fade-up" data-aos-once="true">
                     <h2 className="fw-bold text-black sections-heading">Testimonials</h2>
                     <Carousel>
                         {clients.map((client, index) => (
@@ -318,21 +319,7 @@ const HomePage = () => {
             
             
             {/* Call to Action Section */}
-            <section className='call-to-action' loading='lazy'>
-                <Container className="text-center" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
-                    <div>
-                        <h2 className="fw-bold text-white sections-heading">Ready to <span className='text-yellow'>Transform Your Business</span></h2>
-                        <p className='mt-3 mb-5 text-gray fs-5'>Contact us today to discuss how we can help you achieve your business goals.</p>
-                        <AnimatedButton 
-                            buttonText="Contact Us" 
-                            link="https://share.hsforms.com/1bKYf6vDKT9WleJf4zPxwUgrx61e"
-                            buttonStyle="yellow-button" 
-                            delayTime={0}
-                            isExternal={true}
-                        />
-                    </div>
-                </Container>
-            </section>
+            <CallToAction />
             
         </>
     );
