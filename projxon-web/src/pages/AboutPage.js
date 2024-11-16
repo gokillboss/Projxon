@@ -9,7 +9,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Hero from '../components/Hero';
-
 import InfoForm from '../components/InfoForm';
 import BlackCard from '../components/BlackCard';
 
@@ -129,17 +128,18 @@ const AboutPage = () => {
 
     return (
         <div className="about-page">
-            <Hero title="About PROJXON" subtitle="Empowering Businesses to Reach Their Full Potential"/>
+            {/* Hero Section */}
+            <Hero title="About PROJXON" subtitle="Empowering Businesses to Reach Their Full Potential" backgroundClass="about-us-hero"/>
 
             {/* Who We Are Section */}
             <section className='who-we-are'>
-                <Container className="my-5">
+                <Container className="my-5 overflow-hidden">
                     <Row className='align-items-center g-5'>
-                        <Col md={12} lg={6} data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
+                        <Col md={12} lg={6} data-aos="fade-up" data-aos-once="true">
                             <img className='overflow-hidden rounded object-fit-cover w-100' src={whoWeAre} alt="who we are"/>
                         </Col>
 
-                        <Col  md={12} lg={6} data-aos="fade-left" data-aos-delay="800" data-aos-once="true">
+                        <Col  md={12} lg={6} data-aos="fade-left" data-aos-delay="500" data-aos-once="true">
                             <h1 className="text-uppercase fw-bolder mb-3">Who Are We?</h1>
                             <h2 className='fw-bolder fs-4'> PROJXON is a leading business consulting firm helping medium-sized businesses achieve their full potential.</h2>
                             <p className='fs-5 mt-3'>
@@ -158,7 +158,7 @@ const AboutPage = () => {
             <section className='mission-vision bg-yellow overflow-hidden'>
                 <Container>
                     <Row className='g-5'>
-                        <Col sm={12} md={6} className="mb-4 p-lg-5" data-aos="fade-up" data-aos-delay="100">
+                        <Col sm={12} md={6} className="mb-4 p-lg-5" data-aos="fade-up">
                             <section className='w-100'>
                                 <h2 className='fs-1 mb-4 text-uppercase fw-bold'>Our Mission</h2>
                                 <p className='fs-5'>
@@ -166,7 +166,7 @@ const AboutPage = () => {
                                 </p>
                             </section>       
                         </Col>
-                        <Col sm={12} md={6} className="mb-4 p-lg-5" data-aos="fade-up" data-aos-delay="100">
+                        <Col sm={12} md={6} className="mb-4 p-lg-5" data-aos="fade-up">
                             <section className='w-100'>
                                 <h2 className='fs-1 mb-4 text-uppercase fw-bold'>Our Vision</h2>
                                 <p className='fs-5'>
@@ -222,12 +222,7 @@ const AboutPage = () => {
                                                     {link.icon}
                                                 </a>
                                             ))}
-                                        </div>
-                                        {/* <div className='mt-auto'>
-                                            <Button variant="outline-warning" className="mt-4">
-                                                View Details
-                                            </Button>
-                                        </div> */}                                       
+                                        </div>                                    
                                     </div>
                                 </div>
                             </Col>
@@ -255,12 +250,7 @@ const AboutPage = () => {
                                                     {link.icon}
                                                 </a>
                                             ))}
-                                        </div>
-                                        {/* <div className='mt-auto'>
-                                            <Button variant="outline-warning" className="mt-4">
-                                                View Details
-                                            </Button>
-                                        </div> */}                                       
+                                        </div>                                     
                                     </div>
                                 </div>
                             </Col>
