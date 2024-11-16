@@ -36,7 +36,7 @@ const NavBar = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Container className="d-flex justify-content-md-start justify-content-lg-end">
+                        <Container className="navbar-container d-flex justify-content-md-start justify-content-lg-end">
                             <Nav className="ml-auto text-uppercase">
                                 {navLinks.map((link, index) => (
                                     <Nav.Link 
