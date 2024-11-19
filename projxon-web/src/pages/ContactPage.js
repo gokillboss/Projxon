@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ContactPage.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import contactPic from '../assets/contact.jpg';
+
+import Hero from '../components/Hero';
 import InfoForm from '../components/InfoForm';
 
 const ContactPage = () => {
@@ -13,15 +14,8 @@ const ContactPage = () => {
     }, []);
 
     return (
-        <div >
-
-            <div className="contact-hero-section" data-aos="fade-in">
-                <Container className="text-center">
-                    <h1 className="contact-hero-title text-uppercase">Contact Us</h1>
-                </Container>
-            </div>
-
-
+        <div>
+            <Hero title="Contact Us" />
 
             <Container className="promotional-section my-5">
                 <Row className='align-items-center'>
@@ -47,7 +41,7 @@ const ContactPage = () => {
                             </div>
                             <Card.Body>
                                 <Card className="image-card">
-                                    <Card.Img variant="top" src={contactPic} alt="Promotional" className='img-fluid rounded' />
+                                    <Card.Img variant="top" src='#' alt="Promotional" className='img-fluid rounded' />
                                 </Card>
                             </Card.Body>
                         </Card>

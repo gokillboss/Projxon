@@ -9,12 +9,12 @@ import { Container, Row, Col, Carousel, Card  } from 'react-bootstrap';
 import { LuTrendingUp, LuUsers, LuLightbulb } from "react-icons/lu";
 import { FaQuoteLeft, FaMobile, FaCogs, FaProjectDiagram, FaShoppingCart, FaLaptopCode } from 'react-icons/fa';
 
-import client from '../assets/default-pic.jpg'
-import market from '../assets/services-img/market.webp'
-import eccom from '../assets/services-img/ecom.webp'
-import business from '../assets/services-img/business.webp'
-import manage from '../assets/services-img/manage.webp'
-import it from '../assets/services-img/it.webp'
+import client from '../assets/homepage/default-pic.jpg'
+import market from '../assets/homepage/services-img/market.webp'
+import eccom from '../assets/homepage/services-img/ecom.webp'
+import business from '../assets/homepage/services-img/business.webp'
+import manage from '../assets/homepage/services-img/manage.webp'
+import it from '../assets/homepage/services-img/it.webp'
 
 import BlogCard from '../components/BlogCard';
 import BlackCard from '../components/BlackCard';
@@ -96,7 +96,7 @@ const HomePage = () => {
         {
             image: client,
             quote: "PROJXON transformed our onboarding process, reducing it from 90 days to just 14 days. This efficiency gain translated to an additional 2.5 months of revenue annually. Their expertise in process optimization is unparalleled.",
-            name: "Brandon D.",
+            name: "Bradley Morrison",
             title: "CEO of XYZ Core"
         },
         {

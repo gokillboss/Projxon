@@ -6,6 +6,7 @@ import { LuBookOpen , LuCalendar, LuFileText, LuMail } from "react-icons/lu";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import Hero from '../components/Hero';
 import InfoForm from '../components/InfoForm';
 import BlogCard from '../components/BlogCard';
 
@@ -63,12 +64,8 @@ const ResearchPage = () => {
     return (
         <>
             {/* Hero Section */}
-            <div className="research-hero-section text-center">
-                <Container className="services-hero-content text-center">
-                    <h1 className="research-title text-uppercase">Blog & Research</h1>
-                    <p className="hero-subtitle">Stay Updated with the Latest News, Events, and Insights</p>
-                </Container>
-            </div>
+            <Hero title="Blog & Research" subtitle="Stay Updated with the Latest News, Events, and Insight"/>
+
 
             {/* Research Content Section */}
             <Container className="my-5">

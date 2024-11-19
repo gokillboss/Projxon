@@ -88,7 +88,7 @@ const PartnershipPage = () => {
             {/* Partnership Opportunities Section */}
             <section className=' bg-yellow'>
 
-                <section className="partner-opportunity">
+                <section className="partner-opportunity overflow-hidden">
                     <h1 className='sections-heading fw-bold text-center mb-5 pb-3'>Partnership Opportunities</h1>
 
                     <Container>

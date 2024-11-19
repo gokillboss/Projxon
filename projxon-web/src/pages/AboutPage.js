@@ -12,16 +12,16 @@ import Hero from '../components/Hero';
 import CallToAction from '../components/CallToAction';
 import BlackCard from '../components/BlackCard';
 
-import whoWeAre from '../assets/who-we-are.webp'
-import phelan from '../assets/team/phelan.webp'
-import kathy from '../assets/team/kathy.webp'
-import donavon from '../assets/team/donavon.webp'
-import melissa from '../assets/team/melissa.webp'
+import whoWeAre from '../assets/about/who-we-are.webp'
+import phelan from '../assets/about/team/phelan.webp'
+import kathy from '../assets/about/team/kathy.webp'
+import donavon from '../assets/about/team/donavon.webp'
+import melissa from '../assets/about/team/melissa.webp'
 
-import bast from '../assets/team/bast.webp'
-import dania from '../assets/team/dania.webp'
-import megha from '../assets/team/megha.webp'
-import alexandria from '../assets/team/alexandria.webp'
+import bast from '../assets/about/team/bast.webp'
+import dania from '../assets/about/team/dania.webp'
+import megha from '../assets/about/team/megha.webp'
+import alexandria from '../assets/about/team/alexandria.webp'
 
 
 const AboutPage = () => {

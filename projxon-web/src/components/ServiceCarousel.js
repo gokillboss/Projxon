@@ -2,8 +2,8 @@
 import React from 'react';
 import { Carousel, Card } from 'react-bootstrap';
 import { FaCogs, FaProjectDiagram, FaShoppingCart, FaLaptopCode, FaChartLine, FaChalkboardTeacher, FaLightbulb, FaLeaf, FaSmile, FaGlobe, FaMoneyCheckAlt, FaDigitalTachograph } from 'react-icons/fa';
-import ITConsulting from '../assets/ITConsulting.png';
-import businessIMG from '../assets/business.png';
+import ITConsulting from '../assets/servicepage/ITConsulting.webp';
+import businessIMG from '../assets/servicepage/business.webp';
 
 const ServiceCarousel = () => {
     return (

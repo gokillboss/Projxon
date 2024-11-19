@@ -3,10 +3,12 @@
     color: white;
     padding: 20px 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
     height: 30rem;
 }
 
-/* .hero-section::before {
+.hero-section::before {
     content: '';
     position: absolute;
     width: 400%;
@@ -15,7 +17,17 @@
     left: -200%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
     animation: rotate 10s linear infinite;
-} */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 .hero-content {
     margin: auto;
