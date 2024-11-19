@@ -9,7 +9,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Hero from '../components/Hero';
-import InfoForm from '../components/InfoForm';
+import CallToAction from '../components/CallToAction';
 import BlackCard from '../components/BlackCard';
 
 import whoWeAre from '../assets/who-we-are.webp'
@@ -123,7 +123,7 @@ const AboutPage = () => {
     ]
 
     useEffect(() => {
-        AOS.init({ duration: 1000 });
+        AOS.init({ duration: 800 });
     }, []);
 
     return (
@@ -136,18 +136,21 @@ const AboutPage = () => {
                 <Container className="my-5 overflow-hidden">
                     <Row className='align-items-center g-5'>
                         <Col md={12} lg={6} data-aos="fade-up" data-aos-once="true">
-                            <img className='overflow-hidden rounded object-fit-cover w-100' src={whoWeAre} alt="who we are"/>
+                            <img className='overflow-hidden rounded-3 object-fit-cover w-100' src={whoWeAre} alt="who we are"/>
                         </Col>
 
-                        <Col  md={12} lg={6} data-aos="fade-left" data-aos-delay="500" data-aos-once="true">
+                        <Col md={12} lg={6} data-aos="fade-left" data-aos-delay="500" data-aos-once="true">
                             <h1 className="text-uppercase fw-bolder mb-3">Who Are We?</h1>
                             <h2 className='fw-bolder fs-4'> PROJXON is a leading business consulting firm helping medium-sized businesses achieve their full potential.</h2>
-                            <p className='fs-5 mt-3'>
-                                PROJXON offers a wide range of services, including business process optimization, project management, and strategic planning, to help our clients navigate challenges, optimize operations, and drive sustainable growth. 
-                            </p>
-                            <p className='fs-5'>
-                                Our team of experts is dedicated to providing tailored solutions, innovative strategies, and expert guidance to help businesses innovate, grow, and succeed.
-                            </p>
+                            <div className='mt-3 who-we-are-description gray-opacity'>
+                                <p className='fs-5'>
+                                    PROJXON offers a wide range of services, including business process optimization, project management, and strategic planning, to help our clients navigate challenges, optimize operations, and drive sustainable growth. 
+                                </p>
+                                <p className='fs-5'>
+                                    Our team of experts is dedicated to providing tailored solutions, innovative strategies, and expert guidance to help businesses innovate, grow, and succeed.
+                                </p>
+                            </div>
+                            
                             <Button className='yellow-button mt-3'>Get Started</Button>
                         </Col> 
                     </Row>   
@@ -158,7 +161,7 @@ const AboutPage = () => {
             <section className='mission-vision bg-yellow overflow-hidden'>
                 <Container>
                     <Row className='g-5'>
-                        <Col sm={12} md={6} className="mb-4 p-lg-5" data-aos="fade-up">
+                        <Col sm={12} md={6} className="mb-4 p-lg-5" data-aos="fade-up" data-aos-once="true">
                             <section className='w-100'>
                                 <h2 className='fs-1 mb-4 text-uppercase fw-bold'>Our Mission</h2>
                                 <p className='fs-5'>
@@ -166,7 +169,7 @@ const AboutPage = () => {
                                 </p>
                             </section>       
                         </Col>
-                        <Col sm={12} md={6} className="mb-4 p-lg-5" data-aos="fade-up">
+                        <Col sm={12} md={6} className="mb-4 p-lg-5" data-aos="fade-up" data-aos-once="true">
                             <section className='w-100'>
                                 <h2 className='fs-1 mb-4 text-uppercase fw-bold'>Our Vision</h2>
                                 <p className='fs-5'>
@@ -211,6 +214,7 @@ const AboutPage = () => {
                                         src={member.image}
                                         alt={member.name}
                                         className="img-fluid w-100"
+                                        loading='lazy'
                                     />
                                     <div className="px-3 py-4 px-xl-4 text-white d-flex flex-column flex-grow-1">
                                         <h4 className="mb-2">{member.name}</h4>
@@ -239,6 +243,7 @@ const AboutPage = () => {
                                         src={member.image}
                                         alt={member.name}
                                         className="img-fluid w-100"
+                                        loading='lazy'
                                     />
                                     <div className="px-3 py-4 px-xl-4 text-white d-flex flex-column flex-grow-1">
                                         <h4 className="mb-2">{member.name}</h4>
@@ -274,7 +279,7 @@ const AboutPage = () => {
             </Container> */}
 
             {/* Call to Action Section */}
-            <InfoForm data-aos="fade-up" data-aos-delay="900" />
+            <CallToAction />
         </div>
     );
 }

@@ -1,22 +1,35 @@
 /* AboutPage.css */
 
-.bg-yellow-team {
-    background: #ffd700; 
-    background: radial-gradient(circle, #ffd700 80%, #000 100%);
-}
+/* || General Styles */
+
 
 .who-we-are, .mission-vision, .our-values, .our-team{
     padding-top: 108px;
     padding-bottom: 108px;
 }
 
+.gray-opacity{
+    opacity: 0.8;
+}
+
+/* || Who We Are */
+
 .who-we-are img{
     aspect-ratio: 1 / 1;
     height: auto;
 }
 
+/* || Mission & Values */
+
 .mission-values h2{
     font-size: 3rem;
+}
+
+/* || Our Team */
+
+.bg-yellow-team {
+    background: #ffd700; 
+    background: radial-gradient(circle, #ffd700 80%, #000 100%);
 }
 
 .our-team {
@@ -51,70 +64,7 @@
     color: rgb(234 179 8 / 1);
 }
 
-.about-hero-section {
-    background: linear-gradient(135deg, #ffd700, #000000);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    height: 30rem;
-}
-
-.about-hero-section h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.about-hero-content {
-    margin: auto;
-    text-align: center;
-    padding: 20px;
-    max-width: 800px;
-    position: relative;
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-
-.about-hero-title {
-    margin: 20px;
-    padding-top: 10px;
-}
-
-.about-hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-}
-
-.value-card,
-.team-card {
-    text-align: center;
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.value-card:hover,
-.team-card:hover {
-    transform: translateY(-10px);
-}
-
-.value-icon {
-    font-size: 3rem;
-    color: #007bff;
-    margin-bottom: 20px;
-}
-
-.team-image {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-}
-
-
+/* || Media Queries */
 
 @media (max-width: 768px) {
     /* .hero-subtitle {
