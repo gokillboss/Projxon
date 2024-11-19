@@ -116,7 +116,7 @@ const HomePage = () => {
     const [blogs, setBlogs] = useState([])
 
     useEffect(() => {
-        AOS.init()
+        AOS.init({ duration: 800 })
         const loadBlogs = async () => {
             try{
                 const response = await fetchBlogs()
