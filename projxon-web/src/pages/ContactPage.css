@@ -13,16 +13,16 @@
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* Bóng mờ nhỏ */
-                0 10px 20px rgba(0, 0, 0, 0.2); /* Bóng lớn hơn để tạo chiều sâu 3D */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+                0 10px 20px rgba(0, 0, 0, 0.2); 
 
 
 }
 
 .info-form:hover {
-    transform: translateY(-10px); /* Dịch lên trên để trông nổi bật hơn */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), /* Tăng chiều sâu bóng */
-                0 20px 40px rgba(0, 0, 0, 0.3); /* Bóng nổi rõ hơn */
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 
+                0 20px 40px rgba(0, 0, 0, 0.3); 
 }
 
 
@@ -30,14 +30,14 @@
     border: 2px solid #ffd700;
     border-radius: 30px;
     display: block;
-    width: 100%; /* Đảm bảo ảnh co giãn theo chiều ngang */
-    text-align: center; /* Căn giữa nếu cần */
+    width: 100%; 
+    text-align: center; 
 }
 
 .img-fluid {
-    max-width: 100%; /* Đảm bảo ảnh không vượt quá chiều rộng container */
-    height: auto; /* Giữ tỷ lệ ảnh */
-    border-radius: 30px; /* Tạo hiệu ứng góc bo tròn */
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 30px; 
 }
 
 .contact-section {
@@ -68,15 +68,15 @@
 }
 
 .image-container {
-    max-height: 300px; /* Giới hạn chiều cao của container */
-    overflow: hidden; /* Ẩn bất kỳ phần nào vượt quá chiều cao container */
-    text-align: center; /* Căn giữa hình ảnh */
+    max-height: 300px; 
+    overflow: hidden;
+    text-align: center; 
 }
 
 .image-container img {
-    max-height: 100%; /* Hình ảnh không vượt quá chiều cao của container */
-    width: auto; /* Giữ nguyên tỷ lệ */
-    object-fit: contain; /* Đảm bảo hình ảnh vừa với container mà không bị cắt */
+    max-height: 100%; 
+    width: auto; 
+    object-fit: contain; 
 }
 
 
