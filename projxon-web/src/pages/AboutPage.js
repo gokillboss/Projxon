@@ -9,20 +9,19 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Hero from '../components/Hero';
-
-import InfoForm from '../components/InfoForm';
+import CallToAction from '../components/CallToAction';
 import BlackCard from '../components/BlackCard';
 
-import whoWeAre from '../assets/who-we-are.webp'
-import phelan from '../assets/team/phelan.webp'
-import kathy from '../assets/team/kathy.webp'
-import donavon from '../assets/team/donavon.webp'
-import melissa from '../assets/team/melissa.webp'
+import whoWeAre from '../assets/about/who-we-are.webp'
+import phelan from '../assets/about/team/phelan.webp'
+import kathy from '../assets/about/team/kathy.webp'
+import donavon from '../assets/about/team/donavon.webp'
+import melissa from '../assets/about/team/melissa.webp'
 
-import bast from '../assets/team/bast.webp'
-import dania from '../assets/team/dania.webp'
-import megha from '../assets/team/megha.webp'
-import alexandria from '../assets/team/alexandria.webp'
+import bast from '../assets/about/team/bast.webp'
+import dania from '../assets/about/team/dania.webp'
+import megha from '../assets/about/team/megha.webp'
+import alexandria from '../assets/about/team/alexandria.webp'
 
 
 const AboutPage = () => {
@@ -124,30 +123,34 @@ const AboutPage = () => {
     ]
 
     useEffect(() => {
-        AOS.init({ duration: 1000 });
+        AOS.init({ duration: 800 });
     }, []);
 
     return (
         <div className="about-page">
-            <Hero title="About PROJXON" subtitle="Empowering Businesses to Reach Their Full Potential"/>
+            {/* Hero Section */}
+            <Hero title="About PROJXON" subtitle="Empowering Businesses to Reach Their Full Potential" backgroundClass="about-us-hero"/>
 
             {/* Who We Are Section */}
             <section className='who-we-are'>
-                <Container className="my-5">
+                <Container className="my-5 overflow-hidden">
                     <Row className='align-items-center g-5'>
-                        <Col md={12} lg={6} data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
-                            <img className='overflow-hidden rounded object-fit-cover w-100' src={whoWeAre} alt="who we are"/>
+                        <Col md={12} lg={6} data-aos="fade-up" data-aos-once="true">
+                            <img className='overflow-hidden rounded-3 object-fit-cover w-100' src={whoWeAre} alt="who we are"/>
                         </Col>
 
-                        <Col  md={12} lg={6} data-aos="fade-left" data-aos-delay="800" data-aos-once="true">
+                        <Col md={12} lg={6} data-aos="fade-left" data-aos-delay="500" data-aos-once="true">
                             <h1 className="text-uppercase fw-bolder mb-3">Who Are We?</h1>
                             <h2 className='fw-bolder fs-4'> PROJXON is a leading business consulting firm helping medium-sized businesses achieve their full potential.</h2>
-                            <p className='fs-5 mt-3'>
-                                PROJXON offers a wide range of services, including business process optimization, project management, and strategic planning, to help our clients navigate challenges, optimize operations, and drive sustainable growth. 
-                            </p>
-                            <p className='fs-5'>
-                                Our team of experts is dedicated to providing tailored solutions, innovative strategies, and expert guidance to help businesses innovate, grow, and succeed.
-                            </p>
+                            <div className='mt-3 who-we-are-description gray-opacity'>
+                                <p className='fs-5'>
+                                    PROJXON offers a wide range of services, including business process optimization, project management, and strategic planning, to help our clients navigate challenges, optimize operations, and drive sustainable growth. 
+                                </p>
+                                <p className='fs-5'>
+                                    Our team of experts is dedicated to providing tailored solutions, innovative strategies, and expert guidance to help businesses innovate, grow, and succeed.
+                                </p>
+                            </div>
+                            
                             <Button className='yellow-button mt-3'>Get Started</Button>
                         </Col> 
                     </Row>   
@@ -158,7 +161,7 @@ const AboutPage = () => {
             <section className='mission-vision bg-yellow overflow-hidden'>
                 <Container>
                     <Row className='g-5'>
-                        <Col sm={12} md={6} className="mb-4 p-lg-5" data-aos="fade-up" data-aos-delay="100">
+                        <Col sm={12} md={6} className="mb-4 p-lg-5" data-aos="fade-up" data-aos-once="true">
                             <section className='w-100'>
                                 <h2 className='fs-1 mb-4 text-uppercase fw-bold'>Our Mission</h2>
                                 <p className='fs-5'>
@@ -166,7 +169,7 @@ const AboutPage = () => {
                                 </p>
                             </section>       
                         </Col>
-                        <Col sm={12} md={6} className="mb-4 p-lg-5" data-aos="fade-up" data-aos-delay="100">
+                        <Col sm={12} md={6} className="mb-4 p-lg-5" data-aos="fade-up" data-aos-once="true">
                             <section className='w-100'>
                                 <h2 className='fs-1 mb-4 text-uppercase fw-bold'>Our Vision</h2>
                                 <p className='fs-5'>
@@ -211,6 +214,7 @@ const AboutPage = () => {
                                         src={member.image}
                                         alt={member.name}
                                         className="img-fluid w-100"
+                                        loading='lazy'
                                     />
                                     <div className="px-3 py-4 px-xl-4 text-white d-flex flex-column flex-grow-1">
                                         <h4 className="mb-2">{member.name}</h4>
@@ -222,12 +226,7 @@ const AboutPage = () => {
                                                     {link.icon}
                                                 </a>
                                             ))}
-                                        </div>
-                                        {/* <div className='mt-auto'>
-                                            <Button variant="outline-warning" className="mt-4">
-                                                View Details
-                                            </Button>
-                                        </div> */}                                       
+                                        </div>                                    
                                     </div>
                                 </div>
                             </Col>
@@ -244,6 +243,7 @@ const AboutPage = () => {
                                         src={member.image}
                                         alt={member.name}
                                         className="img-fluid w-100"
+                                        loading='lazy'
                                     />
                                     <div className="px-3 py-4 px-xl-4 text-white d-flex flex-column flex-grow-1">
                                         <h4 className="mb-2">{member.name}</h4>
@@ -255,12 +255,7 @@ const AboutPage = () => {
                                                     {link.icon}
                                                 </a>
                                             ))}
-                                        </div>
-                                        {/* <div className='mt-auto'>
-                                            <Button variant="outline-warning" className="mt-4">
-                                                View Details
-                                            </Button>
-                                        </div> */}                                       
+                                        </div>                                     
                                     </div>
                                 </div>
                             </Col>
@@ -284,7 +279,7 @@ const AboutPage = () => {
             </Container> */}
 
             {/* Call to Action Section */}
-            <InfoForm data-aos="fade-up" data-aos-delay="900" />
+            <CallToAction />
         </div>
     );
 }
