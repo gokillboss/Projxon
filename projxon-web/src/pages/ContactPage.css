@@ -1,36 +1,93 @@
-
-body {
-    overflow-x: hidden;
-  }
-
-.value-card,
-.team-card {
-    text-align: center;
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+.contact-page {
+    background: url('../assets/contact/bg-contact.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #000;
+    color: #fff;
 }
 
-.promotional-section {
-    background-color: #f8f9fa;
-    padding: 40px 20px;
+
+.info-form {
+    background-color: #18181B;
+    padding: 10px;
+    border: 1px solid #ffd700;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+                0 10px 20px rgba(0, 0, 0, 0.2); 
+
+
+}
+
+.info-form:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 
+                0 20px 40px rgba(0, 0, 0, 0.3); 
+}
+
+
+.image-container {
+    border: 2px solid #ffd700;
+    border-radius: 30px;
+    display: block;
+    width: 100%; 
+    text-align: center; 
+}
+
+.img-fluid {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 30px; 
+}
+
+.contact-section {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding-top: 50px;
+    min-height: 100vh;
 }
 
-.promotional-section h2 {
+.contact-section h2 {
     margin-bottom: 20px;
     font-size: 2rem;
 }
 
-.promotional-section p {
+.contact-section p {
     font-size: 1.2rem;
-    color: #555;
+    color: #ffffff;
 }
 
+.content-container {
+    border: 1px solid #ffd700;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: rgba(24, 24, 27, 0.8); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    color: #fff; 
+}
+
+.image-container {
+    max-height: 300px; 
+    overflow: hidden;
+    text-align: center; 
+}
+
+.image-container img {
+    max-height: 100%; 
+    width: auto; 
+    object-fit: contain; 
+}
+
+
+.text-begin {
+    text-align: left; 
+    margin-top: 15px;
+    margin-bottom: 15px; 
+    font-size: 16px; 
+    line-height: 1.6; 
+    color: #fff; 
+}
 
 
 
