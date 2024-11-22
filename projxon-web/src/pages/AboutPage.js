@@ -129,7 +129,7 @@ const AboutPage = () => {
 
     return (
         <div className="about-page">
-            <Hero title="About PROJXON" subtitle="Empowering Businesses to Reach Their Full Potential"/>
+             <Hero title="About PROJXON" subtitle="Empowering Businesses to Reach Their Full Potential"/> 
 
             {/* Who We Are Section */}
             <section className='who-we-are'>
