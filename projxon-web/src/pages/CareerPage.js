@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './CareerPage.css';
-import internPic from '../assets/internPic.png';
+
+import Hero from '../components/Hero';
 import InfoForm from '../components/InfoForm';
 
 const CareerPage = () => {
@@ -14,12 +15,9 @@ const CareerPage = () => {
 
     return (
         <div>
-            {/* Hero Section with Background Image */}
-            <div className="career-hero-section" data-aos="fade-in" data-aos-duration="1500">
-                <Container className="text-center">
-                    <h1 className="career-hero-title text-uppercase">Join Our Team</h1>
-                </Container>
-            </div>
+            {/* Hero Section */}
+            <Hero title="Join Our Team" subtitle="" backgroundClass="career-hero"/>
+
 
             <Container className="intern-section my-5">
                 <Row className="align-items-center">
@@ -49,7 +47,7 @@ const CareerPage = () => {
                         <Card className="">
                             <Card.Body>
                                 <Card className="">
-                                    <Card.Img variant="top" src={internPic} alt="Promotional" className='img-fluid rounded'  />
+                                    <Card.Img variant="top" src='#' alt="Promotional" className='img-fluid rounded'  />
                                 </Card>
                             </Card.Body>
                         </Card>

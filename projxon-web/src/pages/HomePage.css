@@ -6,7 +6,7 @@
 }
 
 .sections-heading{
-    font-size: 3rem
+    font-size: 3rem;
 }
 
 .text-yellow{
@@ -25,7 +25,7 @@
 }
 
 .homepage-hero-section {
-    background: rgba(0, 0, 0, 0.5) url('../assets/city.webp');
+    background: rgba(0, 0, 0, 0.5) url('../assets/homepage/city.webp');
     background-blend-mode: overlay;
     background-size: cover;
     background-position: center;
@@ -189,20 +189,6 @@
     display: block;
 }
 
-
-/* || Contact Form */
-.call-to-action{
-    background: rgba(0, 0, 0, 0.6) url('../assets/contact.webp');
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 600px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 @media (max-width: 780px) {
     .sections-heading{
