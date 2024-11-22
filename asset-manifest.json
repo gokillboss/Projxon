@@ -1,36 +1,37 @@
 {
   "files": {
-    "main.css": "/Projxon/static/css/main.6aa81410.css",
-    "main.js": "/Projxon/static/js/main.e9e41115.js",
-    "static/media/internPic.png": "/Projxon/static/media/internPic.37d3952b2e44c09744e4.png",
-    "static/media/contact.jpg": "/Projxon/static/media/contact.e99dbcf86404927deadd.jpg",
-    "static/media/business.webp": "/Projxon/static/media/business.9c1fe40a9531c65ac158.webp",
-    "static/media/PROX-background.png": "/Projxon/static/media/PROX-background.8217a28bbb80ec7be3b0.png",
-    "static/media/contact.webp": "/Projxon/static/media/contact.9d26c7e529cbf4a9a67f.webp",
+    "main.css": "/Projxon/static/css/main.a1b4fa03.css",
+    "main.js": "/Projxon/static/js/main.27422206.js",
+    "static/media/business.webp": "/Projxon/static/media/business.aeeb6b504bcec7417596.webp",
+    "static/media/Proj.webp": "/Projxon/static/media/Proj.d161e9e332a1db733580.webp",
+    "static/media/calltoaction.webp": "/Projxon/static/media/calltoaction.9d26c7e529cbf4a9a67f.webp",
     "static/media/ecom.webp": "/Projxon/static/media/ecom.ed281b022c91f2cf247d.webp",
     "static/media/city.webp": "/Projxon/static/media/city.92a274922649bed34b9e.webp",
-    "static/media/carreer-hero.png": "/Projxon/static/media/carreer-hero.98b954a91e9cf1887062.png",
     "static/media/manage.webp": "/Projxon/static/media/manage.2cbbb1f93928ad195e13.webp",
-    "static/media/Service-hero.png": "/Projxon/static/media/Service-hero.096019bd3b843c3a6e50.png",
-    "static/media/business.png": "/Projxon/static/media/business.7fb78c8ff0d2f48a7bd6.png",
     "static/media/it.webp": "/Projxon/static/media/it.5f8101c04e9c08a74f3f.webp",
     "static/media/market.webp": "/Projxon/static/media/market.f1824198d98bd3e0eea6.webp",
-    "static/media/ITConsulting.png": "/Projxon/static/media/ITConsulting.9ebe961964cf7d6bb243.png",
     "static/media/who-we-are.webp": "/Projxon/static/media/who-we-are.2032c941127aad943330.webp",
     "static/media/melissa.webp": "/Projxon/static/media/melissa.d85346f36e5edbf499a4.webp",
+    "static/media/PROX-background.webp": "/Projxon/static/media/PROX-background.2410f0f200c37d500f5e.webp",
+    "static/media/bg-contact.png": "/Projxon/static/media/bg-contact.aacf73141e203f184bc0.png",
+    "static/media/partner.webp": "/Projxon/static/media/partner.c5fc0e580af8e6ea1bf4.webp",
+    "static/media/partner-service.webp": "/Projxon/static/media/partner-service.7fd97057739863b01eaf.webp",
+    "static/media/client-ref.webp": "/Projxon/static/media/client-ref.3053d5ba8dc4a9befb04.webp",
     "static/media/megha.webp": "/Projxon/static/media/megha.3cd5d23fe9b7d7f5e29b.webp",
     "static/media/phelan.webp": "/Projxon/static/media/phelan.6b5300f8f45dd95651cb.webp",
     "static/media/bast.webp": "/Projxon/static/media/bast.f90cfeb1e6b57a9c2954.webp",
     "static/media/donavon.webp": "/Projxon/static/media/donavon.d502bdfa3aaf9c32fe78.webp",
     "static/media/kathy.webp": "/Projxon/static/media/kathy.8910d6986a80a02b423e.webp",
+    "static/media/Service-hero.webp": "/Projxon/static/media/Service-hero.616eef90f4e85b8e3b0e.webp",
     "static/media/dania.webp": "/Projxon/static/media/dania.b404dfbc674b12c8a378.webp",
     "static/media/alexandria.webp": "/Projxon/static/media/alexandria.9e3de0ffbd58cf96a6be.webp",
+    "static/media/ITConsulting.webp": "/Projxon/static/media/ITConsulting.a2f854a977e3cdcc150c.webp",
     "index.html": "/Projxon/index.html",
-    "main.6aa81410.css.map": "/Projxon/static/css/main.6aa81410.css.map",
-    "main.e9e41115.js.map": "/Projxon/static/js/main.e9e41115.js.map"
+    "main.a1b4fa03.css.map": "/Projxon/static/css/main.a1b4fa03.css.map",
+    "main.27422206.js.map": "/Projxon/static/js/main.27422206.js.map"
   },
   "entrypoints": [
-    "static/css/main.6aa81410.css",
-    "static/js/main.e9e41115.js"
+    "static/css/main.a1b4fa03.css",
+    "static/js/main.27422206.js"
   ]
 }
