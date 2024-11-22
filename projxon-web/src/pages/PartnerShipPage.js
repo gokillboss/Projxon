@@ -55,9 +55,9 @@ const PartnershipPage = () => {
                 <Container>
                     <Row className="align-items-center justify-content-between" data-aos="fade-right" data-aos-once="true">
                         <Col xs={12} md={6}>
-                            <h1 className="sections-heading partner-heading fw-bold mb-4">
+                            <h2 className="sections-heading partner-heading fw-bold mb-4">
                                 Why Partner with PROJXON?
-                            </h1>
+                            </h2>
                             <p className="partner-heading-sub-heading gray-opacity">
                                 At PROJXON, we excel in delivering innovative solutions tailored to your business needs. Our team combines expertise, creativity, and cutting-edge technology to help your business thrive in today's competitive market. Partner with us for unmatched dedication, seamless collaboration, and results-driven strategies.
                             </p>
@@ -76,7 +76,7 @@ const PartnershipPage = () => {
                             <Col xs={12} md={6} lg={4} key={index}>
                                 <div className="p-xl-3 mt-4" data-aos="fade-up" data-aos-delay={partner.dataAOSDelay} data-aos-once="true">
                                     <div className="partner-number mb-3">{index + 1}</div>
-                                    <h4 className="partner-title fs-4 mb-3">{partner.title}</h4>
+                                    <h3 className="partner-title fs-4 mb-3">{partner.title}</h3>
                                     <p className="gray-opacity mb-0">{partner.text}</p>
                                 </div>
                             </Col>
@@ -102,9 +102,9 @@ const PartnershipPage = () => {
                                 />
                             </Col>
                             <Col xs={12} md={6} className='partner-text' data-aos="fade-right" data-aos-once="true">
-                                <h1 className="sections-heading partner-heading fw-bold mb-4 par">
+                                <h2 className="sections-heading partner-heading fw-bold mb-4 par">
                                     Service Partnerships
-                                </h1>
+                                </h2>
                                 <p className="partner-heading-sub-heading mb-4 pb-2 fs-5">
                                     Would you like to provide more value to your clients and support them in resolving critical issues standing in the way of their growth?
                                 </p>
@@ -132,9 +132,9 @@ const PartnershipPage = () => {
                                 />
                             </Col>
                             <Col xs={12} md={6}  className='partner-text' data-aos="fade-left" data-aos-once="true">  
-                                <h1 className="sections-heading partner-heading fw-bold mb-4">
+                                <h2 className="sections-heading partner-heading fw-bold mb-4">
                                     Referral Partnerships
-                                </h1>
+                                </h2>
                                 <p className="partner-heading-sub-heading mb-4 pb-2 fs-5">
                                     Would you like to provide more value to your clients and support them in resolving critical issues standing in the way of their growth?
                                 </p>

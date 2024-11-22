@@ -43,6 +43,15 @@
     text-underline-offset: 4px
 }
 
+
+.nav-link:focus  {
+    color: #ffd700;
+}
+
+.nav-link:focus-visible {
+    box-shadow: none;
+}
+
 /* Navbar Toggle Button Styling */
 .navbar-toggler {
     border: none;
