@@ -1,11 +1,15 @@
-
 .infoform-container {
 
     background-color: #18181B;
     padding: 50px 0;
+     backdrop-filter: blur(10px);
 }
 
-.infoform-container h2,
+.infoform-container h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
 .infoform-container p {
     margin-bottom: 40px;
 }
@@ -54,12 +58,8 @@
 
 .submit-button:hover {
     background-color: #FFC300;
-    /* Slightly darker shade on hover */
     border-color: #FFC300;
     color: #fff;
-    /* Change text color on hover, if desired */
     transform: scale(1.05);
-    /* Slightly enlarge the button */
     transition: background-color 0.3s ease, transform 0.3s ease;
-    /* Smooth transition effect */
 }
