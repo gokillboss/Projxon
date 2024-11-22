@@ -4,20 +4,16 @@ import './AboutPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FaLightbulb , FaBalanceScale , FaUsers, FaLinkedinIn  } from 'react-icons/fa';
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
 import Hero from '../components/Hero';
 import CallToAction from '../components/CallToAction';
 import BlackCard from '../components/BlackCard';
-
 import whoWeAre from '../assets/about/who-we-are.webp'
 import phelan from '../assets/about/team/phelan.webp'
 import kathy from '../assets/about/team/kathy.webp'
 import donavon from '../assets/about/team/donavon.webp'
 import melissa from '../assets/about/team/melissa.webp'
-
 import bast from '../assets/about/team/bast.webp'
 import dania from '../assets/about/team/dania.webp'
 import megha from '../assets/about/team/megha.webp'
