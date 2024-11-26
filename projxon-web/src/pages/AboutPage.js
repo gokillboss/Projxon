@@ -131,7 +131,7 @@ const AboutPage = () => {
             <Hero title="About PROJXON" subtitle="Empowering Businesses to Reach Their Full Potential" backgroundClass="about-us-hero"/>
 
             {/* Who We Are Section */}
-            <section className='who-we-are'>
+            <section className='who-we-are sections-container'>
                 <Container className="my-5 overflow-hidden">
                     <Row className='align-items-center g-5'>
                         <Col md={12} lg={6} data-aos="fade-up" data-aos-once="true">
@@ -157,7 +157,7 @@ const AboutPage = () => {
             </section>
             
             {/* Our Mission & Vision Section */}
-            <section className='mission-vision bg-yellow overflow-hidden'>
+            <section className='mission-vision bg-yellow overflow-hidden sections-container'>
                 <Container>
                     <Row className='g-5'>
                         <Col sm={12} md={6} className="mb-4 p-lg-5" data-aos="fade-up" data-aos-once="true">
@@ -181,7 +181,7 @@ const AboutPage = () => {
             </section>
 
             {/* Our Values Section */}
-            <section className="bg-black our-values">
+            <section className="bg-black our-values sections-container">
                 <Container className="text-center">
                     <h2 className="fw-bold sections-heading text-yellow" data-aos="fade-up" data-aos-once="true">Our Core Values</h2>
                     <Row className="my-5 g-5">
@@ -193,7 +193,7 @@ const AboutPage = () => {
             </section>
 
             {/* Our Team Section */}
-            <section className='bg-yellow-team our-team'>
+            <section className='bg-yellow-team our-team sections-container'>
                 <Container>
                     <Row className="justify-content-center mb-4 mb-md-5">
                         <Col lg={6} xl={5} className="text-center">

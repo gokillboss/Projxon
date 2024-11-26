@@ -5,6 +5,11 @@
     background: radial-gradient(circle, #ffd700 80%, #000 100%);
 }
 
+.sections-container{
+    padding-top: 108px;
+    padding-bottom: 108px;
+}
+
 .sections-heading{
     font-size: 3rem;
 }
@@ -15,6 +20,10 @@
 
 .text-gray{
     color: rgb(209 213 219 / 1)
+}
+
+.gray-opacity{
+    opacity: 0.8;
 }
 
 /* || Hero */

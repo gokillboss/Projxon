@@ -51,7 +51,7 @@ const PartnershipPage = () => {
             <Hero title="Partner with PROJXON" subtitle="Collaborate with us to drive success and innovation" backgroundClass="partnership-hero"/>
             
             {/* Why Partner with Us Section */}
-            <section className="partner-us overflow-hidden">
+            <section className="partner-us sections-container overflow-hidden">
                 <Container>
                     <Row className="align-items-center justify-content-between" data-aos="fade-right" data-aos-once="true">
                         <Col xs={12} md={6}>
