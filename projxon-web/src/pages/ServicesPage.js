@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import InfoForm from '../components/InfoForm';
 import './ServicesPage.css';
 
+import CallToAction from '../components/CallToAction';
 import Hero from '../components/Hero';
 import ServiceCarousel from '../components/ServiceCarousel';
 import ServiceGrid from '../components/ServiceGrid';
@@ -29,8 +29,8 @@ const ServicesPage = () => {
                 </Container>
             </section>           
 
-
-            <InfoForm />
+            {/* Call To Action Section */}
+            <CallToAction />
         </>
     );
 };

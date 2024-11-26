@@ -1,14 +1,17 @@
 import { useEffect } from 'react';
-
 import './AboutPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { FaLightbulb , FaBalanceScale , FaUsers, FaLinkedinIn  } from 'react-icons/fa';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 import Hero from '../components/Hero';
+import CustomButton from '../components/CustomButton';
 import CallToAction from '../components/CallToAction';
 import BlackCard from '../components/BlackCard';
+
 import whoWeAre from '../assets/about/who-we-are.webp'
 import phelan from '../assets/about/team/phelan.webp'
 import kathy from '../assets/about/team/kathy.webp'
@@ -142,12 +145,12 @@ const AboutPage = () => {
                                 <p className='fs-5'>
                                     PROJXON offers a wide range of services, including business process optimization, project management, and strategic planning, to help our clients navigate challenges, optimize operations, and drive sustainable growth. 
                                 </p>
-                                <p className='fs-5'>
+                                <p className='fs-5 mb-4 pb-2'>
                                     Our team of experts is dedicated to providing tailored solutions, innovative strategies, and expert guidance to help businesses innovate, grow, and succeed.
                                 </p>
                             </div>
                             
-                            <Button className='yellow-button mt-3'>Get Started</Button>
+                            <CustomButton buttonText="Get Started" link="/contact" buttonStyle="yellow-button" className='mt-3'/>
                         </Col> 
                     </Row>   
                 </Container>

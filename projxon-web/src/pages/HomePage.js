@@ -18,7 +18,7 @@ import it from '../assets/homepage/services-img/it.webp'
 
 import BlogCard from '../components/BlogCard';
 import BlackCard from '../components/BlackCard';
-import AnimatedButton from '../components/AnimatedButton';
+import CustomButton from '../components/CustomButton';
 import CallToAction from '../components/CallToAction';
 import { fetchBlogs } from '../services/blogService'
 
@@ -159,7 +159,7 @@ const HomePage = () => {
                     >
                         Empowering medium-sized businesses to achieve their full potential
                     </motion.h2>
-                    <AnimatedButton buttonText="Get Started" link="/contact" buttonStyle="mt-4 yellow-button" delayTime={0.7}/>
+                    <CustomButton buttonText="Get Started" link="/contact" buttonStyle="mt-4 yellow-button" delayTime={0.7} isAnimated={true}/>
                 </Container>
             </div>
 
@@ -175,7 +175,7 @@ const HomePage = () => {
                         our clients.
                     </p>
                     <hr className="divider"/>
-                    <AnimatedButton buttonText="Learn About Us" link="/about" buttonStyle="black-button" delayTime={0.3}/>
+                    <CustomButton buttonText="Learn About Us" link="/about" buttonStyle="black-button" delayTime={0.3} isAnimated={true}/>
                 </Container>
 
             </section>
@@ -212,7 +212,7 @@ const HomePage = () => {
                                     <p className="mb-3 mb-xl-4 text-black">
                                     Our commitment in helping brands reach their full potential is dynamic and unconventional providing strategic and customized consulting plans that drive growth, enhance productivity, and increase market value.
                                     </p>
-                                    <AnimatedButton buttonText="See Services" link="/services" buttonStyle="black-button" delayTime={0}/>
+                                    <CustomButton buttonText="See Services" link="/services" buttonStyle="black-button"/>
                                 </Col>
                             </Row>
                         </Col>
@@ -311,7 +311,7 @@ const HomePage = () => {
                             ))}
                         </ul> 
                         <div className='d-flex justify-content-center mt-5'>
-                            <AnimatedButton buttonText="See All Blogs" link="/research" buttonStyle="yellow-button" delayTime={0}/>
+                            <CustomButton buttonText="See All Blogs" link="/research" buttonStyle="yellow-button"/>
                         </div>
                     </Container>
                 </section>
