@@ -95,7 +95,7 @@ const AboutPage = () => {
             title: "Team Lead,",
             specialty: "Operations + Strategy",
             socials : [
-                { icon : <FaLinkedinIn size={20} />, href: '#'}
+                { icon : <FaLinkedinIn size={20} />, href: 'https://www.linkedin.com/in/syeda-dania-ali'}
             ]
         },
         {
@@ -113,7 +113,7 @@ const AboutPage = () => {
             title: "Team Lead,",
             specialty: "Marketing + Creative",
             socials : [
-                { icon : <FaLinkedinIn size={20} />, href: '#'}
+                { icon : <FaLinkedinIn size={20} />, href: 'https://www.linkedin.com/in/alexandriaboreman'}
             ]
         },
     ]

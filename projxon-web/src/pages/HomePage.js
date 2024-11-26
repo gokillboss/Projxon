@@ -230,7 +230,7 @@ const HomePage = () => {
                                                     backgroundPosition: 'center',
                                                 }}
                                                 >                                                     
-                                                <Card.Body className='text-white' >
+                                                <Card.Body className='text-white'>
                                                     <div className="text-yellow">{service.icon}</div>
                                                     <h3 className="my-4 fs-5 text-yellow">{service.title}</h3>
                                                     <p className="text-gray mt-3">{service.description}</p>

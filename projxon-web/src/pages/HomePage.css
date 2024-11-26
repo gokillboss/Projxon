@@ -139,7 +139,6 @@
     border-radius: 10px;
     box-shadow: 0 8px 20px #000000 !important;
     transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
-    border-radius: 10px;
     margin-bottom: 30px;
     overflow: hidden;
 }
