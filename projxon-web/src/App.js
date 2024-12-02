@@ -24,7 +24,7 @@ const App = () => {
                 <NavBar />
 
                 <Routes>
-                    <Route path="/projxon" element={<HomePage />} />
+                    <Route path="/" element={<HomePage />} />
                     <Route path="/services" element={<ServicesPage />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />

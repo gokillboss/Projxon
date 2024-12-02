@@ -11,7 +11,7 @@ const NavBar = () => {
     const handleLinkClick = () => setExpanded(false);
 
     const navLinks = [
-        { to: "/Projxon", label: "Home" },
+        { to: "/", label: "Home" },
         { to: "/services", label: "Services" },
         { to: "/about", label: "About" },
         { to: "/partnership", label: "Partnership" },
@@ -31,7 +31,7 @@ const NavBar = () => {
                 onToggle={handleToggle}
             >
                 <Container className='d-flex justify-content-between py-1'>
-                    <Navbar.Brand as={NavLink} to="/Projxon" className='text-light'>
+                    <Navbar.Brand as={NavLink} to="/" className='text-light'>
                         PROJXON
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
