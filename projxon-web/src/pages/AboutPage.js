@@ -12,7 +12,7 @@ import CustomButton from '../components/CustomButton';
 import CallToAction from '../components/CallToAction';
 import BlackCard from '../components/BlackCard';
 
-import whoWeAre from '../assets/about/who-we-are.webp'
+import whoWeAre from '../assets/about/whoarewe.webp'
 import phelan from '../assets/about/team/phelan.webp'
 import kathy from '../assets/about/team/kathy.webp'
 import donavon from '../assets/about/team/donavon.webp'
