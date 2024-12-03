@@ -32,7 +32,7 @@ const HomePage = () => {
             image: market,
             icon: <FaMobile size={40} />,
             title: "Marketing + Social Media",
-            description: "Amplify your brand’s impact with expert marketing and social media strategies. Engage your audience, accelerate growth, and redefine your digital presence.",
+            description: "Amplify your brand's impact with expert marketing and social media strategies. Engage your audience, accelerate growth, and redefine your digital presence.",
             dataAOSDelay: "150"
         },
         {

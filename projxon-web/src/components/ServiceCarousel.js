@@ -134,7 +134,7 @@ const carouselServices = [
         content: [
             { 
                 heading: "Sustainability Audits", 
-                description: "Evaluate and improve the sustainability of client operations." 
+                description: "Evaluate and greatly improve the sustainability of client operations." 
             },
             { 
                 heading: "CSR Initiatives", 
@@ -160,7 +160,7 @@ const carouselServices = [
     { 
         image: businessIMG,
         title: "Global Expansion Support",
-        icon: <FaSmile />,
+        icon: <FaGlobe />,
         content: [
             { 
                 heading: "Market Entry Strategies", 
@@ -175,7 +175,7 @@ const carouselServices = [
     { 
         image: ITConsulting,
         title: "Financial Consulting",
-        icon: <FaGlobe />,
+        icon: <FaMoneyCheckAlt />,
         content: [
             { 
                 heading: "Financial Planning and Analysis", 
@@ -202,8 +202,6 @@ const carouselServices = [
             },
         ]
     },
-    
-
 ]
 
 const ServiceCarousel = () => {
@@ -214,13 +212,13 @@ const ServiceCarousel = () => {
                     <img className="d-block w-100" src={service.image} alt={service.title} />
                     <Carousel.Caption>
                         <Card className="service-card">
-                            <div className="card-icon">
+                            <div className="card-icon text-yellow">
                                 {service.icon}
                             </div>
                             <div className="card-content">
-                                <h3>{service.title}</h3>
-                                {service.content.map((item, index) => (
-                                    <p key={index}><strong>{item.heading}:</strong>{item.description}</p>
+                                <h3 className='text-white'>{service.title}</h3>
+                                {service.content.map((item, idx) => (
+                                    <p key={idx} className='text-gray gray-opacity'><strong>{item.heading}:</strong> {item.description}</p>
                                 ))}
                             </div>
                         </Card>

@@ -136,7 +136,7 @@ const PartnershipPage = () => {
                                     Referral Partnerships
                                 </h2>
                                 <p className="partner-heading-sub-heading mb-4 pb-2 fs-5">
-                                    Would you like to provide more value to your clients and support them in resolving critical issues standing in the way of their growth?
+                                    Do you and your team possess the skills to deliver exceptional service, have an interest in working on unique projects, and want to grow your business?
                                 </p>
                                 <CustomButton 
                                     buttonText="Submit Referral" 
