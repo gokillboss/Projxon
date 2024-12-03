@@ -1,15 +1,18 @@
 import { useEffect } from 'react';
-
 import './AboutPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { FaLightbulb , FaBalanceScale , FaUsers, FaLinkedinIn  } from 'react-icons/fa';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 import Hero from '../components/Hero';
+import CustomButton from '../components/CustomButton';
 import CallToAction from '../components/CallToAction';
 import BlackCard from '../components/BlackCard';
-import whoWeAre from '../assets/about/who-we-are.webp'
+
+import whoWeAre from '../assets/about/whoarewe.webp'
 import phelan from '../assets/about/team/phelan.webp'
 import kathy from '../assets/about/team/kathy.webp'
 import donavon from '../assets/about/team/donavon.webp'
@@ -95,7 +98,7 @@ const AboutPage = () => {
             title: "Team Lead,",
             specialty: "Operations + Strategy",
             socials : [
-                { icon : <FaLinkedinIn size={20} />, href: '#'}
+                { icon : <FaLinkedinIn size={20} />, href: 'https://www.linkedin.com/in/syeda-dania-ali'}
             ]
         },
         {
@@ -113,7 +116,7 @@ const AboutPage = () => {
             title: "Team Lead,",
             specialty: "Marketing + Creative",
             socials : [
-                { icon : <FaLinkedinIn size={20} />, href: '#'}
+                { icon : <FaLinkedinIn size={20} />, href: 'https://www.linkedin.com/in/alexandriaboreman'}
             ]
         },
     ]
@@ -128,7 +131,7 @@ const AboutPage = () => {
             <Hero title="About PROJXON" subtitle="Empowering Businesses to Reach Their Full Potential" backgroundClass="about-us-hero"/>
 
             {/* Who We Are Section */}
-            <section className='who-we-are'>
+            <section className='who-we-are sections-container'>
                 <Container className="my-5 overflow-hidden">
                     <Row className='align-items-center g-5'>
                         <Col md={12} lg={6} data-aos="fade-up" data-aos-once="true">
@@ -142,19 +145,19 @@ const AboutPage = () => {
                                 <p className='fs-5'>
                                     PROJXON offers a wide range of services, including business process optimization, project management, and strategic planning, to help our clients navigate challenges, optimize operations, and drive sustainable growth. 
                                 </p>
-                                <p className='fs-5'>
+                                <p className='fs-5 mb-4 pb-2'>
                                     Our team of experts is dedicated to providing tailored solutions, innovative strategies, and expert guidance to help businesses innovate, grow, and succeed.
                                 </p>
                             </div>
                             
-                            <Button className='yellow-button mt-3'>Get Started</Button>
+                            <CustomButton buttonText="Get Started" link="/contact" buttonStyle="yellow-button" className='mt-3'/>
                         </Col> 
                     </Row>   
                 </Container>
             </section>
             
             {/* Our Mission & Vision Section */}
-            <section className='mission-vision bg-yellow overflow-hidden'>
+            <section className='mission-vision bg-yellow overflow-hidden sections-container'>
                 <Container>
                     <Row className='g-5'>
                         <Col sm={12} md={6} className="mb-4 p-lg-5" data-aos="fade-up" data-aos-once="true">
@@ -178,7 +181,7 @@ const AboutPage = () => {
             </section>
 
             {/* Our Values Section */}
-            <section className="bg-black our-values">
+            <section className="bg-black our-values sections-container">
                 <Container className="text-center">
                     <h2 className="fw-bold sections-heading text-yellow" data-aos="fade-up" data-aos-once="true">Our Core Values</h2>
                     <Row className="my-5 g-5">
@@ -190,7 +193,7 @@ const AboutPage = () => {
             </section>
 
             {/* Our Team Section */}
-            <section className='bg-yellow-team our-team'>
+            <section className='bg-yellow-team our-team sections-container'>
                 <Container>
                     <Row className="justify-content-center mb-4 mb-md-5">
                         <Col lg={6} xl={5} className="text-center">
