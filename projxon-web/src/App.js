@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
@@ -21,16 +20,16 @@ const App = () => {
         <>
 
             <div className="content">
-                <ScrollToTop />F
+                <ScrollToTop />
                 <NavBar />
 
                 <Routes>
-                    <Route path="/Projxon" element={<HomePage />} />
+                    <Route path="/" element={<HomePage />} />
                     <Route path="/services" element={<ServicesPage />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/partnership" element={<PartnershipPage />} />
-                    <Route path="/career" element={<CareerPage />} />
+                    <Route path="/careers" element={<CareerPage />} />
                     <Route path="/research" element={<ResearchPage />} />
                     <Route path="/research/:blogId" element={<BlogPage />} />
                 </Routes>

@@ -2,203 +2,229 @@
 import React from 'react';
 import { Carousel, Card } from 'react-bootstrap';
 import { FaCogs, FaProjectDiagram, FaShoppingCart, FaLaptopCode, FaChartLine, FaChalkboardTeacher, FaLightbulb, FaLeaf, FaSmile, FaGlobe, FaMoneyCheckAlt, FaDigitalTachograph } from 'react-icons/fa';
-import ITConsulting from '../assets/ITConsulting.png';
-import businessIMG from '../assets/business.png';
+import ITConsulting from '../assets/servicepage/ITConsulting.webp';
+import businessIMG from '../assets/servicepage/business.webp';
+
+const carouselServices = [
+    { 
+        image: businessIMG,
+        title: "Business Process Optimization",
+        icon: <FaCogs />,
+        content: [
+            { 
+                heading: "Workflow Analysis", 
+                description: "Conduct a thorough analysis of current workflows to identify bottlenecks, redundancies, and inefficiencies." 
+            },
+            { 
+                heading: "Process Re-engineering", 
+                description: "Re-engineer core business processes with a focus on optimizing resources and minimizing waste." 
+            },
+            { 
+                heading: "Performance Metrics and KPIs", 
+                description: "Develop customized performance metrics that align with business goals and objectives, supported by real-time dashboards." 
+            },
+        ]
+    },
+    { 
+        image: ITConsulting,
+        title: "Project Management",
+        icon: <FaProjectDiagram />,
+        content: [
+            { 
+                heading: "Project Planning and Execution", 
+                description: "Develop detailed project plans outlining scope, timelines, resources, and budgets, ensuring efficient execution." 
+            },
+            { 
+                heading: "Agile Transformation", 
+                description: "Assist businesses in adopting Agile methodologies for improved project delivery and adaptability." 
+            },
+            { 
+                heading: "Risk Management", 
+                description: "Identify, assess, and mitigate project risks to ensure successful outcomes." 
+            },
+        ]
+    },
+    { 
+        image: businessIMG,
+        title: "E-commerce Solutions",
+        icon: <FaShoppingCart />,
+        content: [
+            { 
+                heading: "Platform Selection and Implementation", 
+                description: "Help clients choose the right e-commerce platform and oversee its implementation." 
+            },
+            { 
+                heading: "Digital Marketing Strategies", 
+                description: "Develop and execute digital marketing campaigns to drive online sales and improve brand visibility." 
+            },
+            { 
+                heading: "User Experience Optimization", 
+                description: "Enhance the online shopping experience through UI/UX design improvements and personalized customer journeys." 
+            },
+        ]
+    },
+    { 
+        image: ITConsulting,
+        title: "IT Consulting",
+        icon: <FaLaptopCode />,
+        content: [
+            { 
+                heading: "IT Strategy and Planning", 
+                description: "Develop IT strategies aligned with business goals to drive digital transformation." 
+            },
+            { 
+                heading: "System Integration", 
+                description: "Integrate various IT systems to ensure seamless data flow and process automation." 
+            },
+            { 
+                heading: "Cybersecurity", 
+                description: "Implement robust cybersecurity measures to protect client data and IT infrastructure." 
+            },
+        ]
+    },
+    { 
+        image: ITConsulting,
+        title: "Data-Driven Decision Making",
+        icon: <FaChartLine />,
+        content: [
+            { 
+                heading: "Advanced Analytics", 
+                description: "Use data analytics to provide actionable insights for decision-making." 
+            },
+            { 
+                heading: "AI and Machine Learning Solutions", 
+                description: "Implement AI and ML solutions to automate processes and predict business trends." 
+            },
+        ]
+    },
+    { 
+        image: businessIMG,
+        title: "Customized Training Program",
+        icon: <FaChalkboardTeacher />,
+        content: [
+            { 
+                heading: "Employee Training", 
+                description: "Develop and deliver training programs tailored to client needs, including process improvement, project management, and technology adoption." 
+            },
+            { 
+                heading: "Leadership Development", 
+                description: "Offer leadership training to help executives and managers lead change effectively within their organizations." 
+            },
+        ]
+    },
+    { 
+        image: ITConsulting,
+        title: "Innovation and R&D Consulting",
+        icon: <FaLightbulb />,
+        content: [
+            { 
+                heading: "Innovation Workshops", 
+                description: "Conduct workshops to foster a culture of innovation and generate new ideas." 
+            },
+            { 
+                heading: "R&D Strategy", 
+                description: "Assist clients in developing and executing R&D strategies to stay ahead of market trends." 
+            },
+        ]
+    },
+    { 
+        image: businessIMG,
+        title: "Sustainability and CSR",
+        icon: <FaLeaf />,
+        content: [
+            { 
+                heading: "Sustainability Audits", 
+                description: "Evaluate and greatly improve the sustainability of client operations." 
+            },
+            { 
+                heading: "CSR Initiatives", 
+                description: "Develop and implement CSR programs that align with client values and enhance brand reputation." 
+            },
+        ]
+    },
+    { 
+        image: ITConsulting,
+        title: "Customer Experience Enhancement",
+        icon: <FaSmile />,
+        content: [
+            { 
+                heading: "CX Strategy", 
+                description: "Develop strategies to improve overall customer experience across all touchpoints." 
+            },
+            { 
+                heading: "Customer Feedback Systems", 
+                description: "Implement systems to capture and analyze customer feedback for continuous improvement." 
+            },
+        ]
+    },
+    { 
+        image: businessIMG,
+        title: "Global Expansion Support",
+        icon: <FaGlobe />,
+        content: [
+            { 
+                heading: "Market Entry Strategies", 
+                description: "Assist clients in entering new markets with comprehensive market research and entry strategies." 
+            },
+            { 
+                heading: "Localization Services", 
+                description: "Provide localization services to adapt products and marketing materials for different regions." 
+            },
+        ]
+    },
+    { 
+        image: ITConsulting,
+        title: "Financial Consulting",
+        icon: <FaMoneyCheckAlt />,
+        content: [
+            { 
+                heading: "Financial Planning and Analysis", 
+                description: "Offer financial planning, budgeting, and analysis services to help clients manage their finances effectively." 
+            },
+            { 
+                heading: "Funding and Investment Advisory", 
+                description: "Assist clients in securing funding and making sound investment decisions." 
+            },
+        ]
+    },
+    { 
+        image: ITConsulting,
+        title: "Digital Transformation Consulting",
+        icon: <FaDigitalTachograph />,
+        content: [
+            { 
+                heading: "Digital Strategy Development", 
+                description: "Create digital transformation roadmaps to modernize business operations." 
+            },
+            { 
+                heading: "Technology Adoption", 
+                description: "Guide clients in adopting emerging technologies such as blockchain, IoT, and cloud computing." 
+            },
+        ]
+    },
+]
 
 const ServiceCarousel = () => {
     return (
-        <Carousel interval={3000} controls={true} indicators={true} pause={false}>
-            {/* Business Process Optimization */}
-            <Carousel.Item>
-                <img className="d-block w-100" src={businessIMG} alt="Business Process Optimization" />
-                <Carousel.Caption>
-                    <Card className="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <div className="card-icon">
-                            <FaCogs />
-                        </div>
-                        <div className="card-content">
-                            <h3>Business Process Optimization</h3>
-                            <p><strong>Workflow Analysis:</strong> Conduct a thorough analysis of current workflows to identify bottlenecks, redundancies, and inefficiencies.</p>
-                            <p><strong>Process Re-engineering:</strong> Re-engineer core business processes with a focus on optimizing resources and minimizing waste.</p>
-                            <p><strong>Performance Metrics and KPIs:</strong> Develop customized performance metrics that align with business goals and objectives, supported by real-time dashboards.</p>
-                        </div>
-                    </Card>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-            {/* Project Management */}
-            <Carousel.Item>
-                <img className="d-block w-100" src={ITConsulting} alt="Project Management" />
-                <Carousel.Caption>
-                    <Card className="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div className="card-icon">
-                            <FaProjectDiagram />
-                        </div>
-                        <div className="card-content">
-                            <h3>Project Management</h3>
-                            <p><strong>Project Planning and Execution:</strong> Develop detailed project plans outlining scope, timelines, resources, and budgets, ensuring efficient execution.</p>
-                            <p><strong>Agile Transformation:</strong> Assist businesses in adopting Agile methodologies for improved project delivery and adaptability.</p>
-                            <p><strong>Risk Management:</strong> Identify, assess, and mitigate project risks to ensure successful outcomes.</p>
-                        </div>
-                    </Card>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-            {/* E-commerce Solutions */}
-            <Carousel.Item>
-                <img className="d-block w-100" src={businessIMG} alt="E-commerce Solutions" />
-                <Carousel.Caption>
-                    <Card className="service-card" data-aos="fade-up" data-aos-delay="300">
-                        <div className="card-icon">
-                            <FaShoppingCart />
-                        </div>
-                        <div className="card-content">
-                            <h3>E-commerce Solutions</h3>
-                            <p><strong>Platform Selection and Implementation:</strong> Help clients choose the right e-commerce platform and oversee its implementation.</p>
-                            <p><strong>Digital Marketing Strategies:</strong> Develop and execute digital marketing campaigns to drive online sales and improve brand visibility.</p>
-                            <p><strong>User Experience Optimization:</strong> Enhance the online shopping experience through UI/UX design improvements and personalized customer journeys.</p>
-                        </div>
-                    </Card>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-            {/* IT Consulting */}
-            <Carousel.Item>
-                <img className="d-block w-100" src={ITConsulting} alt="IT Consulting" />
-                <Carousel.Caption>
-                    <Card className="service-card" data-aos="fade-up" data-aos-delay="400">
-                        <div className="card-icon">
-                            <FaLaptopCode />
-                        </div>
-                        <div className="card-content">
-                            <h3>IT Consulting</h3>
-                            <p><strong>IT Strategy and Planning:</strong> Develop IT strategies aligned with business goals to drive digital transformation.</p>
-                            <p><strong>System Integration:</strong> Integrate various IT systems to ensure seamless data flow and process automation.</p>
-                            <p><strong>Cybersecurity:</strong> Implement robust cybersecurity measures to protect client data and IT infrastructure.</p>
-                        </div>
-                    </Card>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-
-            {/* Data-Driven Decision Making */}
-            <Carousel.Item>
-                <img className="d-block w-100" src={ITConsulting} alt="Data-Driven Decision Making" />
-                <Carousel.Caption>
-                    <Card className="service-card" data-aos="fade-up" data-aos-delay="500">
-                        <div className="card-icon">
-                            <FaChartLine />
-                        </div>
-                        <div className="card-content">
-                            <h3>Data-Driven Decision Making</h3>
-                            <p><strong>Advanced Analytics:</strong> Use data analytics to provide actionable insights for decision-making.</p>
-                            <p><strong>AI and Machine Learning Solutions:</strong> Implement AI and ML solutions to automate processes and predict business trends.</p>
-                        </div>
-                    </Card>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-            {/* Customized Training Programs */}
-            <Carousel.Item>
-                <img className="d-block w-100" src={businessIMG} alt="Customized Training Programs" />
-                <Carousel.Caption>
-                    <Card className="service-card" data-aos="fade-up" data-aos-delay="600">
-                        <div className="card-icon">
-                            <FaChalkboardTeacher />
-                        </div>
-                        <div className="card-content">
-                            <h3>Customized Training Programs</h3>
-                            <p><strong>Employee Training:</strong> Develop and deliver training programs tailored to client needs, including process improvement, project management, and technology adoption.</p>
-                            <p><strong>Leadership Development:</strong> Offer leadership training to help executives and managers lead change effectively within their organizations.</p>
-                        </div>
-                    </Card>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-            {/* Innovation and R&D Consulting */}
-            <Carousel.Item>
-                <img className="d-block w-100" src={ITConsulting} alt="Innovation and R&D Consulting" />
-                <Carousel.Caption>
-                    <Card className="service-card" data-aos="fade-up" data-aos-delay="700">
-                        <div className="card-icon">
-                            <FaLightbulb />
-                        </div>
-                        <div className="card-content">
-                            <h3>Innovation and R&D Consulting</h3>
-                            <p><strong>Innovation Workshops:</strong> Conduct workshops to foster a culture of innovation and generate new ideas.</p>
-                            <p><strong>R&D Strategy:</strong> Assist clients in developing and executing R&D strategies to stay ahead of market trends.</p>
-                        </div>
-                    </Card>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-            {/* Sustainability and CSR */}
-            <Carousel.Item>
-                <img className="d-block w-100" src={businessIMG} alt="Sustainability and CSR" />
-                <Carousel.Caption>
-                    <Card className="service-card" data-aos="fade-up" data-aos-delay="800">
-                        <div className="card-icon">
-                            <FaLeaf />
-                        </div>
-                        <div className="card-content">
-                            <h3>Sustainability and CSR</h3>
-                            <p><strong>Sustainability Audits:</strong> Evaluate and improve the sustainability of client operations.</p>
-                            <p><strong>CSR Initiatives:</strong> Develop and implement CSR programs that align with client values and enhance brand reputation.</p>
-                        </div>
-                    </Card>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-            {/* Customer Experience Enhancement */}
-            <Carousel.Item>
-                <img className="d-block w-100" src={ITConsulting} alt="Customer Experience Enhancement" />
-                <Carousel.Caption>
-                    <Card className="service-card" data-aos="fade-up" data-aos-delay="900">
-                        <div className="card-icon">
-                            <FaSmile />
-                        </div>
-                        <div className="card-content">
-                            <h3>Customer Experience Enhancement</h3>
-                            <p><strong>CX Strategy:</strong> Develop strategies to improve overall customer experience across all touchpoints.</p>
-                            <p><strong>Customer Feedback Systems:</strong> Implement systems to capture and analyze customer feedback for continuous improvement.</p>
-                        </div>
-                    </Card>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-            {/* Global Expansion Support */}
-            <Carousel.Item>
-                <img className="d-block w-100" src={businessIMG} alt="Global Expansion Support" />
-                <Carousel.Caption>
-                    <Card className="service-card" data-aos="fade-up" data-aos-delay="1000">
-                        <div className="card-icon">
-                            <FaGlobe />
-                        </div>
-                        <div className="card-content">
-                            <h3>Global Expansion Support</h3>
-                            <p><strong>Market Entry Strategies:</strong> Assist clients in entering new markets with comprehensive market research and entry strategies.</p>
-                            <p><strong>Localization Services:</strong> Provide localization services to adapt products and marketing materials for different regions.</p>
-                        </div>
-                    </Card>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-            {/* Digital Transformation Consulting */}
-            <Carousel.Item>
-                <img className="d-block w-100" src={ITConsulting} alt="Digital Transformation Consulting" />
-                <Carousel.Caption>
-                    <Card className="service-card" data-aos="fade-up" data-aos-delay="1200">
-                        <div className="card-icon">
-                            <FaDigitalTachograph />
-                        </div>
-                        <div className="card-content">
-                            <h3>Digital Transformation Consulting</h3>
-                            <p><strong>Digital Strategy Development:</strong> Create digital transformation roadmaps to modernize business operations.</p>
-                            <p><strong>Technology Adoption:</strong> Guide clients in adopting emerging technologies such as blockchain, IoT, and cloud computing.</p>
-                        </div>
-                    </Card>
-                </Carousel.Caption>
-            </Carousel.Item>
+        <Carousel interval={3000} controls={true} indicators={true} pause={false} data-aos="fade-up">
+            {carouselServices.map((service, index) => (
+                <Carousel.Item key={index} className='service-carousel'>
+                    <img className="d-block w-100" src={service.image} alt={service.title} />
+                    <Carousel.Caption>
+                        <Card className="service-card">
+                            <div className="card-icon text-yellow">
+                                {service.icon}
+                            </div>
+                            <div className="card-content">
+                                <h3 className='text-white'>{service.title}</h3>
+                                {service.content.map((item, idx) => (
+                                    <p key={idx} className='text-gray gray-opacity'><strong>{item.heading}:</strong> {item.description}</p>
+                                ))}
+                            </div>
+                        </Card>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            ))}   
         </Carousel>
     );
 };

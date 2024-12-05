@@ -11,7 +11,7 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col>
-                        <Link to="/Projxon" className="footer-logo" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <Link to="/" className="footer-logo" style={{ textDecoration: 'none', color: 'inherit' }}>
                             <h1 className="footer-logo">PROJXON</h1>
                         </Link>
                     </Col>

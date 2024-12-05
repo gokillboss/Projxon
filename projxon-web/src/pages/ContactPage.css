@@ -1,72 +1,97 @@
-.contact-hero-section {
-    background: linear-gradient(135deg, #ffd700, #000000);
-    color: white;
-    padding: 40px 0;
-    position: relative;
-    overflow: hidden;
-    height: 15rem;
+.contact-page {
+    background: url('../assets/contact/bg-contact.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #000;
+    color: #fff;
 }
 
 
-
-.contact-hero-section::before {
-    content: '';
-    position: absolute;
-    width: 400%;
-    height: 400%;
-    top: -200%;
-    left: -200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
-    animation: rotate 10s linear infinite;
-}
-
-
-body {
-    overflow-x: hidden;
-  }
-
-.contact-hero-title {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-
-.value-card,
-.team-card {
-    text-align: center;
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.info-form {
+    background-color: #18181B;
+    padding: 10px;
+    border: 1px solid #ffd700;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+                0 10px 20px rgba(0, 0, 0, 0.2); 
+
+
 }
 
-.promotional-section {
-    background-color: #f8f9fa;
-    padding: 40px 20px;
+.info-form:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 
+                0 20px 40px rgba(0, 0, 0, 0.3); 
+}
+
+
+.image-container {
+    border: 2px solid #ffd700;
+    border-radius: 30px;
+    display: block;
+    width: 100%; 
+    text-align: center; 
+}
+
+.img-fluid {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 30px; 
+}
+
+.contact-section {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding-top: 50px;
+    min-height: 100vh;
 }
 
-.promotional-section h2 {
+.contact-section h2 {
     margin-bottom: 20px;
     font-size: 2rem;
 }
 
-.promotional-section p {
+.contact-section p {
     font-size: 1.2rem;
-    color: #555;
+    color: #ffffff;
+}
+
+.content-container {
+    border: 1px solid #ffd700;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: rgba(24, 24, 27, 0.8); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    color: #fff; 
+}
+
+.image-container {
+    max-height: 300px; 
+    overflow: hidden;
+    text-align: center; 
+}
+
+.image-container img {
+    max-height: 100%; 
+    width: auto; 
+    object-fit: contain; 
+}
+
+
+.text-begin {
+    text-align: left; 
+    margin-top: 15px;
+    margin-bottom: 15px; 
+    font-size: 16px; 
+    line-height: 1.6; 
+    color: #fff; 
 }
 
 
 
-
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
-    }
 
     .promotional-section h2 {
         font-size: 1.8rem;

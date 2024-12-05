@@ -1,90 +1,88 @@
-import React from 'react';
 import { useState, useEffect } from "react"
 
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import InfoForm from '../components/InfoForm';
+import { Container, Button } from 'react-bootstrap';
+// import { LuBookOpen , LuCalendar, LuFileText, LuMail } from "react-icons/lu";
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import DOMPurify from 'dompurify';
-import { LuBookOpen , LuCalendar, LuFileText, LuMail } from "react-icons/lu";
+
+import Hero from '../components/Hero';
+import CallToAction from '../components/CallToAction';
+import BlogCard from '../components/BlogCard';
+import LoadingSpinner from '../components/LoadingSpinner';
+
+
 import { fetchBlogs } from '../services/blogService'
-import { Link } from 'react-router-dom'
-
-
 
 import './ResearchPage.css';
 
 
 const ResearchPage = () => {
 
-    const cards = [
-        {
-            icon: <LuBookOpen size={23} />,
-            title: 'Blog',
-            description: 'Stay Updated with the Latest News, Events, and Insights.',
-            action: 'Read More'
-        },
-        {
-            icon: <LuCalendar size={23} />,
-            title: 'Events',
-            description: 'Join our upcoming events and webinars to stay ahead in the industry.',
-            action: 'View Events'
-        },
-        {
-            icon: <LuFileText size={23} />,
-            title: 'Articles',
-            description: 'Read our detailed articles and case studies on various topics.',
-            action: 'Explore Articles'
-        },
-        {
-            icon: <LuMail size={23} />,
-            title: 'Newsletter',
-            description: 'Subscribe to our newsletter for the latest updates and exclusive content.',
-            action: 'Subscribe'
-        },
-    ]
+    // const cards = [
+    //     {
+    //         icon: <LuBookOpen size={23} />,
+    //         title: 'Blog',
+    //         description: 'Stay Updated with the Latest News, Events, and Insights.',
+    //         action: 'Read More'
+    //     },
+    //     {
+    //         icon: <LuCalendar size={23} />,
+    //         title: 'Events',
+    //         description: 'Join our upcoming events and webinars to stay ahead in the industry.',
+    //         action: 'View Events'
+    //     },
+    //     {
+    //         icon: <LuFileText size={23} />,
+    //         title: 'Articles',
+    //         description: 'Read our detailed articles and case studies on various topics.',
+    //         action: 'Explore Articles'
+    //     },
+    //     {
+    //         icon: <LuMail size={23} />,
+    //         title: 'Newsletter',
+    //         description: 'Subscribe to our newsletter for the latest updates and exclusive content.',
+    //         action: 'Subscribe'
+    //     },
+    // ]
 
     const [blogs, setBlogs] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [visibleBlogs, setVisibleBlogs] = useState(6)
 
-    const cleanExcerpt = (excerpt) => {
-        return DOMPurify.sanitize(excerpt);
-    };
-    
-    const formatDate = (date) => {
-        const dateObj = new Date(date);
-
-        const options = { year: 'numeric', month: 'short', day: 'numeric' };
-        const formattedDate = dateObj.toLocaleDateString('en-US', options);
-        return formattedDate
+    const handleLoadMore = () => {
+        setVisibleBlogs((prev) => prev + 6)
     }
 
     useEffect(() => {
-        AOS.init({ duration: 1200 })
+        AOS.init({ duration: 1000, once: true })
         const loadBlogs = async () => {
             try{
                 const response = await fetchBlogs()
                 setBlogs(response)
+                console.log(response)
             }
             catch(error){
                 console.log(error)
+            }
+            finally{
+                setLoading(false)
             }
         }
         loadBlogs()
     }, [])
 
+    
+
 
     return (
         <>
             {/* Hero Section */}
-            <div className="research-hero-section text-center">
-                <Container className="services-hero-content text-center">
-                    <h1 className="research-title text-uppercase">Blog & Research</h1>
-                    <p className="hero-subtitle">Stay Updated with the Latest News, Events, and Insights</p>
-                </Container>
-            </div>
+            <Hero title="Blog & Research" subtitle="Stay Updated with the Latest News, Events, and Insight"/>
+
 
             {/* Research Content Section */}
-            <Container className="my-5">
+            {/* <Container className="my-5">
                 <Row className="g-4">
                     {cards.map((card, index) => (
                         <Col key={index} lg={3} md={6} sm={12}>
@@ -104,67 +102,46 @@ const ResearchPage = () => {
                         </Col>
                     ))}
                 </Row>
-            </Container>
+            </Container> */}
             
 
             {/* Recent Blogs Section */}
-            <Container className="my-5 container">
-                <h2 className='mb-3'>Recent Posts</h2>
-                <ul className="list-unstyled row row-cols-1 row-cols-md-2 row-cols-lg-3">
 
-                    {blogs && blogs.map((blog) => {
-                        
-                        const sanitizedExcerpt = cleanExcerpt(blog.excerpt.rendered)
-                        const featuredMedia = blog._embedded['wp:featuredmedia'];
-                        let sourceUrl = ''
+                <section className="sections-container blog-section">
+                    <Container className="container">
+                        <h2 className='mb-5'>
+                            Recent Posts                         
+                            <span className="blog-heading-border mt-2"></span>
+                        </h2>
 
-                        if (featuredMedia && featuredMedia.length > 0) {
-                            sourceUrl = featuredMedia[0].source_url
-                        }
-
-                        return (
-                            <li key={blog.id} className="col mb-4" data-aos="fade-up">  
-                                    
-                                <Card className='overflow-hidden blog-card h-100'>
-                                    <Link to={`/research/${blog.slug}`}>
-                                        <Card.Img 
-                                            variant="top" 
-                                            className="blog-img w-100 object-fit-cover" 
-                                            src={sourceUrl} 
-                                            alt={blog.title.rendered} 
-                                        />
-                                    </Link>
-
-                                    <Card.Body className='d-flex flex-column'>
-                                        <Link to={`/research/${blog.id}`} className='blog-card-title'>
-                                            <Card.Title className='mb-0'>{blog.title.rendered}</Card.Title>
-                                        </Link>
-
-                                        <div className='d-flex align-items-center gap-2 mt-1'>
-                                            <span className='text-muted'>{blog._embedded.author[0].name}</span>
-                                            <span className='text-muted dot-seperator fs-6'>•</span>
-                                            <span className='text-muted'>{formatDate(blog.date)}</span>
-                                        </div>
-                                        <div className='clamped-container py-4 flex-grow-1'>
-                                            <div dangerouslySetInnerHTML={{ __html: sanitizedExcerpt }}  className='card-excerpt text-muted'/>
-                                        </div>
-                                        <Link key={blog.id} to={`/research/${blog.slug}`} className="mt-auto">
-                                            <Button variant="primary blog-button">Read More</Button>
-                                        </Link>
-                                    </Card.Body>
-                                </Card>
-                            </li>
-                        )
-                    })}
-                </ul> 
-            </Container>
-
-
-            {/* Footer CTA Section */}
-            <div className="research-footer-cta text-center py-5">
-
-                <InfoForm />
-            </div>
+                        { loading ? (
+                            <div className="text-center my-5">
+                                <LoadingSpinner />
+                            </div>
+                        ) : blogs.length > 0 ? (
+                            <>
+                                <ul className="list-unstyled row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                                    {blogs && blogs.slice(0, visibleBlogs).map((blog, index) => (    
+                                        <BlogCard blog={blog} key={index}/>                    
+                                    ))}
+                                </ul> 
+                                {visibleBlogs < blogs.length && (
+                                    <div className="text-center mt-4">
+                                        <Button onClick={handleLoadMore} className="fs-5 px-4 black-button">
+                                            Load More
+                                        </Button>
+                                    </div>
+                                )}
+                            </>
+                            ) : (
+                                <div className="text-center my-5">
+                                    <p>No blog posts at the moment.</p>
+                                </div>
+                            )}
+                    </Container>
+                </section>
+            {/* Call to Action Section */}
+            <CallToAction />
         </>
     );
 };

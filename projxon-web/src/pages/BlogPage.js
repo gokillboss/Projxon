@@ -42,7 +42,6 @@ const BlogPage = () => {
         const loadBlog = async () => {
             try{
                 const response = await fetchBlog(blogId)
-                console.log(response)
                 setBlog(response)
             }
             catch(error){
@@ -72,9 +71,9 @@ const BlogPage = () => {
     return (
         <>    
         
-            <Container className='w-50 blog-container'>
+            <Container className='w-50 blog-container px-3'>
                       
-                <article className='mt-5'>
+                <article className='my-5 py-2'>
                     <header>
                         <h1 className='fw-bold'>{blog.title.rendered}</h1>
 
@@ -91,7 +90,7 @@ const BlogPage = () => {
                     </header>
                     
                     <img 
-                        className="w-100  blogpage-img" 
+                        className="w-100 blogpage-img" 
                         src={sourceUrl} 
                         alt={blog.title.rendered} 
                     />

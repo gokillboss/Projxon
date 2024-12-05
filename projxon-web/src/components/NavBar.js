@@ -9,74 +9,45 @@ const NavBar = () => {
 
     const handleToggle = () => setExpanded(!expanded);
     const handleLinkClick = () => setExpanded(false);
+
+    const navLinks = [
+        { to: "/", label: "Home" },
+        { to: "/services", label: "Services" },
+        { to: "/about", label: "About" },
+        { to: "/partnership", label: "Partnership" },
+        { to: "/research", label: "Research" },
+        { to: "/contact", label: "Contact" },
+        { to: "/careers", label: "Careers" },
+    ]
     
     return (
-        <div className='w-100 my-1'>
+        <div className='w-100'>
             <Navbar
+                fixed='top'
                 bg="black"
                 variant="black"
                 expand="lg"
                 expanded={expanded}
                 onToggle={handleToggle}
-                className="fixed-top"
             >
                 <Container className='d-flex justify-content-between py-1'>
-                    <Navbar.Brand as={NavLink} to="/Projxon" className='text-light'>
+                    <Navbar.Brand as={NavLink} to="/" className='text-light'>
                         PROJXON
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Container className="d-flex justify-content-md-start justify-content-lg-end">
+                        <Container className="navbar-container d-flex justify-content-md-start justify-content-lg-end">
                             <Nav className="ml-auto text-uppercase">
-                                <Nav.Link 
-                                    as={NavLink} 
-                                    to="/Projxon" 
-                                    onClick={handleLinkClick} 
-                                >
-                                    Home
-                                </Nav.Link>
-                                <Nav.Link 
-                                    as={NavLink} 
-                                    to="/services" 
-                                    onClick={handleLinkClick} 
-                                >
-                                    Services
-                                </Nav.Link>
-                                <Nav.Link 
-                                    as={NavLink} 
-                                    to="/about" 
-                                    onClick={handleLinkClick} 
-                                >
-                                    About
-                                </Nav.Link>
-                                <Nav.Link 
-                                    as={NavLink} 
-                                    to="/partnership" 
-                                    onClick={handleLinkClick} 
-                                >
-                                    Partnership
-                                </Nav.Link>
-                                <Nav.Link 
-                                    as={NavLink} 
-                                    to="/research" 
-                                    onClick={handleLinkClick} 
-                                >
-                                    Research
-                                </Nav.Link>
-                                <Nav.Link 
-                                    as={NavLink} 
-                                    to="/contact" 
-                                    onClick={handleLinkClick} 
-                                >
-                                    Connect
-                                </Nav.Link>
-                                <Nav.Link 
-                                    as={NavLink} 
-                                    to="/career" 
-                                    onClick={handleLinkClick} 
-                                >
-                                    Career
-                                </Nav.Link>
+                                {navLinks.map((link, index) => (
+                                    <Nav.Link 
+                                        key={index}
+                                        as={NavLink} 
+                                        to={link.to}
+                                        onClick={handleLinkClick} 
+                                    >
+                                        {link.label}
+                                    </Nav.Link>      
+                                ))}
                             </Nav>
                         </Container>
                     </Navbar.Collapse>

@@ -4,9 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import InfoForm from '../components/InfoForm';
 import './ServicesPage.css';
 
+import CallToAction from '../components/CallToAction';
+import Hero from '../components/Hero';
 import ServiceCarousel from '../components/ServiceCarousel';
 import ServiceGrid from '../components/ServiceGrid';
 
@@ -19,21 +20,25 @@ const ServicesPage = () => {
     return (
         <>
             {/* Hero Section */}
-            <div className="services-hero-section justify-content-md-center align-items-center " data-aos="fade-in">
-                <Container className="text-center services-hero-content ">
-                    <h1 className="services-hero-title text-uppercase">Our Premium Services</h1>
-                    <p className="services-hero-subtitle">Crafted with Excellence, Delivered with Precision</p>
+            <Hero title="Our Premium Services" subtitle="Crafted with Excellence, Delivered with Precision" backgroundClass="services-hero-section"/>
+
+            {/* <section className='sections-container'>
+                <Container>
+                <p className='text-center'></p>
+
                 </Container>
-            </div>
+                
+            </section> */}
 
-            {/* Services Carousel */}
-            <Container className='mt-4'>
-                <ServiceCarousel />
-                <ServiceGrid />
-            </Container>
+            <section className='services-container sections-container'>
+                <Container className='pt-4'>
+                    <ServiceCarousel />
+                    <ServiceGrid />
+                </Container>
+            </section>           
 
-
-            <InfoForm />
+            {/* Call To Action Section */}
+            <CallToAction />
         </>
     );
 };

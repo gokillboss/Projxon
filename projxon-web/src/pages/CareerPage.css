@@ -1,58 +1,114 @@
 /* CareerPage.css */
 
-.career-page-container {
-    background: linear-gradient(135deg, #ffd700, #000000);
-    color: white;
-    padding: 40px 0;
-    position: relative;
-    overflow: hidden;
-    height: 15rem;
+/* || Intern Testimonials */
+.interns-testimonials-heading {
+	font-size: 32px;
+	line-height: 1.5;
 }
 
-
-
-
-.career-hero-section::before {
-    content: '';
-    position: absolute;
-    width: 400%;
-    height: 400%;
-    top: -200%;
-    left: -200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
-    animation: rotate 10s linear infinite;
+.interns-testimonials-sub-heading {
+	font-size: 18px;
+	line-height: 1.7;
 }
-/* 
 
-.career-hero-section {
-    background: linear-gradient(135deg, #ffd700, #000000);
-    color: white;
-    padding: 40px 0;
-    position: relative;
-    overflow: hidden;
-    height: 15rem;
+.intern-card{
+	background-color: #000 !important;
+    box-shadow: 0 8px 20px #000000 !important;
+	border-radius: 10px;
+    transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+}
 
-} */
+.intern-card:hover {
+	transform: translateY(-10px); 
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
 
+.interns-testimonials .carousel-indicators {
+	margin: 0;
+	bottom: -50px;
+}
 
-.career-hero-section {
-    background-image: url('../assets/carreer-hero.png');
-    background-size: 100% 18rem;
+.interns-testimonials .carousel-indicators button {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #28303b;
+	opacity: 0.2;
+}
+
+.interns-testimonials .carousel-indicators button.active {
+	background-color: #000 !important;
+	color: #000 !important;
+	opacity: 1;
+}
+
+/* || Apply */
+.apply{
+	background: rgba(0, 0, 0, 0.6) url('../assets/careers/LA.webp');
+    background-blend-mode: overlay;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 15rem; 
+    min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    margin-top: ;
+}
+
+.apply-sub-heading {
+	font-size: 20px;
+	line-height: 1.2;
+}
+
+.apply-img {
+	position: relative;
+	left: 50%;
+	transform: translateX(-55%);
+}
+
+/* || Positions */
+.positions {
+	overflow: hidden;
+
+	position: relative;
+	z-index: 1;
+}
+
+.positions-heading {
+	line-height: 45px;
 }
 
 
-
-.career-hero-title {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    font-weight: 700;
+.positions-sub-heading {
+	font-size: 18px;
+	line-height: 25px;
 }
 
+.positions-item {
+	background-color: #000;
+	border-radius: 20px;
+	box-shadow: rgba(255, 215, 0, 0.16) 0px 10px 15px 0px, rgba(255, 215, 0, 0.06) 0px 0px 0px 1px;
+}
+
+[class*="positions-shape-"] {
+	position: relative;
+}
+
+[class*="positions-shape-"]::before {
+	content: "";
+	background-color: #ffd700;
+	border-radius: 20px;
+	position: absolute;
+	top: -25px;
+	bottom: -25px;
+	width: 33%;
+	z-index: -1;
+}
+
+.positions-shape-start::before {
+	left: -25px;
+}
+
+.positions-shape-end::before {
+	right: -25px;
+}

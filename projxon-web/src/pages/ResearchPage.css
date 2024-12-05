@@ -1,59 +1,8 @@
-/* Hero Section Styling */
-.research-hero-section {
-    background: linear-gradient(110deg, #ffd700, #000000);
-    color: white;
-    padding: 20px 0;
-    position: relative;
-    overflow: hidden;
-    height: 15rem;
-    
-}
-
-
-.research-hero-section::before {
-    content: '';
-    position: absolute;
-    width: 400%;
-    height: 400%;
-    top: -200%;
-    left: -200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
-    animation: rotate 10s linear infinite;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.services-hero-content {
-    margin: auto;
-    text-align: center;
-    padding: 20px;
-    max-width: 800px;
-    position: relative;
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-
 
 .research-title {
     font-size: 3.5rem;
     margin-bottom: 20px;
     font-weight: 700;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    color: #e0e0e0;
-    margin-bottom: 20px;
 }
 
 /* Research Cards Styling */
@@ -110,15 +59,14 @@
     color: #000000;
 }
 
-/* .blog-card-title:hover{
-    color: #2251ff;
-    text-decoration: underline;
-} */
+.blog-card-title:hover{
+    text-decoration: underline #ffd700;
+}
 
 /* Blog Cards Styling */
 .blog-button, .research-button{
-    background-color: #FACC15 !important;
-    border: #FACC15;
+    background-color: #ffd700 !important;
+    border: #ffd700;
     color: #000000;
 }
 
