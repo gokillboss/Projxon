@@ -6,6 +6,9 @@ import { CiCalendar } from "react-icons/ci";
 
 import { useParams } from 'react-router-dom'
 import { fetchBlog } from '../services/blogService'
+
+import defaultImg from '../assets/research/default-blog-img.webp'
+
 import './BlogPage.css';
 
 const BlogPage = () => {
@@ -91,7 +94,7 @@ const BlogPage = () => {
                     
                     <img 
                         className="w-100 blogpage-img" 
-                        src={sourceUrl} 
+                        src={sourceUrl ? sourceUrl : defaultImg} 
                         alt={blog.title.rendered} 
                     />
 
