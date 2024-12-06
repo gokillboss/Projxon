@@ -1,5 +1,5 @@
 .contact-page {
-    background: url('../assets/contact/bg-contact.png') no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/contact/bg-contact.webp') no-repeat center center fixed;    
     background-size: cover;
     background-color: #000;
     color: #fff;
