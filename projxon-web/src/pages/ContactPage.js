@@ -7,11 +7,10 @@ import 'aos/dist/aos.css';
 import contactPic from '../assets/contact/Proj.webp';
 import Hero from '../components/Hero';
 import InfoForm from '../components/InfoForm';
-import CallToAction from '../components/CallToAction';
 
 const ContactPage = () => {
     useEffect(() => {
-        AOS.init({ duration: 1000 });
+        AOS.init({ duration: 1000, once: true });
     }, []);
 
     return (

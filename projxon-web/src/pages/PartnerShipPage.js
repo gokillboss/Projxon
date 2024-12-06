@@ -14,7 +14,7 @@ import service_partner from '../assets/partnership/partner-service.webp'
 
 import Hero from '../components/Hero';
 import CallToAction from '../components/CallToAction';
-import AnimatedButton from '../components/AnimatedButton';
+import CustomButton from '../components/CustomButton';
 // import PartnerForm from '../components/PartnerForm';
 
 
@@ -51,7 +51,7 @@ const PartnershipPage = () => {
             <Hero title="Partner with PROJXON" subtitle="Collaborate with us to drive success and innovation" backgroundClass="partnership-hero"/>
             
             {/* Why Partner with Us Section */}
-            <section className="partner-us">
+            <section className="partner-us sections-container overflow-hidden">
                 <Container>
                     <Row className="align-items-center justify-content-between" data-aos="fade-right" data-aos-once="true">
                         <Col xs={12} md={6}>
@@ -86,9 +86,9 @@ const PartnershipPage = () => {
             </section>
 
             {/* Partnership Opportunities Section */}
-            <section className=' bg-yellow'>
+            <section className=' bg-yellow overflow-hidden'>
 
-                <section className="partner-opportunity overflow-hidden">
+                <section className="partner-opportunity">
                     <h1 className='sections-heading fw-bold text-center mb-5 pb-3'>Partnership Opportunities</h1>
 
                     <Container>
@@ -109,7 +109,7 @@ const PartnershipPage = () => {
                                     Would you like to provide more value to your clients and support them in resolving critical issues standing in the way of their growth?
                                 </p>
 
-                                <AnimatedButton 
+                                <CustomButton 
                                     buttonText="Partner With Us" 
                                     link="https://share.hsforms.com/1y8K29LT1QRa1VT1u2RoWTArx61e"
                                     buttonStyle="black-button" 
@@ -121,7 +121,7 @@ const PartnershipPage = () => {
                     </Container>
                 </section>
 
-                <section className="partner-opportunity referral overflow-hidden">
+                <section className="partner-opportunity referral">
                     <Container>
                         <Row className="align-items-center justify-content-between">
                             <Col xs={12} md={6} className="position-relative" data-aos="fade-right" data-aos-once="true">
@@ -136,9 +136,9 @@ const PartnershipPage = () => {
                                     Referral Partnerships
                                 </h2>
                                 <p className="partner-heading-sub-heading mb-4 pb-2 fs-5">
-                                    Would you like to provide more value to your clients and support them in resolving critical issues standing in the way of their growth?
+                                    Do you and your team possess the skills to deliver exceptional service, have an interest in working on unique projects, and want to grow your business?
                                 </p>
-                                <AnimatedButton 
+                                <CustomButton 
                                     buttonText="Submit Referral" 
                                     link="https://share.hsforms.com/1bKYf6vDKT9WleJf4zPxwUgrx61e"
                                     buttonStyle="black-button" 
@@ -153,8 +153,7 @@ const PartnershipPage = () => {
             </section>
             
 
-            {/* Contact Form Section */}
-            {/* <PartnerForm /> */}
+            {/* Call To Action Section */}
             <CallToAction />
 
         </div>

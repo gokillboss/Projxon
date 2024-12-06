@@ -4,6 +4,8 @@ import DOMPurify from 'dompurify';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
+import blogDefaultImg from '../assets/research/default-blog-img.webp'
+
 
 
 const BlogCard = ({ blog, blogStyle }) => {
@@ -35,7 +37,7 @@ const BlogCard = ({ blog, blogStyle }) => {
                     <Card.Img 
                         variant="top" 
                         className="blog-img w-100 object-fit-cover" 
-                        src={sourceUrl} 
+                        src={sourceUrl ? sourceUrl : blogDefaultImg} 
                         alt={blog.title.rendered} 
                     />
                 </Link>
