@@ -3,10 +3,12 @@ require('dotenv').config()
 const express = require("express");
 const path = require("path");
 const cors = require('cors')
+const morgan = require('morgan');
+
 
 // express app
 const app = express();
-
+app.use(morgan('dev'));
 // Enable CORS for client origin only
 
 const corsOptions = {
@@ -46,7 +48,7 @@ app.use((err, req, res, next) => {
 
 
 // Server Running
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8800;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
