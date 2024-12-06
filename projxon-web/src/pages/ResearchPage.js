@@ -60,7 +60,6 @@ const ResearchPage = () => {
             try{
                 const response = await fetchBlogs()
                 setBlogs(response)
-                console.log(response)
             }
             catch(error){
                 console.log(error)
