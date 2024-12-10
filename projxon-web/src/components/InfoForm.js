@@ -46,7 +46,7 @@ const InfoForm = () => {
 
     return (
         <div className="infoform-container text-white p-2">
-            <Col className='m-4' data-aos="fade-up" data-aos-once="true">
+            <Col className='m-4'>
                 <h2 className="text-center">Ready to Transform Your Business?</h2>
                 <p className="text-center">Contact us today to discuss how we can help you achieve your business goals.</p>
                 

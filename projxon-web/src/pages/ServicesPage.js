@@ -20,7 +20,7 @@ const ServicesPage = () => {
     return (
         <>
             {/* Hero Section */}
-            <Hero title="Our Premium Services" subtitle="Crafted with Excellence, Delivered with Precision" backgroundClass="services-hero-section"/>
+            <Hero title="Our Premium Services" subtitle="Crafted with Excellence, Delivered with Precision" backgroundClass="services-hero"/>
 
             {/* <section className='sections-container'>
                 <Container>

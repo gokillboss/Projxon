@@ -48,7 +48,7 @@ const PartnershipPage = () => {
     return (
         <div>
             {/* Hero Section */}
-            <Hero title="Partner with PROJXON" subtitle="Collaborate with us to drive success and innovation" backgroundClass="partnership-hero"/>
+            <Hero title="Partner with PROJXON" subtitle="Collaborate with us to drive success and innovation" backgroundClass="partner-hero"/>
             
             {/* Why Partner with Us Section */}
             <section className="partner-us sections-container overflow-hidden">
