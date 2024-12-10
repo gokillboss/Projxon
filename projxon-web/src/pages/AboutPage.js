@@ -132,7 +132,7 @@ const AboutPage = () => {
 
             {/* Who We Are Section */}
             <section className='who-we-are sections-container'>
-                <Container className="my-5 overflow-hidden">
+                <Container className="overflow-hidden">
                     <Row className='align-items-center g-5'>
                         <Col md={12} lg={6} data-aos="fade-up" data-aos-once="true">
                             <img className='overflow-hidden rounded-3 object-fit-cover w-100' src={whoWeAre} alt="who we are"/>
@@ -149,8 +149,9 @@ const AboutPage = () => {
                                     Our team of experts is dedicated to providing tailored solutions, innovative strategies, and expert guidance to help businesses innovate, grow, and succeed.
                                 </p>
                             </div>
-                            
-                            <CustomButton buttonText="Get Started" link="/contact" buttonStyle="yellow-button" className='mt-3'/>
+                            <div className='about-button'>
+                                <CustomButton buttonText="Get Started" link="/contact" buttonStyle="yellow-button" />
+                            </div>
                         </Col> 
                     </Row>   
                 </Container>
