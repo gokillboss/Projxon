@@ -128,7 +128,7 @@ const AboutPage = () => {
     return (
         <div className="about-page">
             {/* Hero Section */}
-            <Hero title="About PROJXON" subtitle="Empowering Businesses to Reach Their Full Potential" backgroundClass="about-us-hero"/>
+            <Hero title="About PROJXON" subtitle="Empowering Businesses to Reach Their Full Potential" backgroundClass="about-hero"/>
 
             {/* Who We Are Section */}
             <section className='who-we-are sections-container'>

@@ -1,9 +1,8 @@
-import React from 'react'
-
 import DOMPurify from 'dompurify';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
+import './BlogCard.css';
 import blogDefaultImg from '../assets/research/default-blog-img.webp'
 
 

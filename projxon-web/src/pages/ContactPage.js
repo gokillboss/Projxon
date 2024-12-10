@@ -10,12 +10,12 @@ import InfoForm from '../components/InfoForm';
 
 const ContactPage = () => {
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 800, once: true });
     }, []);
 
     return (
         <div className='contact-page'>
-            <Hero title="Contact Us" />
+            <Hero title="Contact Us" backgroundClass="contact-hero"/>
             <section className='sections-container'>
                 <Container className="contact-section d-flex justify-content-center">
                     <Row className='align-items-center justify-content-between'>

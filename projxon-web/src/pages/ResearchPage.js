@@ -77,7 +77,7 @@ const ResearchPage = () => {
     return (
         <>
             {/* Hero Section */}
-            <Hero title="Blog & Research" subtitle="Stay Updated with the Latest News, Events, and Insight"/>
+            <Hero title="Blog & Research" subtitle="Stay Updated with the Latest News, Events, and Insight" backgroundClass="research-hero"/>
 
 
             {/* Research Content Section */}
@@ -105,40 +105,39 @@ const ResearchPage = () => {
             
 
             {/* Recent Blogs Section */}
+            <section className="sections-container blog-section">
+                <Container className="container">
+                    <h2 className='mb-5'>
+                        Recent Posts                         
+                        <span className="blog-heading-border mt-2"></span>
+                    </h2>
 
-                <section className="sections-container blog-section">
-                    <Container className="container">
-                        <h2 className='mb-5'>
-                            Recent Posts                         
-                            <span className="blog-heading-border mt-2"></span>
-                        </h2>
-
-                        { loading ? (
-                            <div className="text-center my-5">
-                                <LoadingSpinner />
-                            </div>
-                        ) : blogs.length > 0 ? (
-                            <>
-                                <ul className="list-unstyled row row-cols-1 row-cols-md-2 row-cols-lg-3">
-                                    {blogs && blogs.slice(0, visibleBlogs).map((blog, index) => (    
-                                        <BlogCard blog={blog} key={index}/>                    
-                                    ))}
-                                </ul> 
-                                {visibleBlogs < blogs.length && (
-                                    <div className="text-center mt-4">
-                                        <Button onClick={handleLoadMore} className="fs-5 px-4 black-button">
-                                            Load More
-                                        </Button>
-                                    </div>
-                                )}
-                            </>
-                            ) : (
-                                <div className="text-center my-5">
-                                    <p>No blog posts at the moment.</p>
+                    { loading ? (
+                        <div className="text-center my-5">
+                            <LoadingSpinner />
+                        </div>
+                    ) : blogs.length > 0 ? (
+                        <>
+                            <ul className="list-unstyled row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                                {blogs && blogs.slice(0, visibleBlogs).map((blog, index) => (    
+                                    <BlogCard blog={blog} key={index}/>                    
+                                ))}
+                            </ul> 
+                            {visibleBlogs < blogs.length && (
+                                <div className="text-center mt-4">
+                                    <Button onClick={handleLoadMore} className="fs-5 px-4 black-button">
+                                        Load More
+                                    </Button>
                                 </div>
                             )}
-                    </Container>
-                </section>
+                        </>
+                        ) : (
+                            <div className="text-center my-5">
+                                <p>No blog posts at the moment.</p>
+                            </div>
+                        )}
+                </Container>
+            </section>
             {/* Call to Action Section */}
             <CallToAction />
         </>
