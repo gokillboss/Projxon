@@ -16,7 +16,7 @@ const ContactPage = () => {
     return (
         <div className='contact-page'>
             <Hero title="Contact Us" backgroundClass="contact-hero"/>
-            <section className='sections-container'>
+            <section className='sections-container contact-container'>
                 <Container className="contact-section d-flex justify-content-center">
                     <Row className='align-items-center justify-content-between'>
 

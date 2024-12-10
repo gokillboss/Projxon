@@ -1,11 +1,12 @@
 /* || Hero */
 
 #contact-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/banners/Contact.webp') no-repeat center center;    
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/banners/Contact.webp') no-repeat center center; 
+    background-size: cover;      
 }
 
 
-.contact-page {
+.contact-container {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/contact/bg-contact.webp') no-repeat center center fixed;    
     background-size: cover;
     background-color: #000;
