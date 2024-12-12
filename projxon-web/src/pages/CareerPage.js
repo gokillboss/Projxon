@@ -40,7 +40,7 @@ const CareerPage = () => {
         {
             image: gianna,
             name: "Gianna Vita",
-            university: "Azuza Pacific University",
+            university: "Indiana University Bloomington",
             testimonial:"PROJXON has provided me with valuable insights into cross-departmental collaboration, showing me how teams work together to achieve shared goals. This experience has not only deepened my understanding of leadership but also boosted my confidence to embrace innovative project ideas."
         },
         ],

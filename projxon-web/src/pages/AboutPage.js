@@ -27,17 +27,17 @@ const AboutPage = () => {
 
     const values = [
         {
-            icon: <FaLightbulb size={45} className="text-yellow" />,
+            icon: <FaLightbulb size={55} className="text-yellow" />,
             title: "Innovation",
             description: "We constantly seek out new ideas and approaches to stay ahead of industry trends and provide our clients with cutting-edge solutions.",
         },
         {
-            icon: <FaBalanceScale size={45} className="text-yellow" />,
+            icon: <FaBalanceScale size={55} className="text-yellow" />,
             title: "Integrity",
             description: "We believe in doing business with honesty and transparency, building trust with our clients and partners through ethical practices.",
         },
         {
-            icon: <FaUsers size={45} className="text-yellow" />,
+            icon: <FaUsers size={55} className="text-yellow" />,
             title: "Collaboration",
             description: "We work closely with our clients and partners, fostering a collaborative environment that drives success for everyone involved."
         },
@@ -217,7 +217,7 @@ const AboutPage = () => {
                                         loading='lazy'
                                     />
                                     <div className="px-3 py-4 px-xl-4 text-white d-flex flex-column flex-grow-1">
-                                        <h4 className="mb-2">{member.name}</h4>
+                                        <h4 className="mb-2 text-yellow">{member.name}</h4>
                                         <h6>{member.title}</h6>
                                         <h6>{member.specialty}</h6>
                                         <div className="mt-auto">
@@ -246,7 +246,7 @@ const AboutPage = () => {
                                         loading='lazy'
                                     />
                                     <div className="px-3 py-4 px-xl-4 text-white d-flex flex-column flex-grow-1">
-                                        <h4 className="mb-2">{member.name}</h4>
+                                        <h4 className="mb-2 text-yellow">{member.name}</h4>
                                         <h6>{member.title}</h6>
                                         <h6>{member.specialty}</h6>
                                         <div className="mt-auto">
