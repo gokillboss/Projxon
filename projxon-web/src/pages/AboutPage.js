@@ -27,17 +27,17 @@ const AboutPage = () => {
 
     const values = [
         {
-            icon: <FaLightbulb size={45} className="text-yellow" />,
+            icon: <FaLightbulb size={55} className="text-yellow" />,
             title: "Innovation",
             description: "We constantly seek out new ideas and approaches to stay ahead of industry trends and provide our clients with cutting-edge solutions.",
         },
         {
-            icon: <FaBalanceScale size={45} className="text-yellow" />,
+            icon: <FaBalanceScale size={55} className="text-yellow" />,
             title: "Integrity",
             description: "We believe in doing business with honesty and transparency, building trust with our clients and partners through ethical practices.",
         },
         {
-            icon: <FaUsers size={45} className="text-yellow" />,
+            icon: <FaUsers size={55} className="text-yellow" />,
             title: "Collaboration",
             description: "We work closely with our clients and partners, fostering a collaborative environment that drives success for everyone involved."
         },
@@ -128,11 +128,11 @@ const AboutPage = () => {
     return (
         <div className="about-page">
             {/* Hero Section */}
-            <Hero title="About PROJXON" subtitle="Empowering Businesses to Reach Their Full Potential" backgroundClass="about-us-hero"/>
+            <Hero title="About PROJXON" subtitle="Empowering Businesses to Reach Their Full Potential" backgroundClass="about-hero"/>
 
             {/* Who We Are Section */}
             <section className='who-we-are sections-container'>
-                <Container className="my-5 overflow-hidden">
+                <Container className="overflow-hidden">
                     <Row className='align-items-center g-5'>
                         <Col md={12} lg={6} data-aos="fade-up" data-aos-once="true">
                             <img className='overflow-hidden rounded-3 object-fit-cover w-100' src={whoWeAre} alt="who we are"/>
@@ -149,8 +149,9 @@ const AboutPage = () => {
                                     Our team of experts is dedicated to providing tailored solutions, innovative strategies, and expert guidance to help businesses innovate, grow, and succeed.
                                 </p>
                             </div>
-                            
-                            <CustomButton buttonText="Get Started" link="/contact" buttonStyle="yellow-button" className='mt-3'/>
+                            <div className='about-button'>
+                                <CustomButton buttonText="Get Started" link="/contact" buttonStyle="yellow-button" />
+                            </div>
                         </Col> 
                     </Row>   
                 </Container>
@@ -216,7 +217,7 @@ const AboutPage = () => {
                                         loading='lazy'
                                     />
                                     <div className="px-3 py-4 px-xl-4 text-white d-flex flex-column flex-grow-1">
-                                        <h4 className="mb-2">{member.name}</h4>
+                                        <h4 className="mb-2 text-yellow">{member.name}</h4>
                                         <h6>{member.title}</h6>
                                         <h6>{member.specialty}</h6>
                                         <div className="mt-auto">
@@ -245,7 +246,7 @@ const AboutPage = () => {
                                         loading='lazy'
                                     />
                                     <div className="px-3 py-4 px-xl-4 text-white d-flex flex-column flex-grow-1">
-                                        <h4 className="mb-2">{member.name}</h4>
+                                        <h4 className="mb-2 text-yellow">{member.name}</h4>
                                         <h6>{member.title}</h6>
                                         <h6>{member.specialty}</h6>
                                         <div className="mt-auto">

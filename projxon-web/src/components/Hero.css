@@ -50,3 +50,9 @@
     font-size: 1.5rem;
     margin-bottom: 40px;
 }
+
+@media (max-width: 768px) {
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}

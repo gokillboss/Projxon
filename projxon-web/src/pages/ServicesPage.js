@@ -14,13 +14,13 @@ import ServiceGrid from '../components/ServiceGrid';
 const ServicesPage = () => {
 
     useEffect(() => {
-        AOS.init({ duration: 1000 });
+        AOS.init({ duration: 800, once: true });
     }, []);
 
     return (
         <>
             {/* Hero Section */}
-            <Hero title="Our Premium Services" subtitle="Crafted with Excellence, Delivered with Precision" backgroundClass="services-hero-section"/>
+            <Hero title="Our Premium Services" subtitle="Crafted with Excellence, Delivered with Precision" backgroundClass="services-hero"/>
 
             {/* <section className='sections-container'>
                 <Container>

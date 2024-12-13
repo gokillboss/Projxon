@@ -40,7 +40,7 @@ const CareerPage = () => {
         {
             image: gianna,
             name: "Gianna Vita",
-            university: "Azuza Pacific University",
+            university: "Indiana University Bloomington",
             testimonial:"PROJXON has provided me with valuable insights into cross-departmental collaboration, showing me how teams work together to achieve shared goals. This experience has not only deepened my understanding of leadership but also boosted my confidence to embrace innovative project ideas."
         },
         ],
@@ -82,13 +82,13 @@ const CareerPage = () => {
 
 
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 800, once: true });
     }, []);
 
     return (
         <div>
             {/* Hero Section */}
-            <Hero title="Join Our Team" subtitle="" backgroundClass="career-hero"/>
+            <Hero title="Join Our Team" backgroundClass="career-hero"/>
 
             <Container className="momentum-intern overflow-hidden sections-container">
                 <h2 className='sections-heading text-center mb-5'>Momentum Internship Program</h2>
