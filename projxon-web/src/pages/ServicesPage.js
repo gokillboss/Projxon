@@ -14,7 +14,7 @@ import ServiceGrid from '../components/ServiceGrid';
 const ServicesPage = () => {
 
     useEffect(() => {
-        AOS.init({ duration: 1000 });
+        AOS.init({ duration: 800, once: true });
     }, []);
 
     return (
