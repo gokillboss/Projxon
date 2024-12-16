@@ -47,7 +47,7 @@ const CareerPage = () => {
         [
             {
                 image: arthur,
-                name: "Jordan Le",
+                name: "Artur Fedrizzi",
                 university: "University of California Irvine",
                 testimonial:"The Momentum Internship Program at PROJXON gave me applicable knowledge, skills, tools, and experience far better than any college class or activity has ever given me. Getting to tackle real business problems and learning my mentor's thought process was priceless. Joining this MIP was the best decision I could have made in starting off my professional career."
             },
@@ -240,7 +240,7 @@ const CareerPage = () => {
                                                             />
                                                         </div>
                                                         <div>
-                                                            <h4 className="mb-0 fs-5 text-white">{name}</h4>
+                                                            <h4 className="mb-0 fs-5 text-yellow">{name}</h4>
                                                             <p className="mb-0 small text-gray">{university}</p>
                                                         </div>
                                                     </div>
