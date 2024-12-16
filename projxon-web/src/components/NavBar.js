@@ -40,6 +40,7 @@ const NavBar = () => {
                             <Nav className="ml-auto text-uppercase">
                                 {navLinks.map((link, index) => (
                                     <Nav.Link 
+                                        className='link-offset-3'
                                         key={index}
                                         as={NavLink} 
                                         to={link.to}
