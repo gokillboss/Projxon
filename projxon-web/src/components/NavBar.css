@@ -40,7 +40,6 @@
 .nav-link.active {
     color: #ffd700 !important;
     text-decoration: underline; 
-    text-underline-offset: 4px
 }
 
 

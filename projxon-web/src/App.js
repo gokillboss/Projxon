@@ -9,6 +9,8 @@ import PartnershipPage from './pages/PartnerShipPage';
 import CareerPage from './pages/CareerPage';
 import ResearchPage from './pages/ResearchPage';
 import BlogPage from './pages/BlogPage';
+import NotFound from './pages/NotFound';
+
 
 import './App.css';
 import "./index.css";
@@ -32,6 +34,7 @@ const App = () => {
                     <Route path="/careers" element={<CareerPage />} />
                     <Route path="/research" element={<ResearchPage />} />
                     <Route path="/research/:blogId" element={<BlogPage />} />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </div>
             <Footer />
