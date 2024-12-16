@@ -49,12 +49,12 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#handover-notes">Handover Notes</a></li>
+    <!-- <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li> -->
   </ol>
 </details>
 
@@ -75,7 +75,6 @@ PROJXON is a leading business consulting firm helping medium-sized businesses ac
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [![React][React.js]][React-url]
 * [![Express][Express.js]][Express-url]
@@ -101,35 +100,34 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/gokillboss/Projxon.git
    ```
-3. Navigate to the frontend and backend directory. Run the following in both directories
+2. Navigate to the frontend and backend directory. Run the following in both directories
    ```sh
    npm install
    ```
-4. Enter your API in frontend/projxon-web `.env`
+3. Enter your API in frontend/projxon-web `.env`
    ```js
    REACT_APP_API_URL = 'http://localhost:3000/'
    REACT_APP_SERVICE_ID = 'ENTER SERVICE ID KEY FOR EMAILJS FROM EMAIL SERVICE'
    REACT_APP_TEMPLATE_ID_1 = 'ENTER TEMPLATE ID KEY FOR EMAILJS FROM EMAIL TEMPLATE'
    REACT_APP_PUBLIC_KEY = 'ENTER PUBLIC KEY FOR EMAILJS FROM ACCOUNT'
    ```
-5. Enter your API in server `.env`
+4. Enter your API in server `.env`
    ```js
    PORT=4000
    WORDPRESS_API_URL='ENTER LOCAL WP LIVE SITE URL'
    WORDPRESS_API_USERNAME='ENTER LOCAL WP LIVE SITE USERNAME'
    WORDPRESS_API_PASSWORD='ENTER LOCAL WP LIVE SITE PASSWORD'
 
-6. Start the frontend
+5. Start the frontend
    ```sh
    npm start
    ```
 
-7. Run the backend
+6. Run the backend
    ```sh
    npm run dev
    ```
