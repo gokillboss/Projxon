@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Projxon/static/css/main.b6d58667.css",
-    "main.js": "/Projxon/static/js/main.3a25ad40.js",
+    "main.css": "/Projxon/static/css/main.6389513c.css",
+    "main.js": "/Projxon/static/js/main.e0782520.js",
     "static/media/business.webp": "/Projxon/static/media/business.aeeb6b504bcec7417596.webp",
     "static/media/Proj.webp": "/Projxon/static/media/Proj.d161e9e332a1db733580.webp",
     "static/media/internship.webp": "/Projxon/static/media/internship.978b7aca083fd07d6631.webp",
@@ -43,11 +43,11 @@
     "static/media/ITConsulting.webp": "/Projxon/static/media/ITConsulting.a2f854a977e3cdcc150c.webp",
     "static/media/loadingSpinner.svg": "/Projxon/static/media/loadingSpinner.e38b55e6e88e92d14329dcc9c860c4d3.svg",
     "index.html": "/Projxon/index.html",
-    "main.b6d58667.css.map": "/Projxon/static/css/main.b6d58667.css.map",
-    "main.3a25ad40.js.map": "/Projxon/static/js/main.3a25ad40.js.map"
+    "main.6389513c.css.map": "/Projxon/static/css/main.6389513c.css.map",
+    "main.e0782520.js.map": "/Projxon/static/js/main.e0782520.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6d58667.css",
-    "static/js/main.3a25ad40.js"
+    "static/css/main.6389513c.css",
+    "static/js/main.e0782520.js"
   ]
 }
