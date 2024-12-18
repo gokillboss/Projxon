@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Projxon/static/css/main.6389513c.css",
+    "main.css": "/Projxon/static/css/main.d791f59f.css",
     "main.js": "/Projxon/static/js/main.e0782520.js",
     "static/media/business.webp": "/Projxon/static/media/business.aeeb6b504bcec7417596.webp",
     "static/media/Proj.webp": "/Projxon/static/media/Proj.d161e9e332a1db733580.webp",
@@ -15,19 +15,19 @@
     "static/media/it.webp": "/Projxon/static/media/it.5f8101c04e9c08a74f3f.webp",
     "static/media/market.webp": "/Projxon/static/media/market.f1824198d98bd3e0eea6.webp",
     "static/media/bg-contact.webp": "/Projxon/static/media/bg-contact.9e870c650322244b7f32.webp",
+    "static/media/Contact.webp": "/Projxon/static/media/Contact.a50ff4c9ae0be2022ff8.webp",
     "static/media/partner-service.webp": "/Projxon/static/media/partner-service.2032c941127aad943330.webp",
     "static/media/employee.webp": "/Projxon/static/media/employee.904a0ace2f4997c34d72.webp",
     "static/media/client-ref.webp": "/Projxon/static/media/client-ref.deb94c4a888ebaa3ac26.webp",
     "static/media/melissa.webp": "/Projxon/static/media/melissa.d85346f36e5edbf499a4.webp",
-    "static/media/Contact.webp": "/Projxon/static/media/Contact.e82beff0ce44c007502b.webp",
     "static/media/LA.webp": "/Projxon/static/media/LA.d1321748549ea93d1e82.webp",
     "static/media/Research.webp": "/Projxon/static/media/Research.a47608cf33f1b8206f0f.webp",
     "static/media/About.webp": "/Projxon/static/media/About.97c3230fe7f547d27316.webp",
     "static/media/PROJ-service.webp": "/Projxon/static/media/PROJ-service.c0fa2d77a206b3810ca9.webp",
-    "static/media/Careers.webp": "/Projxon/static/media/Careers.7ce76bbaf558dd6490d5.webp",
     "static/media/partner.webp": "/Projxon/static/media/partner.c5fc0e580af8e6ea1bf4.webp",
-    "static/media/Partnership.webp": "/Projxon/static/media/Partnership.3a73d6a5b340e5bfe3ba.webp",
+    "static/media/Careers.webp": "/Projxon/static/media/Careers.b4b4366908e8a88d39c8.webp",
     "static/media/Services.webp": "/Projxon/static/media/Services.a8ce97d5266d8a5f4496.webp",
+    "static/media/Partnership.webp": "/Projxon/static/media/Partnership.003130282743a815847b.webp",
     "static/media/megha.webp": "/Projxon/static/media/megha.3cd5d23fe9b7d7f5e29b.webp",
     "static/media/phelan.webp": "/Projxon/static/media/phelan.6b5300f8f45dd95651cb.webp",
     "static/media/bast.webp": "/Projxon/static/media/bast.f90cfeb1e6b57a9c2954.webp",
@@ -43,11 +43,11 @@
     "static/media/ITConsulting.webp": "/Projxon/static/media/ITConsulting.a2f854a977e3cdcc150c.webp",
     "static/media/loadingSpinner.svg": "/Projxon/static/media/loadingSpinner.e38b55e6e88e92d14329dcc9c860c4d3.svg",
     "index.html": "/Projxon/index.html",
-    "main.6389513c.css.map": "/Projxon/static/css/main.6389513c.css.map",
+    "main.d791f59f.css.map": "/Projxon/static/css/main.d791f59f.css.map",
     "main.e0782520.js.map": "/Projxon/static/js/main.e0782520.js.map"
   },
   "entrypoints": [
-    "static/css/main.6389513c.css",
+    "static/css/main.d791f59f.css",
     "static/js/main.e0782520.js"
   ]
 }
