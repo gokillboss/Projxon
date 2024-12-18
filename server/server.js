@@ -12,7 +12,7 @@ app.use(morgan('dev'));
 // Enable CORS for client origin only
 
 const corsOptions = {
-    origin: ['https://testprojxon.onrender.com', 'https://gokillboss.github.io/Projxon', 'https://localhost:3000'],
+    origin: ['https://testprojxon.onrender.com', 'https://gokillboss.github.io/Projxon', 'http://localhost:3000', 'https://www.projxon.com'],
 }
 app.use(cors(corsOptions))
 
