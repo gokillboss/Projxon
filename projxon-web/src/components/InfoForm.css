@@ -1,31 +1,10 @@
-.infoform-container {
-
-    background-color: #18181B;
-    padding: 50px 0;
-     backdrop-filter: blur(10px);
-}
-
-.infoform-container h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-.infoform-container p {
-    margin-bottom: 40px;
-}
-
-.infoform {
-    max-width: 600px;
-    margin: 0 auto;
-}
+/* || Infoform */
 
 .infoform .form-label {
     color: #f8f9fa;
 }
 
 .infoform .form-control {
-    background-color: #495057;
-    border: 1px solid #ced4da;
     color: #f8f9fa;
 }
 
@@ -35,24 +14,9 @@
 
 .infoform .form-control:focus {
     background-color: #495057;
-    border-color: #80bdff;
+    border-color: #ffd700;
     box-shadow: none;
     color: #f8f9fa;
-}
-
-.infoform .btn {
-    background-color: #007bff;
-    border: none;
-    transition: background-color 0.3s;
-}
-
-.infoform .btn:hover {
-    background-color: #0056b3;
-}
-
-
-.submit-button {
-    background-color: #8ed130;
 }
 
 
