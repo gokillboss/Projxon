@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/Projxon/static/css/main.d791f59f.css",
-    "main.js": "/Projxon/static/js/main.e0782520.js",
+    "main.css": "/Projxon/static/css/main.c5982204.css",
+    "main.js": "/Projxon/static/js/main.c0b6cc5e.js",
     "static/media/business.webp": "/Projxon/static/media/business.aeeb6b504bcec7417596.webp",
-    "static/media/Proj.webp": "/Projxon/static/media/Proj.d161e9e332a1db733580.webp",
     "static/media/internship.webp": "/Projxon/static/media/internship.978b7aca083fd07d6631.webp",
     "static/media/calltoaction.webp": "/Projxon/static/media/calltoaction.9d26c7e529cbf4a9a67f.webp",
     "static/media/consult.webp": "/Projxon/static/media/consult.52793a600060466022be.webp",
@@ -14,15 +13,14 @@
     "static/media/manage.webp": "/Projxon/static/media/manage.2cbbb1f93928ad195e13.webp",
     "static/media/it.webp": "/Projxon/static/media/it.5f8101c04e9c08a74f3f.webp",
     "static/media/market.webp": "/Projxon/static/media/market.f1824198d98bd3e0eea6.webp",
-    "static/media/bg-contact.webp": "/Projxon/static/media/bg-contact.9e870c650322244b7f32.webp",
-    "static/media/Contact.webp": "/Projxon/static/media/Contact.a50ff4c9ae0be2022ff8.webp",
+    "static/media/bg-contact.webp": "/Projxon/static/media/bg-contact.a50ff4c9ae0be2022ff8.webp",
     "static/media/partner-service.webp": "/Projxon/static/media/partner-service.2032c941127aad943330.webp",
     "static/media/employee.webp": "/Projxon/static/media/employee.904a0ace2f4997c34d72.webp",
     "static/media/client-ref.webp": "/Projxon/static/media/client-ref.deb94c4a888ebaa3ac26.webp",
     "static/media/melissa.webp": "/Projxon/static/media/melissa.d85346f36e5edbf499a4.webp",
     "static/media/LA.webp": "/Projxon/static/media/LA.d1321748549ea93d1e82.webp",
-    "static/media/Research.webp": "/Projxon/static/media/Research.a47608cf33f1b8206f0f.webp",
     "static/media/About.webp": "/Projxon/static/media/About.97c3230fe7f547d27316.webp",
+    "static/media/Research.webp": "/Projxon/static/media/Research.dd00440562a5d2839c97.webp",
     "static/media/PROJ-service.webp": "/Projxon/static/media/PROJ-service.c0fa2d77a206b3810ca9.webp",
     "static/media/partner.webp": "/Projxon/static/media/partner.c5fc0e580af8e6ea1bf4.webp",
     "static/media/Careers.webp": "/Projxon/static/media/Careers.b4b4366908e8a88d39c8.webp",
@@ -35,19 +33,20 @@
     "static/media/kathy.webp": "/Projxon/static/media/kathy.8910d6986a80a02b423e.webp",
     "static/media/dania.webp": "/Projxon/static/media/dania.b404dfbc674b12c8a378.webp",
     "static/media/alexandria.webp": "/Projxon/static/media/alexandria.9e3de0ffbd58cf96a6be.webp",
+    "static/media/Contact.webp": "/Projxon/static/media/Contact.d1527f50a0431d03e61e.webp",
+    "static/media/default-blog-img.webp": "/Projxon/static/media/default-blog-img.72043b0a0733084b3ce7.webp",
     "static/media/noemi.webp": "/Projxon/static/media/noemi.756bda49380c76030263.webp",
     "static/media/gianna.webp": "/Projxon/static/media/gianna.fb0a17f7735f5fe461ac.webp",
     "static/media/arthur.webp": "/Projxon/static/media/arthur.cedd41ebb4aff138f276.webp",
     "static/media/jordan.webp": "/Projxon/static/media/jordan.d14b71792d4faa4953bb.webp",
-    "static/media/default-blog-img.webp": "/Projxon/static/media/default-blog-img.12ed743c8e1f953d85ad.webp",
     "static/media/ITConsulting.webp": "/Projxon/static/media/ITConsulting.a2f854a977e3cdcc150c.webp",
     "static/media/loadingSpinner.svg": "/Projxon/static/media/loadingSpinner.e38b55e6e88e92d14329dcc9c860c4d3.svg",
     "index.html": "/Projxon/index.html",
-    "main.d791f59f.css.map": "/Projxon/static/css/main.d791f59f.css.map",
-    "main.e0782520.js.map": "/Projxon/static/js/main.e0782520.js.map"
+    "main.c5982204.css.map": "/Projxon/static/css/main.c5982204.css.map",
+    "main.c0b6cc5e.js.map": "/Projxon/static/js/main.c0b6cc5e.js.map"
   },
   "entrypoints": [
-    "static/css/main.d791f59f.css",
-    "static/js/main.e0782520.js"
+    "static/css/main.c5982204.css",
+    "static/js/main.c0b6cc5e.js"
   ]
 }
