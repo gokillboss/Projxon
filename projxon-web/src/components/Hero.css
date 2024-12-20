@@ -15,7 +15,7 @@
     height: 400%;
     top: -200%;
     left: -200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent);
     animation: rotate 10s linear infinite;
 }
 
