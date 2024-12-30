@@ -32,6 +32,12 @@ const routes = require('./routes')
 app.use('/api/', routes)
 
 
+// Catch-all handler for React routes
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
+});
+  
+
 // 404 handler
 app.use((req, res) => {
     res.status(404).json({ message: "Not found" });
