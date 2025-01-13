@@ -110,7 +110,7 @@ To get a local copy up and running follow these simple example steps.
    ```
 3. Enter your API in frontend/projxon-web `.env`
    ```js
-   REACT_APP_API_URL = 'http://localhost:3000/'
+   REACT_APP_API_URL = 'http://localhost:4000/'
    REACT_APP_SERVICE_ID = 'ENTER SERVICE ID KEY FOR EMAILJS FROM EMAIL SERVICE'
    REACT_APP_TEMPLATE_ID_1 = 'ENTER TEMPLATE ID KEY FOR EMAILJS FROM EMAIL TEMPLATE'
    REACT_APP_PUBLIC_KEY = 'ENTER PUBLIC KEY FOR EMAILJS FROM ACCOUNT'
