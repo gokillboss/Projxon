@@ -8,4 +8,10 @@ router.get('/', clientController.getClients);
 // GET a single client by ID
 router.get('/:id', clientController.getClient);
 
+// POST a new client testimonial
+router.post('/', clientController.addClient);
+
+// DELETE a client testimonial
+router.delete('/:id', clientController.deleteClient);
+
 module.exports = router;
