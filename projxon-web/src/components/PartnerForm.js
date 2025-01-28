@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Form, Button, Col, Alert } from 'react-bootstrap';
-import emailjs from '@emailjs/browser';
+import { sendEmail } from "../services/emailService";
 import './PartnerForm.css';
 
 const PartnerForm = () => {
@@ -15,30 +15,24 @@ const PartnerForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-        
-        try {
-            const result = await emailjs.sendForm(
-                process.env.REACT_APP_SERVICE_ID,
-                process.env.REACT_APP_TEMPLATE_ID_2,
-                form.current,
-                process.env.REACT_APP_PUBLIC_KEY
-            );
 
-            if (result.text === 'OK') {
-                setStatus({
-                    show: true,
-                    message: 'Thank you for your partnership request! We will contact you soon.',
-                    type: 'success'
-                });
-                form.current.reset();
-            }
+        const formData = new FormData(form.current);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            await sendEmail(data); // Call the service function
+            setStatus({
+                show: true,
+                message: "Thank you for your partnership request! We will contact you soon.",
+                type: "success",
+            });
+            form.current.reset();
         } catch (error) {
             setStatus({
                 show: true,
-                message: 'Something went wrong. Please try again later.',
-                type: 'danger'
+                message: "Something went wrong. Please try again later.",
+                type: "danger",
             });
-            console.error('FAILED...', error);
         } finally {
             setLoading(false);
         }
