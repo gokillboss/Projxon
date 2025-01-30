@@ -93,27 +93,6 @@ const HomePage = () => {
         },
     ]
 
-    // const clients = [
-    //     {
-    //         image: client,
-    //         quote: "PROJXON transformed our onboarding process, reducing it from 90 days to just 14 days. This efficiency gain translated to an additional 2.5 months of revenue annually. Their expertise in process optimization is unparalleled.",
-    //         name: "Bradley Morrison",
-    //         title: "CEO of XYZ Core"
-    //     },
-    //     {
-    //         image: client,
-    //         quote: "If it wasn't for PROJXON, my company wouldn't have been where it is today. They saved us time and showed us a clear path of where our company is heading.",
-    //         name: "Jane Smith",
-    //         title: "Operations Manager at ABC Inc"
-    //     },
-    //     {
-    //         image: client,
-    //         quote: "Thanks to PROJXON's innovative strategies, our operational costs decreased by 20% and our productivity improved dramatically. Their team is incredibly knowledgeable and dedicated.",
-    //         name: "John Doe",
-    //         title: "CEO of Tech Inc"
-    //     },
-    // ]
-
     const [blogs, setBlogs] = useState([])
 
     useEffect(() => {

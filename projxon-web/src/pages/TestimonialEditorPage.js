@@ -85,11 +85,11 @@ const TestimonialEditorPage = () => {
   };
 
   return (
-    <div>
+    <div className="testimonial-editor">
       <h1>Testimonial Carousel Editor</h1>
       <div className="carousel">
         <div className="testimonial">
-          <img className="image" src={getCurrentClient().image} alt="Client Image" />
+          <img className="image" src={getCurrentClient().image} alt="Client" />
           <span className="quote">{getCurrentClient().quote}</span>
           <span className="name">{getCurrentClient().name}</span>
           <span className="title">{getCurrentClient().title}</span>

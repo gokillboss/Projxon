@@ -14,7 +14,6 @@ const LoginPage = () => {
     const result = await login(username, password);
 
     if (result.success) {
-      alert('Login successful!');
       navigate('/editor'); 
     } else {
       alert(result.message);
@@ -49,7 +48,7 @@ const LoginPage = () => {
               />
             </Form.Group>
 
-            <Button variant="primary" type="submit" className="w-100">
+            <Button variant="primary" type="submit" className="yellow-button">
               Login
             </Button>
           </Form>
