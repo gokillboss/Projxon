@@ -13,7 +13,7 @@ import NotFound from './pages/NotFound';
 
 import LoginPage from './pages/LoginPage';
 import TestimonialEditorPage from './pages/TestimonialEditorPage'
-
+import AuthGuard from './components/AuthGuard';
 
 import './App.css';
 import "./index.css";
@@ -40,7 +40,7 @@ const App = () => {
                     <Route path="*" element={<NotFound />} />
 
                     <Route path="/login" element={<LoginPage />} />
-                    <Route path="/editor" element={<TestimonialEditorPage />} />
+                    <Route path="/editor" element={<AuthGuard><TestimonialEditorPage /></AuthGuard>} />
                 </Routes>
             </div>
             <Footer />

@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { fetchClients, addClient, deleteClient } from '../services/clientService';
 import './TestimonialEditorPage.css';
+import { useNavigate } from 'react-router-dom';
+import { logout } from '../services/loginService';
 
 const TestimonialEditorPage = () => {
   const [clients, setClients] = useState([]);
   const [currentTestIndex, setCurrentTestIndex] = useState(0);
   const [newTestimonial, setNewTestimonial] = useState({ image: '', quote: '', name: '', title: '' });
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
 
   useEffect(() => {
     const loadClients = async () => {
@@ -95,7 +103,10 @@ const TestimonialEditorPage = () => {
       <textarea name="quote" value={newTestimonial.quote} onChange={handleInputChange} placeholder="Quote"></textarea>
       <textarea name="name" value={newTestimonial.name} onChange={handleInputChange} placeholder="Name"></textarea>
       <textarea name="title" value={newTestimonial.title} onChange={handleInputChange} placeholder="Title"></textarea>
-      <button id="addButton" onClick={handleAdd}>Add Entry</button>
+      <div className="buttons">
+        <button id="addButton" onClick={handleAdd}>Add Entry</button>
+        <button id="logoutButton" onClick={handleLogout}>Logout</button>
+      </div>
     </div>
   );
 };

@@ -12,22 +12,48 @@ export const fetchClient = async (id) => {
 
 export const addClient = async (clientData) => {
     try {
-        const response = await axiosInstance.post('/api/clients', clientData);
+        const token = localStorage.getItem('authToken'); 
+        console.log("🛠 Sending Token:", token); // Debug log
+
+        if (!token) {
+            throw new Error("Unauthorized - No token found");
+        }
+
+        const response = await axiosInstance.post('/api/clients', clientData, {
+            headers: {
+                'Authorization': `Bearer ${token}`,  
+                'Content-Type': 'application/json'
+            }
+        });
+
         return response.data;
     } catch (error) {
-        console.error("Error adding client:", error);
+        console.error("❌ Error adding client:", error);
         return null;
     }
 };
 
+
 export const deleteClient = async (id) => {
     try {
-        const response = await axiosInstance.delete(`/api/clients/${id}`);
+        const token = localStorage.getItem('authToken');  
+
+        if (!token) {
+            throw new Error("Unauthorized - No token found");
+        }
+
+        const response = await axiosInstance.delete(`/api/clients/${id}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`,  
+                'Content-Type': 'application/json'
+            }
+        });
+
         if (response.status === 200 || response.status === 204) {
             console.log("✅ Client deleted successfully in backend");
             return true;  
         }
-        
+
         console.log("❌ Unexpected response:", response);
         return false;
     } catch (error) {

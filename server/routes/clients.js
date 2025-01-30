@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const clientController = require("../controllers/clientController");
+const { authenticateUser } = require("../middleware/authMiddleware");
 
 // GET all clients
 router.get('/', clientController.getClients);
@@ -9,9 +10,9 @@ router.get('/', clientController.getClients);
 router.get('/:id', clientController.getClient);
 
 // POST a new client testimonial
-router.post('/', clientController.addClient);
+router.post('/', authenticateUser, clientController.addClient);
 
 // DELETE a client testimonial
-router.delete('/:id', clientController.deleteClient);
+router.delete('/:id', authenticateUser, clientController.deleteClient);
 
 module.exports = router;

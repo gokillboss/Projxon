@@ -1,19 +1,28 @@
 import React, { useState } from 'react';
-import './LoginPage.css';
 import { Form, Button, Row, Col, Container } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import { login } from '../services/loginService';
 
 const LoginPage = () => {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log('Login attempted with:', { email, password });
+    
+    const result = await login(username, password);
+
+    if (result.success) {
+      alert('Login successful!');
+      navigate('/editor'); 
+    } else {
+      alert(result.message);
+    }
   };
 
   return (
-    <div>
-      <Container>
+    <Container>
       <Row className="justify-content-md-center mt-5">
         <Col xs={12} md={6}>
           <h2 className="text-center mb-4">Login</h2>
@@ -21,10 +30,11 @@ const LoginPage = () => {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Username</Form.Label>
               <Form.Control
-                type="email"
+                type="text"
                 placeholder="Enter username"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
               />
             </Form.Group>
 
@@ -35,6 +45,7 @@ const LoginPage = () => {
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                required
               />
             </Form.Group>
 
@@ -45,8 +56,7 @@ const LoginPage = () => {
         </Col>
       </Row>
     </Container>
-    </div>
-  )
-}
+  );
+};
 
 export default LoginPage;
