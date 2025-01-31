@@ -11,6 +11,9 @@ import ResearchPage from './pages/ResearchPage';
 import BlogPage from './pages/BlogPage';
 import NotFound from './pages/NotFound';
 
+import LoginPage from './pages/LoginPage';
+import TestimonialEditorPage from './pages/TestimonialEditorPage'
+import AuthGuard from './components/AuthGuard';
 
 import './App.css';
 import "./index.css";
@@ -35,6 +38,9 @@ const App = () => {
                     <Route path="/research" element={<ResearchPage />} />
                     <Route path="/research/:blogId" element={<BlogPage />} />
                     <Route path="*" element={<NotFound />} />
+
+                    <Route path="/login" element={<LoginPage />} />
+                    <Route path="/editor" element={<AuthGuard><TestimonialEditorPage /></AuthGuard>} />
                 </Routes>
             </div>
             <Footer />
